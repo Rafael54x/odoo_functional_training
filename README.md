@@ -12,7 +12,10 @@ Silabus praktik ramah pemula untuk Odoo 19 Enterprise.
 | Database | `odoo_functional` |
 | Login | `admin` / `admin` |
 
-Setup Docker: lihat folder [`odoo19e/`](./odoo19e/README.md).
+Setup Docker: lihat [`odoo19e/README.md`](./odoo19e/README.md)  
+Perintah tempel di server: [`odoo19e/ON-SERVER.md`](./odoo19e/ON-SERVER.md)
+
+Layout host odoodev2: `/opt/odoo/community` + `/opt/odoo/enterprise` (enterprise harus diisi dulu).
 
 ## Menjalankan web (local)
 
