@@ -18,7 +18,17 @@ npm install
 npm run dev
 ```
 
-App berjalan di [http://127.0.0.1:43129](http://127.0.0.1:43129).
+App listen di `0.0.0.0:43129` (semua interface).
+
+- Lokal di VM: [http://127.0.0.1:43129](http://127.0.0.1:43129)
+- Akses multi-device: jalankan Cloudflare quick tunnel (saat agent aktif):
+
+```bash
+cloudflared tunnel --url http://127.0.0.1:43129
+```
+
+URL `https://*.trycloudflare.com` yang muncul bisa dibuka dari HP/laptop mana saja selama sesi agent + tunnel masih hidup.
+
 
 ## Isi silabus
 
