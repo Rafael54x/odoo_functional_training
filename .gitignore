@@ -52,3 +52,6 @@ odoo19/logs/
 **/__pycache__/
 *.token
 secrets/
+
+# Odoo Enterprise source (large, do not commit)
+odoo19e/src/

@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { odooLab, odooLoginHint } from "@/data/odoo-lab";
 
 const steps = [
   {
-    title: "Siapkan Odoo latihan",
-    body: "Pakai database odoo_functional, login admin / admin. Jangan campur dengan data produksi.",
+    title: "Buka Odoo latihan (odoo19e)",
+    body: `Di browser, buka ${odooLab.url}. Ini instance Odoo 19 Enterprise di ${odooLab.hostLabel}. Database: ${odooLab.database}, login ${odooLab.user} / ${odooLab.password}.`,
   },
   {
     title: "Mulai dari Modul 00",
@@ -12,7 +13,7 @@ const steps = [
   },
   {
     title: "Baca satu langkah, kerjakan di Odoo, baru lanjut",
-    body: "Tiap langkah punya jalur klik, instruksi berurutan, dan “Jika berhasil, Anda melihat…”. Ikuti itu.",
+    body: "Tiap langkah punya jalur klik, instruksi berurutan, dan “Jika berhasil, Anda melihat…”. Ikuti itu di Odoo yang sama.",
   },
   {
     title: "Tandai selesai jika sudah berhasil",
@@ -59,13 +60,31 @@ export default function CaraPakaiPage() {
         Cara memakai lab ini
       </h1>
       <p className="mt-4 text-base leading-relaxed text-stone-600 sm:text-lg">
-        Lab ini dibuat untuk orang yang baru kenal Odoo. Anda tidak perlu background
-        ERP. Ikuti urutan di bawah — pelan saja.
+        Lab ini dibuat untuk orang yang baru kenal Odoo. Semua praktik dikerjakan di
+        instance <strong>{odooLab.name}</strong> ({odooLab.edition}).
       </p>
+
+      <aside className="beginner-callout mt-6">
+        <p className="text-sm font-semibold text-teal-950">Target Odoo latihan</p>
+        <p className="mt-1 text-sm leading-relaxed text-stone-700">
+          {odooLoginHint()}
+        </p>
+        <a
+          href={odooLab.url}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-800 hover:underline"
+        >
+          Buka Odoo sekarang <ExternalLink className="size-3.5" />
+        </a>
+      </aside>
 
       <ol className="mt-8 space-y-4">
         {steps.map((s, i) => (
-          <li key={s.title} className="howto-step rounded-2xl border border-stone-200/80 bg-white/75 p-4">
+          <li
+            key={s.title}
+            className="howto-step rounded-2xl border border-stone-200/80 bg-white/75 p-4"
+          >
             <span className="howto-num">{i + 1}</span>
             <div>
               <h2 className="font-heading text-xl text-teal-950">{s.title}</h2>
@@ -82,7 +101,10 @@ export default function CaraPakaiPage() {
         </p>
         <dl className="mt-4 space-y-3">
           {glossary.map((g) => (
-            <div key={g.term} className="border-t border-stone-100 pt-3 first:border-0 first:pt-0">
+            <div
+              key={g.term}
+              className="border-t border-stone-100 pt-3 first:border-0 first:pt-0"
+            >
               <dt className="text-sm font-semibold text-teal-900">{g.term}</dt>
               <dd className="mt-0.5 text-sm leading-relaxed text-stone-600">
                 {g.meaning}

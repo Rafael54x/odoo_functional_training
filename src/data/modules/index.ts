@@ -1,4 +1,5 @@
 import type { SyllabusModule, Lesson } from "../types";
+import { odooLab } from "../odoo-lab";
 import { introModule } from "./00-intro";
 import { companyModule } from "./01-company";
 import { contactsModule } from "./02-contacts";
@@ -60,8 +61,10 @@ export function getAdjacentLesson(moduleSlug: string, lessonSlug: string) {
 
 export const learningPathSummary = {
   title: "Jalur Belajar Odoo 19 Functional",
-  database: "odoo_functional",
-  credentials: { user: "admin", password: "admin" },
+  database: odooLab.database,
+  credentials: { user: odooLab.user, password: odooLab.password },
+  odooUrl: odooLab.url,
+  instance: odooLab.name,
   stack: [
     "Contacts",
     "Sales",

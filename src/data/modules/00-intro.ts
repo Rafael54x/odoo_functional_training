@@ -1,4 +1,5 @@
 import type { SyllabusModule } from "../types";
+import { odooLab } from "../odoo-lab";
 
 export const introModule: SyllabusModule = {
   slug: "pengenalan",
@@ -109,12 +110,17 @@ export const introModule: SyllabusModule = {
         },
         {
           id: "login-db",
-          title: "Login ke database latihan",
-          menuPath: "Browser → alamat Odoo Anda → pilih database odoo_functional",
-          clickPath: ["Browser", "Halaman Login", "Log in"],
-          goal: "Anda berhasil masuk sebagai admin ke database odoo_functional.",
-          why: "Semua latihan silabus ini memakai satu database kosong bernama odoo_functional agar data rapi dan bisa diulang.",
+          title: "Login ke database latihan (odoo19e)",
+          menuPath: `Browser → ${odooLab.url} → database ${odooLab.database}`,
+          clickPath: ["Browser", odooLab.url, "Log in"],
+          goal: `Anda berhasil masuk sebagai admin ke database ${odooLab.database} di ${odooLab.name}.`,
+          why: `Semua latihan silabus ini memakai instance ${odooLab.edition} di ${odooLab.hostLabel}, database ${odooLab.database}.`,
           glossary: [
+            {
+              term: "odoo19e",
+              meaning:
+                "Nama container/instance Docker Odoo 19 Enterprise di server odoodev2.",
+            },
             {
               term: "Database",
               meaning:
@@ -126,35 +132,36 @@ export const introModule: SyllabusModule = {
             },
           ],
           actions: [
-            "Buka Odoo di browser (contoh lokal: http://localhost:8069).",
-            "Jika muncul pilihan database, pilih odoo_functional. Jangan masuk ke database lain.",
-            "Isi Email / Username: admin",
-            "Isi Password: admin",
+            `Buka browser, ketik alamat: ${odooLab.url}`,
+            `Jika muncul pilihan database, pilih ${odooLab.database}. Jangan masuk ke database lain.`,
+            `Isi Email / Username: ${odooLab.user}`,
+            `Isi Password: ${odooLab.password}`,
             "Klik Log in.",
-            "Tunggu sampai muncul Home Apps atau halaman Discuss — berarti Anda sudah masuk.",
+            "Tunggu sampai muncul Home Apps — berarti Anda sudah masuk.",
           ],
           expectToSee:
-            "Anda berada di dalam Odoo (bukan lagi di halaman login). Nama user biasanya Administrator / Mitchell Admin.",
+            "Anda berada di dalam Odoo (bukan lagi di halaman login). URL browser tetap mengarah ke server odoo19e.",
           tips: [
-            "Simpan bookmark ke database yang benar agar tidak salah masuk.",
-            "Untuk latihan, jangan ganti password dulu supaya semua peserta memakai kredensial yang sama.",
+            `Bookmark ${odooLab.url} agar cepat dibuka lagi.`,
+            "Untuk latihan, jangan ganti password dulu supaya semua peserta sama.",
           ],
           pitfalls: [
             "Login ke database salah → data latihan seolah “hilang”.",
+            "Kalau halaman tidak terbuka, pastikan container odoo19e di odoodev2 sedang running (port 8070).",
           ],
           screen: {
             kind: "login",
             app: "Login",
-            menu: "Database Selector",
-            title: "Login Odoo",
-            subtitle: "Database: odoo_functional",
+            menu: odooLab.url,
+            title: "Login Odoo 19 Enterprise",
+            subtitle: `Database: ${odooLab.database} · ${odooLab.name}`,
             fields: [
-              { label: "Email", value: "admin", required: true },
+              { label: "Email", value: odooLab.user, required: true },
               { label: "Password", value: "•••••", required: true },
-              { label: "Database", value: "odoo_functional", required: true },
+              { label: "Database", value: odooLab.database, required: true },
             ],
             buttons: ["Log in"],
-            highlight: "Pakai admin / admin",
+            highlight: `${odooLab.user} / ${odooLab.password}`,
           },
         },
       ],

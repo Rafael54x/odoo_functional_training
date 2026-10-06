@@ -1,43 +1,39 @@
 # Odoo Functional Lab (Odoo 19)
 
-Silabus praktik **ramah pemula** untuk belajar Odoo 19 Functional dari nol: kenalan layar → setup → master data → transaksi Purchase / Inventory / Sales / Accounting.
+Silabus praktik ramah pemula untuk Odoo 19 Enterprise.
 
-## Database latihan
+## Odoo latihan (odoo19e)
 
 | Item | Nilai |
 | --- | --- |
+| URL | http://172.16.2.123:8070 |
+| Host | odoodev2 |
+| Container | `odoo19e` |
 | Database | `odoo_functional` |
-| User | `admin` |
-| Password | `admin` |
+| Login | `admin` / `admin` |
 
-## Menjalankan lab (web)
+Setup Docker: lihat folder [`odoo19e/`](./odoo19e/README.md).
+
+## Menjalankan web (local)
 
 ```bash
 npm install
 npm run dev
 ```
 
-App listen di `0.0.0.0:43129`.
+App: http://127.0.0.1:43129
 
-- Lokal: [http://127.0.0.1:43129](http://127.0.0.1:43129)
-- Multi-device (saat agent aktif):
+## Deploy Vercel
 
 ```bash
-cloudflared tunnel --url http://127.0.0.1:43129
+npx vercel login
+npx vercel --prod
 ```
 
-## Alur baca untuk pemula
+Atau set secret `VERCEL_TOKEN` lalu `npx vercel --prod --token "$VERCEL_TOKEN"`.
 
-1. Buka **/cara-pakai**
-2. Mulai **Modul 00**
-3. Kerjakan langkah berurutan (jalur klik + “Jika berhasil, Anda melihat…”)
-4. Centang checklist sebelum pindah lesson
+## Alur baca pemula
 
-## Scripts
-
-| Command | Keterangan |
-| --- | --- |
-| `npm run dev` | Dev server port 43129 |
-| `npm run build` | Production build |
-| `npm run start` | Start production |
-| `npm run lint` | ESLint |
+1. `/cara-pakai`
+2. Modul 00
+3. Kerjakan di http://172.16.2.123:8070

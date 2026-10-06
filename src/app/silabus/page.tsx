@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { modules, learningPathSummary } from "@/data/modules";
+import { odooLab, odooLoginHint } from "@/data/odoo-lab";
 
 export default function SilabusPage() {
   return (
@@ -13,8 +14,11 @@ export default function SilabusPage() {
       </p>
 
       <div className="mt-6 rounded-2xl border border-teal-900/10 bg-white/70 px-4 py-3 text-sm text-stone-700">
-        Database latihan: <strong>{learningPathSummary.database}</strong> · Login:{" "}
-        <strong>admin / admin</strong> · Mulai dari{" "}
+        Odoo:{" "}
+        <a href={odooLab.url} className="font-semibold text-teal-800 underline">
+          {odooLab.url}
+        </a>{" "}
+        · {odooLoginHint()} ·{" "}
         <Link href="/cara-pakai" className="font-semibold text-teal-800 underline">
           Cara pakai
         </Link>

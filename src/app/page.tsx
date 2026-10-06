@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, BookOpenCheck, ListOrdered, Route } from "lucide-react";
 import { modules, learningPathSummary } from "@/data/modules";
+import { odooLab } from "@/data/odoo-lab";
 
 export default function HomePage() {
   const totalLessons = modules.reduce((n, m) => n + m.lessons.length, 0);
@@ -17,9 +18,10 @@ export default function HomePage() {
               Belajar Odoo Functional dari nol, langkah demi langkah.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-teal-50/85 sm:text-lg">
-              Panduan praktik untuk pemula: dari login & kenalan layar Odoo, isi
-              data dasar, sampai transaksi beli–stok–jual–tagih di Odoo 19
-              Enterprise — dengan jalur klik yang jelas tiap langkah.
+              Panduan praktik untuk pemula di instance{" "}
+              <span className="font-semibold text-amber-200">{odooLab.name}</span>{" "}
+              ({odooLab.edition}) — dari login & kenalan layar sampai transaksi
+              beli–stok–jual–tagih, dengan jalur klik yang jelas.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -41,7 +43,7 @@ export default function HomePage() {
             {[
               { label: "Modul berurutan", value: String(modules.length) },
               { label: "Lesson praktik", value: String(totalLessons) },
-              { label: "Database latihan", value: "odoo_functional" },
+              { label: "Odoo latihan", value: odooLab.url.replace("http://", "") },
             ].map((item) => (
               <div
                 key={item.label}

@@ -1,0 +1,57 @@
+# Odoo 19 Enterprise — odoo19e
+# Host target: odoodev2 (172.16.2.123)
+# UI: http://172.16.2.123:8070
+#
+# Prasyarat di host:
+#   1. Docker + Docker Compose terpasang
+#   2. Source Enterprise ada di ./src  (hasil copy dari
+#      C:\Users\user\odoo-19.0+e.20250918)
+#
+# Start:
+#   cd odoo19e && docker compose up -d --build
+
+name: odoo19e
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: odoo19e-db
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: postgres
+    volumes:
+      - odoo19e-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  odoo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: odoo19e
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8070:8069"
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: odoo
+    volumes:
+      # Source Odoo 19 Enterprise (wajib ada sebelum build/up)
+      - ./src:/opt/odoo19e:ro
+      - ./config/odoo.conf:/etc/odoo/odoo.conf:ro
+      - odoo19e-data:/var/lib/odoo
+      - odoo19e-extra:/mnt/extra-addons
+    restart: unless-stopped
+
+volumes:
+  odoo19e-db:
+  odoo19e-data:
+  odoo19e-extra:
