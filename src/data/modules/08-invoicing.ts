@@ -7,6 +7,8 @@ export const invoicingModule: SyllabusModule = {
   shortTitle: "Invoicing",
   icon: "Receipt",
   color: "lime",
+  plainSummary:
+    "Tagih pelanggan, bayar vendor, dan pelajari laporan piutang/hutang secara sederhana.",
   description:
     "Customer Invoice & Vendor Bill mandiri, credit note, register payment, bank statement reconciliation, dan report dasar AR/AP.",
   apps: ["Invoicing", "Accounting"],

@@ -7,6 +7,8 @@ export const e2eModule: SyllabusModule = {
   shortTitle: "E2E",
   icon: "Workflow",
   color: "teal",
+  plainSummary:
+    "Uji diri: jalankan siklus beli–jual lengkap lalu cek stok dan hutang/piutang.",
   description:
     "Menjalankan skenario bisnis lengkap Procure-to-Pay + Order-to-Cash dalam satu siklus, plus checklist go-live functional dan troubleshooting.",
   apps: ["Purchase", "Sales", "Inventory", "Invoicing", "Contacts"],
@@ -179,7 +181,7 @@ export const e2eModule: SyllabusModule = {
             "Skor 1–5 tiap area: Master Data, Purchase, Inventory, Sales, Invoicing, Reporting, Troubleshooting.",
             "Target lulus latihan: minimal 4 di P2P & O2C, 3 di Accounting reports.",
             "Ulangi Script A–C di database fresh untuk bukti reproduksibel.",
-            "Dokumentasikan screenshot Anda sendiri menggantikan mock di app ini saat MCP/Odoo lokal aktif.",
+            "Dokumentasikan screenshot Anda sendiri menggantikan mock di app ini dari Odoo latihan Anda.",
           ],
           screen: {
             kind: "report",

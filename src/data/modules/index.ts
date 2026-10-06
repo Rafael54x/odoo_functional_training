@@ -70,5 +70,5 @@ export const learningPathSummary = {
     "Invoicing / Accounting",
   ],
   principle:
-    "Master data dulu, transaksi kemudian, laporan untuk menutup siklus. Jangan loncat ke SO/PO sebelum Contacts, Products, Taxes, dan Warehouse siap.",
+    "Urutan emas untuk pemula: kenalan layar Odoo → setup perusahaan → isi kontak & produk → baru beli/jual → baru pelajari tagihan & laporan. Loncat urutan biasanya bikin bingung.",
 };

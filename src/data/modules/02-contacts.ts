@@ -7,6 +7,8 @@ export const contactsModule: SyllabusModule = {
   shortTitle: "Contacts",
   icon: "Users",
   color: "sky",
+  plainSummary:
+    "Isi buku alamat: siapa vendor (pemasok) dan siapa customer (pembeli). Semua transaksi nanti memilih dari sini.",
   description:
     "Membangun katalog mitra: company vs individual, alamat invoice/delivery, tags, payment terms, pricelist, dan akun piutang/hutang.",
   apps: ["Contacts", "Invoicing", "Sales", "Purchase"],
@@ -22,7 +24,9 @@ export const contactsModule: SyllabusModule = {
       title: "Struktur Contact & Best Practice",
       duration: "30 menit",
       summary:
-        "Contact bisa Company atau Individual. Anak contact (child) dipakai untuk alamat/kontak orang di dalam company.",
+        "Contact = orang atau perusahaan di buku alamat Odoo. Vendor untuk beli, customer untuk jual.",
+      beginnerIntro:
+        "Belum perlu pikir akuntansi. Fokus: buat 2 pemasok dan 2 pelanggan dengan nama yang konsisten, supaya latihan berikutnya mudah.",
       objectives: [
         "Membedakan Company vs Individual",
         "Memahami hierarchy contact",

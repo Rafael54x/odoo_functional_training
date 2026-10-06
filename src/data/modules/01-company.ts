@@ -7,6 +7,8 @@ export const companyModule: SyllabusModule = {
   shortTitle: "Perusahaan",
   icon: "Building2",
   color: "amber",
+  plainSummary:
+    "Isi identitas perusahaan latihan Anda (nama, alamat, mata uang) supaya dokumen PO/Invoice terlihat rapi.",
   description:
     "Melengkapi data perusahaan, mata uang, bahasa, timezone, fiscal localization, dan settings awal tiap app sebelum master data transaksi.",
   apps: ["Settings", "Contacts", "Invoicing"],
@@ -22,24 +24,29 @@ export const companyModule: SyllabusModule = {
       title: "Profil Perusahaan (Company)",
       duration: "35 menit",
       summary:
-        "Company adalah entitas hukum yang punya CoA, journal, warehouse, dan dokumen sendiri. Semua transaksi “milik” sebuah company.",
+        "Company = “identitas toko/perusahaan” di Odoo. Nama & alamat di sini ikut tercetak di PO, SO, dan Invoice.",
+      beginnerIntro:
+        "Anggap ini seperti mengisi profil toko di marketplace. Belum perlu paham akuntansi — cukup isi nama, alamat, dan kontak yang benar.",
       objectives: [
-        "Edit company default",
-        "Isi alamat & informasi legal",
-        "Upload logo untuk dokumen cetak",
+        "Membuka data perusahaan default",
+        "Mengisi nama & alamat lengkap",
+        "Menyimpan logo (opsional tapi bagus untuk latihan cetak)",
       ],
       steps: [
         {
           id: "buka-company",
           title: "Buka form Company",
-          menuPath: "Settings → Companies → Update Info (atau Settings → General Settings → Company)",
-          goal: "Membuka record company yang akan dipakai latihan.",
-          why: "Header invoice, PO, dan report mengambil data dari company.",
+          menuPath: "Settings → Companies → Update Info",
+          clickPath: ["Settings", "Companies / Update Info"],
+          goal: "Form perusahaan terbuka dan siap diedit.",
+          why: "Tanpa membuka form ini, Anda tidak bisa mengganti nama/alamat yang muncul di dokumen.",
           actions: [
-            "Buka Settings.",
-            "Di bagian Companies, klik nama company atau Update Info.",
-            "Atau: Settings → Users & Companies → Companies → buka company.",
+            "Dari Home Apps, klik Settings (ikon gerigi).",
+            "Cari bagian Companies. Klik nama company atau tombol Update Info.",
+            "Alternatif: di Settings, buka Users & Companies → Companies → klik baris company.",
+            "Pastikan Anda melihat form dengan field Company Name dan Address.",
           ],
+          expectToSee: "Form company terbuka (bukan hanya halaman Settings umum).",
           screen: {
             kind: "settings",
             app: "Settings",
@@ -105,7 +112,9 @@ export const companyModule: SyllabusModule = {
       title: "Fiscal Localization, Currency & Bahasa",
       duration: "40 menit",
       summary:
-        "Fiscal localization menentukan Chart of Accounts, pajak, dan report lokal. Lakukan sedini mungkin pada DB kosong.",
+        "Pilih “paket negara” (pajak & akun), aktifkan mata uang, dan set zona waktu agar tanggal transaksi tidak geser.",
+      beginnerIntro:
+        "Bagian ini sedikit lebih “setting”. Kerjakan pelan. Intinya: negara/pajak dulu, baru isi transaksi — supaya tidak berantakan belakangan.",
       objectives: [
         "Memilih/memasang localization package",
         "Memastikan currency company benar",

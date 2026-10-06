@@ -7,6 +7,8 @@ export const inventoryMasterModule: SyllabusModule = {
   shortTitle: "Inventory",
   icon: "Package",
   color: "orange",
+  plainSummary:
+    "Siapkan gudang dan produk yang bisa dibeli serta dijual, termasuk satuan (UoM).",
   description:
     "Warehouse, Locations, Operation Types, Units of Measure, Product Categories, dan Products (storable/consumable/service) siap transaksi.",
   apps: ["Inventory", "Purchase", "Sales"],

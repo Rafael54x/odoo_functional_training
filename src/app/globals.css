@@ -324,6 +324,136 @@
   transform: translateY(-1px);
 }
 
+.lesson-shell {
+  width: 100%;
+  padding: 1.5rem 1rem 3rem;
+}
+
+@media (min-width: 640px) {
+  .lesson-shell {
+    padding: 2rem 1.5rem 4rem;
+  }
+}
+
+.lesson-reading {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.beginner-callout {
+  border-radius: 1.1rem;
+  border: 1px solid rgba(15, 76, 69, 0.14);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 76, 69, 0.06),
+    rgba(216, 180, 106, 0.14)
+  );
+  padding: 1rem 1.1rem;
+}
+
+.step-read-card {
+  border: 1px solid rgba(15, 76, 69, 0.12);
+  background: rgba(255, 253, 247, 0.95);
+  border-radius: 1.35rem;
+  padding: 1.25rem;
+  box-shadow: 0 12px 32px rgba(28, 43, 42, 0.04);
+}
+
+.step-read-card-done {
+  border-color: rgba(15, 76, 69, 0.28);
+  box-shadow: 0 0 0 1px rgba(15, 76, 69, 0.08);
+}
+
+.step-index {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: #0f4c45;
+  color: #f6e7b8;
+  font-family: var(--font-heading), ui-serif, Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.action-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.75rem 0.85rem;
+  border-radius: 0.9rem;
+  background: rgba(243, 239, 228, 0.55);
+  border: 1px solid rgba(15, 76, 69, 0.06);
+}
+
+.action-num {
+  display: grid;
+  place-items: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 999px;
+  background: #214541;
+  color: #f6e7b8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.expect-box {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  border-radius: 0.95rem;
+  border: 1px solid rgba(15, 76, 69, 0.16);
+  background: rgba(15, 76, 69, 0.05);
+  padding: 0.85rem 1rem;
+}
+
+.shot-frame {
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(28, 43, 42, 0.18);
+  background: #132826;
+  box-shadow: 0 16px 40px rgba(15, 76, 69, 0.12);
+}
+
+.tip-box {
+  border-radius: 0.95rem;
+  border: 1px solid rgba(216, 180, 106, 0.55);
+  background: rgba(255, 248, 230, 0.9);
+  padding: 0.85rem;
+}
+
+.warn-box {
+  border-radius: 0.95rem;
+  border: 1px solid rgba(244, 180, 180, 0.8);
+  background: rgba(255, 241, 241, 0.9);
+  padding: 0.85rem;
+}
+
+.howto-step {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.howto-num {
+  display: grid;
+  place-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  background: #0f4c45;
+  color: #f6e7b8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;

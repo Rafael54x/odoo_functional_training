@@ -7,6 +7,8 @@ export const purchaseModule: SyllabusModule = {
   shortTitle: "Purchase",
   icon: "ShoppingCart",
   color: "violet",
+  plainSummary:
+    "Alur beli barang: minta penawaran → konfirmasi PO → terima barang → bayar tagihan vendor.",
   description:
     "RFQ → Send → Confirm PO → Receive Products → Create Vendor Bill → Register Payment. Termasuk 3-way matching dan kontrol qty.",
   apps: ["Purchase", "Inventory", "Invoicing"],
@@ -21,21 +23,24 @@ export const purchaseModule: SyllabusModule = {
       slug: "rfq-to-po",
       title: "RFQ sampai Purchase Order Confirmed",
       duration: "50 menit",
-      summary: "Dokumen pembelian dimulai sebagai RFQ (Draft/Sent) lalu menjadi PO (Purchase Order).",
+      summary:
+        "Kita mulai dokumen pembelian. RFQ = permintaan harga; setelah Confirm, jadi Purchase Order (komitmen beli).",
+      beginnerIntro:
+        "Prasyarat: sudah ada vendor dan produk. Kalau belum, kembali ke Modul Contacts & Inventory dulu. Di langkah ini kita klik pelan: New → isi → Save → Confirm.",
       objectives: [
-        "Create RFQ",
-        "Send by email / mark sent",
-        "Confirm Order",
+        "Membuat RFQ baru",
+        "Mengirim / menandai RFQ terkirim",
+        "Confirm menjadi Purchase Order",
       ],
       flow: {
-        title: "Status flow Purchase",
-        description: "Draft → RFQ Sent → Purchase Order → Locked/Done",
+        title: "Status flow Purchase (bahasa sederhana)",
+        description: "Draft → dikirim ke vendor → dikonfirmasi → diterima & ditagih",
         nodes: [
-          { id: "d", label: "RFQ Draft", type: "start" },
-          { id: "s", label: "RFQ Sent", type: "process" },
-          { id: "c", label: "Purchase Order\n(Confirmed)", type: "process" },
-          { id: "r", label: "Fully Received", type: "decision" },
-          { id: "b", label: "Fully Billed", type: "end" },
+          { id: "d", label: "RFQ Draft\n(masih konsep)", type: "start" },
+          { id: "s", label: "RFQ Sent\n(sudah dikirim)", type: "process" },
+          { id: "c", label: "Purchase Order\n(sudah commit)", type: "process" },
+          { id: "r", label: "Barang diterima", type: "decision" },
+          { id: "b", label: "Sudah ditagih", type: "end" },
         ],
         edges: [
           { from: "d", to: "s", label: "Send" },
@@ -49,21 +54,35 @@ export const purchaseModule: SyllabusModule = {
           id: "new-rfq",
           title: "Buat Request for Quotation",
           menuPath: "Purchase → Orders → Requests for Quotation → New",
-          goal: "RFQ draft dengan vendor & produk.",
-          why: "RFQ adalah titik awal negosiasi harga sebelum komitmen.",
-          actions: [
-            "New RFQ.",
-            "Vendor: PT Sumber Bahan Makmur.",
-            "Order Deadline / Expected Arrival: isi tanggal.",
-            "Add line: Kopi Arabika 1kg — Qty 20 — Unit Price dari vendor list (90.000).",
-            "Add line: Teh Hijau 500g — Qty 30.",
-            "Pastikan Taxes purchase terisi.",
-            "Cek total untaxed + tax.",
-            "Save — status masih RFQ.",
+          clickPath: ["Purchase", "Orders", "Requests for Quotation", "New"],
+          goal: "Ada RFQ draft berisi vendor + minimal 1–2 baris produk.",
+          why: "Ini dokumen awal pembelian. Belum “janji pasti” sampai Anda Confirm.",
+          glossary: [
+            {
+              term: "RFQ",
+              meaning: "Request for Quotation — permintaan penawaran harga ke vendor.",
+            },
+            {
+              term: "Vendor",
+              meaning: "Pemasok / supplier yang Anda beli barang darinya.",
+            },
           ],
+          actions: [
+            "Buka Apps → Purchase.",
+            "Menu Orders → Requests for Quotation.",
+            "Klik New.",
+            "Di field Vendor, pilih PT Sumber Bahan Makmur (buat dulu di Contacts jika belum ada).",
+            "Isi Order Deadline / Expected Arrival dengan tanggal mendatang.",
+            "Di tab Products, klik Add a product → pilih Kopi Arabika 1kg → Qty 20 → harga ~90.000.",
+            "Tambah baris Teh Hijau 500g Qty 30 (atau produk lain yang Anda punya).",
+            "Pastikan kolom Taxes terisi (pajak pembelian).",
+            "Lihat total di kanan bawah, lalu klik Save. Status harus masih RFQ.",
+          ],
+          expectToSee:
+            "Dokumen tersimpan dengan nomor (mis. P00001), status RFQ, dan total > 0.",
           tips: [
-            "Jika produk punya seller info, harga & delay terisi otomatis.",
-            "Field Deliver To menentukan warehouse tujuan.",
+            "Kalau produk punya data vendor, harga sering terisi otomatis.",
+            "Field Deliver To = gudang tujuan barang.",
           ],
           screen: {
             kind: "form",
@@ -127,6 +146,8 @@ export const purchaseModule: SyllabusModule = {
       title: "Receive Products, Vendor Bill & Payment",
       duration: "60 menit",
       summary: "Menyelesaikan sisi gudang dan accounting dari PO.",
+      beginnerIntro:
+        "Setelah PO confirmed, barang belum otomatis bertambah. Anda harus Receive, lalu buat Bill, lalu bayar. Ikuti urutan itu.",
       objectives: [
         "Validate receipt (full & partial)",
         "Create bill dengan 3-way match",
@@ -156,13 +177,14 @@ export const purchaseModule: SyllabusModule = {
           goal: "Stok bertambah di WH/Stock; PO qty received terupdate.",
           why: "Tanpa receipt, stok tidak ada dan bill matching bisa blocked (tergantung settings).",
           actions: [
-            "Dari PO klik Receive Products.",
-            "Di transfer WH/IN/… pastikan Operations qty Done = Demand (atau isi Quantity).",
-            "Validate. Jika diminta create backorder untuk partial — pilih sesuai skenario.",
-            "Skenario A (full): terima semua → Done.",
-            "Skenario B (latihan partial): terima 10 dari 20 kopi → Create Backorder.",
-            "Cek Product → On Hand quantity.",
+            "Buka Purchase Order yang sudah Confirmed.",
+            "Klik tombol Receive Products (atau smart button Receipt).",
+            "Anda masuk dokumen Receipt (WH/IN/…). Isi kolom Quantity / Done sama dengan Demand jika menerima penuh.",
+            "Klik Validate.",
+            "Jika hanya terima sebagian: isi qty lebih kecil, lalu pilih Create Backorder saat ditanya.",
+            "Kembali ke produk → cek On Hand sudah bertambah.",
           ],
+          expectToSee: "Receipt berstatus Done, dan stok On Hand produk bertambah.",
           tips: [
             "Detailed Operations muncul jika locations/lot aktif.",
           ],

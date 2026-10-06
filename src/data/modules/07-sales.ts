@@ -7,6 +7,8 @@ export const salesModule: SyllabusModule = {
   shortTitle: "Sales",
   icon: "BadgeDollarSign",
   color: "rose",
+  plainSummary:
+    "Alur jual: buat penawaran → konfirmasi SO → kirim barang → buat invoice pelanggan.",
   description:
     "Quotation → Send → Confirm SO → Delivery → Create Invoice → Payment. Termasuk invoicing policy ordered vs delivered.",
   apps: ["Sales", "Inventory", "Invoicing"],
@@ -22,6 +24,8 @@ export const salesModule: SyllabusModule = {
       title: "Quotation sampai Sales Order",
       duration: "45 menit",
       summary: "Dokumen penjualan dimulai sebagai Quotation lalu menjadi Sales Order setelah Confirm.",
+      beginnerIntro:
+        "Cermin dari Purchase, tapi untuk pelanggan. Prasyarat: customer + produk + stok (atau terima barang dulu dari Purchase).",
       objectives: [
         "Create quotation",
         "Send to customer",

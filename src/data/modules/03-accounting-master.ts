@@ -7,6 +7,8 @@ export const accountingMasterModule: SyllabusModule = {
   shortTitle: "Accounting",
   icon: "Wallet",
   color: "emerald",
+  plainSummary:
+    "Siapkan pajak, akun, dan syarat bayar supaya invoice/bill tidak error saat diposting.",
   description:
     "Chart of Accounts, Taxes, Journals, Payment Terms, Fiscal Positions — fondasi agar Invoice/Bill dan jurnal otomatis benar.",
   apps: ["Invoicing", "Accounting"],

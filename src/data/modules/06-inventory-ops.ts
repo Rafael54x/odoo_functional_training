@@ -7,6 +7,8 @@ export const inventoryOpsModule: SyllabusModule = {
   shortTitle: "Stock Ops",
   icon: "Warehouse",
   color: "cyan",
+  plainSummary:
+    "Operasi gudang harian: pindah barang antar lokasi dan menyesuaikan stok hasil opname.",
   description:
     "Internal Transfer, Inventory Adjustment, scrap, tracking lot/serial (opsional), dan membaca Quant / Moves / Valuation.",
   apps: ["Inventory"],

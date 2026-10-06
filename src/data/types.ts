@@ -40,10 +40,20 @@ export type OdooScreenConfig = {
 export type LessonStep = {
   id: string;
   title: string;
+  /** Jalur menu manusiawi, contoh: "Apps → Purchase → Orders → New" */
   menuPath: string;
+  /** Potongan klik untuk ditampilkan sebagai breadcrumb pill */
+  clickPath?: string[];
+  /** Ringkas 1 kalimat: hasil yang didapat setelah langkah ini */
   goal: string;
+  /** Penjelasan sederhana kenapa langkah ini ada (bahasa non-teknis) */
   why: string;
+  /** Instruksi klik demi klik, kalimat pendek */
   actions: string[];
+  /** Apa yang harus terlihat di layar jika berhasil */
+  expectToSee?: string;
+  /** Istilah baru yang muncul di langkah ini */
+  glossary?: Array<{ term: string; meaning: string }>;
   tips?: string[];
   pitfalls?: string[];
   screen: OdooScreenConfig;
@@ -73,6 +83,8 @@ export type Lesson = {
   title: string;
   duration: string;
   summary: string;
+  /** Intro ramah pemula sebelum masuk langkah */
+  beginnerIntro?: string;
   objectives: string[];
   prerequisites?: string[];
   flow?: LessonFlow;
@@ -88,6 +100,8 @@ export type SyllabusModule = {
   icon: string;
   color: string;
   description: string;
+  /** Satu kalimat “dalam bahasa manusia” */
+  plainSummary?: string;
   apps: string[];
   outcomes: string[];
   lessons: Lesson[];

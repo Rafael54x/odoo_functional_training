@@ -19,9 +19,9 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Odoo Functional Lab — Silabus Odoo 19",
+  title: "Odoo Functional Lab — Belajar Odoo 19 dari Nol",
   description:
-    "Silabus praktikum Odoo 19 Functional dari setup master data hingga flow Purchase, Inventory, Sales, dan Invoicing.",
+    "Panduan Odoo 19 Functional ramah pemula: dari login dan master data sampai Purchase, Inventory, Sales, dan Accounting.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

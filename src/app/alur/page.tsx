@@ -38,14 +38,14 @@ export default function AlurPage() {
   );
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
-      <p className="eyebrow">Visual process map</p>
+    <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
+      <p className="eyebrow">Peta proses</p>
       <h1 className="font-heading mt-2 text-4xl text-teal-950 sm:text-5xl">
         Peta alur lengkap
       </h1>
-      <p className="mt-4 max-w-3xl text-base text-stone-600 sm:text-lg">
-        Semua diagram proses dari silabus dikumpulkan di sini. Pakai sebagai peta
-        sebelum masuk ke langkah detail ber-screenshot.
+      <p className="mt-4 max-w-2xl text-base text-stone-600 sm:text-lg">
+        Bingung “ini langkah ke mana”? Lihat peta dulu, lalu kembali ke lesson
+        untuk instruksi klik demi klik.
       </p>
 
       <div className="mt-8">
