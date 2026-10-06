@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# agent scratch
+agent-tools/
+
+# Local Odoo 19 Enterprise install (large / private)
+odoo19/community/
+odoo19/enterprise/
+odoo19/venv/
+odoo19/filestore/
+odoo19/logs/
+**/__pycache__/
+*.token
+secrets/

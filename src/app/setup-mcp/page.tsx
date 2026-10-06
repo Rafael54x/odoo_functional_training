@@ -112,8 +112,7 @@ export default function SetupMcpPage() {
           <li>Seed master data sesuai silabus (contacts, products, taxes)</li>
           <li>Menjalankan transaksi sample P2P / O2C</li>
           <li>
-            Mengganti mock screenshot di lab ini dengan screenshot nyata dari
-            instance Anda
+            Refresh screenshot dari instance Enterprise lokal / MCP Anda
           </li>
         </ul>
       </section>
