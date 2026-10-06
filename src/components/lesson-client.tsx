@@ -15,6 +15,10 @@ import type { Lesson, SyllabusModule } from "@/data/types";
 import { FlowDiagram } from "@/components/flow-diagram";
 import { OdooScreen } from "@/components/odoo-screen";
 import {
+  enterpriseMeta,
+  getStepScreenshot,
+} from "@/data/real-screenshots";
+import {
   isStepDone,
   loadProgress,
   saveProgress,
@@ -221,10 +225,51 @@ export function LessonClient({
                   )}
                 </div>
 
-                <OdooScreen
-                  screen={step.screen}
-                  caption={`Langkah ${index + 1}: ${step.title}`}
-                />
+                <div className="space-y-4">
+                  {(() => {
+                    const real = getStepScreenshot(step.id);
+                    if (!real) {
+                      return (
+                        <OdooScreen
+                          screen={step.screen}
+                          caption={`Langkah ${index + 1}: ${step.title}`}
+                        />
+                      );
+                    }
+                    return (
+                      <>
+                        <figure className="overflow-hidden rounded-xl border border-teal-900/15 bg-[#132826] shadow-lg">
+                          <div className="flex items-center justify-between gap-2 px-3 py-2 text-[10px] uppercase tracking-[0.18em] text-amber-100/90">
+                            <span>Screenshot nyata</span>
+                            <span>
+                              {enterpriseMeta.version} · {enterpriseMeta.edition}
+                            </span>
+                          </div>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={real.src}
+                            alt={real.caption}
+                            className="w-full bg-white"
+                          />
+                          <figcaption className="px-3 py-2 text-xs text-teal-50/80">
+                            {real.caption}
+                          </figcaption>
+                        </figure>
+                        <details className="rounded-xl border border-stone-200 bg-white/70 p-3">
+                          <summary className="cursor-pointer text-sm font-medium text-stone-700">
+                            Lihat anotasi field / mock UI tambahan
+                          </summary>
+                          <div className="mt-3">
+                            <OdooScreen
+                              screen={step.screen}
+                              caption={`Anotasi langkah ${index + 1}: ${step.title}`}
+                            />
+                          </div>
+                        </details>
+                      </>
+                    );
+                  })()}
+                </div>
               </div>
             </article>
           );

@@ -21,11 +21,12 @@ export default function HomePage() {
               Belajar Odoo 19 Functional dari database kosong sampai transaksi utuh.
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-teal-50/85 sm:text-lg">
-              Silabus praktik untuk database{" "}
+              Silabus praktik Odoo{" "}
+              <span className="font-semibold text-amber-200">19 Enterprise</span>{" "}
+              untuk database{" "}
               <span className="font-semibold text-amber-200">odoo_functional</span>{" "}
-              (admin/admin): setup master data, lalu flow Purchase, Inventory,
-              Sales, dan Invoicing — lengkap dengan alur proses dan screenshot UI
-              tiap langkah.
+              (admin/admin): setup master data hingga flow Purchase, Inventory,
+              Sales, dan Accounting — dengan screenshot nyata `19.0+e` tiap langkah.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link

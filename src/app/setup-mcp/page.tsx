@@ -86,7 +86,25 @@ export default function SetupMcpPage() {
 
       <section className="panel mt-4 space-y-3 text-sm leading-relaxed text-stone-700">
         <h2 className="font-heading text-xl text-teal-950">
-          4. Setelah MCP nyambung
+          4. Odoo 19 Enterprise di mesin agent
+        </h2>
+        <p>
+          Screenshot di silabus diambil dari <strong>Odoo 19.0+e (Enterprise)</strong>.
+          Source install lokal butuh clone private repo{" "}
+          <code>github.com/odoo/enterprise</code> (subscription) ke{" "}
+          <code>odoo19/enterprise</code>, lalu jalankan{" "}
+          <code>./odoo19/start-enterprise.sh</code>. Community saja tidak cukup.
+        </p>
+        <p>
+          Kirim GitHub PAT yang punya akses <code>odoo/enterprise</code> branch{" "}
+          <code>19.0</code> jika ingin instance Enterprise lokal permanen di VM ini
+          (DB <code>odoo_functional</code>, admin/admin).
+        </p>
+      </section>
+
+      <section className="panel mt-4 space-y-3 text-sm leading-relaxed text-stone-700">
+        <h2 className="font-heading text-xl text-teal-950">
+          5. Setelah MCP nyambung
         </h2>
         <p>Anda bisa minta agent untuk:</p>
         <ul className="list-disc space-y-2 pl-5">

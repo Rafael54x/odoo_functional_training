@@ -33,7 +33,9 @@ App berjalan di [http://127.0.0.1:43129](http://127.0.0.1:43129).
 9. Invoicing, payment, rekonsiliasi, laporan AR/AP  
 10. End-to-end + troubleshooting + rubrik kompetensi  
 
-Setiap langkah punya: path menu, alasan bisnis, aksi berurutan, tips/pitfall, **flow diagram**, dan **screenshot UI Odoo 19** (mock fidelitas tinggi agar bisa dipelajari tanpa menunggu capture live).
+Setiap langkah punya: path menu, alasan bisnis, aksi berurutan, tips/pitfall, **flow diagram**, dan **screenshot nyata Odoo 19 Enterprise (`19.0+e`)** plus anotasi field opsional.
+
+Screenshot diambil dari instance Enterprise yang diverifikasi lewat `/web/webclient/version_info` → `server_version: "19.0+e"`.
 
 ## MCP Odoo di project ini
 
