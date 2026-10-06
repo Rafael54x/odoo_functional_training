@@ -2,6 +2,9 @@
 
 Silabus praktik ramah pemula untuk Odoo 19 Enterprise.
 
+Repo: https://github.com/Rafael54x/odoo_functional_training  
+Deploy: Vercel (hubungkan ke repo di atas)
+
 ## Odoo latihan (odoo19e)
 
 | Item | Nilai |
