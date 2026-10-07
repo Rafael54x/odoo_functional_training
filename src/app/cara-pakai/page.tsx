@@ -4,24 +4,24 @@ import { odooLab, odooLoginHint } from "@/data/odoo-lab";
 
 const steps = [
   {
-    title: "Buka Odoo latihan (odoo19e)",
-    body: `Di browser, buka ${odooLab.url}. Ini instance Odoo 19 Enterprise di ${odooLab.hostLabel}. Database: ${odooLab.database}, login ${odooLab.user} / ${odooLab.password}.`,
+    title: "Buka Odoo latihan",
+    body: `Di browser, buka ${odooLab.url}. Database: ${odooLab.database}. Login ${odooLab.user} / ${odooLab.password}. Ini instance Odoo 19 Enterprise di ${odooLab.hostLabel}.`,
   },
   {
     title: "Mulai dari Modul 00",
-    body: "Jangan loncat ke Purchase/Sales dulu. Pelajari navigasi dan install modul terlebih dahulu.",
+    body: "Jangan loncat ke Purchase/Sales dulu. Pelajari navigasi, pastikan modul terpasang, lalu isi master data.",
   },
   {
-    title: "Baca satu langkah, kerjakan di Odoo, baru lanjut",
-    body: "Tiap langkah punya jalur klik, instruksi berurutan, dan “Jika berhasil, Anda melihat…”. Ikuti itu di Odoo yang sama.",
+    title: "Baca satu langkah → isi field → cek hasil",
+    body: "Tiap langkah punya jalur klik, daftar aksi berurutan, tabel “Isi field ini”, screenshot Odoo, dan kotak “Jika berhasil, Anda melihat…”. Kerjakan di Odoo yang sama, baru lanjut.",
   },
   {
-    title: "Tandai selesai jika sudah berhasil",
-    body: "Tombol “Tandai selesai” membantu Anda tahu progress. Checklist di akhir lesson wajib dicek.",
+    title: "Pakai nilai seed yang sama",
+    body: "Vendor PT Sumber Bahan Makmur, customer Toko Maju Jaya, produk Kopi Arabika 1kg — dipakai di seluruh silabus agar flow mudah diulang.",
   },
   {
     title: "Urutan tetap: data dulu, transaksi kemudian",
-    body: "Contacts & Products dulu → baru Purchase/Sales → baru pelajari laporan. Loncat urutan = sering error.",
+    body: "Contacts & Products dulu → Purchase (terima stok) → Sales (kirim & tagih) → laporan. Loncat urutan = sering error “no stock / missing partner”.",
   },
 ];
 
@@ -50,6 +50,10 @@ const glossary = [
     term: "Invoice / Bill",
     meaning: "Tagihan ke pelanggan / tagihan dari vendor.",
   },
+  {
+    term: "3-way matching",
+    meaning: "Cocokkan PO ↔ Receipt ↔ Vendor Bill sebelum bayar.",
+  },
 ];
 
 export default function CaraPakaiPage() {
@@ -60,8 +64,9 @@ export default function CaraPakaiPage() {
         Cara memakai lab ini
       </h1>
       <p className="mt-4 text-base leading-relaxed text-stone-600 sm:text-lg">
-        Lab ini dibuat untuk orang yang baru kenal Odoo. Semua praktik dikerjakan di
-        instance <strong>{odooLab.name}</strong> ({odooLab.edition}).
+        Lab ini untuk pemula Odoo. Semua praktik dikerjakan di{" "}
+        <strong>{odooLab.url}</strong> · database <strong>{odooLab.database}</strong>{" "}
+        ({odooLab.edition}).
       </p>
 
       <aside className="beginner-callout mt-6">
@@ -123,9 +128,9 @@ export default function CaraPakaiPage() {
         </Link>
         <Link
           href="/silabus"
-          className="inline-flex h-11 items-center rounded-lg border border-teal-900/15 px-4 text-sm font-semibold text-teal-900"
+          className="inline-flex h-11 items-center rounded-lg border border-stone-300 px-4 text-sm font-semibold text-stone-700"
         >
-          Lihat semua silabus
+          Lihat silabus
         </Link>
       </div>
     </div>

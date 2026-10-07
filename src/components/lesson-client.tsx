@@ -257,6 +257,55 @@ export function LessonClient({
                   </ol>
                 </div>
 
+                {step.fillFields && step.fillFields.length > 0 && (
+                  <div className="fill-guide mt-5">
+                    <h3 className="text-sm font-semibold text-stone-900">
+                      Isi field ini (nilai konkret)
+                    </h3>
+                    <p className="mt-1 text-xs text-stone-500">
+                      Salin nilai di kolom “Isi dengan” ke field Odoo yang sama.
+                      Field bertanda ★ wajib.
+                    </p>
+                    <div className="mt-3 overflow-x-auto">
+                      <table className="fill-table">
+                        <thead>
+                          <tr>
+                            <th>Field di Odoo</th>
+                            <th>Isi dengan</th>
+                            <th>Lokasi</th>
+                            <th>Cara</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {step.fillFields.map((f) => (
+                            <tr key={`${f.field}-${f.value}`}>
+                              <td>
+                                {f.required ? (
+                                  <span className="font-semibold text-teal-950">
+                                    ★ {f.field}
+                                  </span>
+                                ) : (
+                                  f.field
+                                )}
+                                {f.note && (
+                                  <p className="mt-0.5 text-[11px] text-stone-500">
+                                    {f.note}
+                                  </p>
+                                )}
+                              </td>
+                              <td>
+                                <code className="fill-value">{f.value}</code>
+                              </td>
+                              <td>{f.where || "—"}</td>
+                              <td>{f.how || "Ketik / pilih"}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
+
                 {step.expectToSee && (
                   <div className="expect-box mt-5">
                     <Eye className="size-4 shrink-0 text-teal-800" />
@@ -271,11 +320,11 @@ export function LessonClient({
                   </div>
                 )}
 
-                <div className="mt-5">
+                <div className="mt-5 space-y-4">
                   {real ? (
                     <figure className="shot-frame">
                       <div className="flex items-center justify-between gap-2 px-3 py-2 text-[10px] uppercase tracking-[0.16em] text-amber-100/90">
-                        <span>Contoh layar Odoo</span>
+                        <span>Screenshot Odoo asli</span>
                         <span>
                           {enterpriseMeta.version} · {enterpriseMeta.edition}
                         </span>
@@ -290,25 +339,16 @@ export function LessonClient({
                         {real.caption}
                       </figcaption>
                     </figure>
-                  ) : (
+                  ) : null}
+                  <div>
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
+                      Anotasi field (panduan isi)
+                    </p>
                     <OdooScreen
                       screen={step.screen}
                       caption={`Langkah ${index + 1}: ${step.title}`}
                     />
-                  )}
-                  {real && (
-                    <details className="mt-3 rounded-xl border border-stone-200 bg-white/80 p-3">
-                      <summary className="cursor-pointer text-sm text-stone-600">
-                        Butuh panduan field di layar? Buka anotasi
-                      </summary>
-                      <div className="mt-3">
-                        <OdooScreen
-                          screen={step.screen}
-                          caption={`Anotasi: ${step.title}`}
-                        />
-                      </div>
-                    </details>
-                  )}
+                  </div>
                 </div>
 
                 {(step.tips?.length || step.pitfalls?.length) && (

@@ -413,6 +413,53 @@
   padding: 0.85rem 1rem;
 }
 
+.fill-guide {
+  border-radius: 1rem;
+  border: 1px solid rgba(15, 76, 69, 0.14);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.95rem 1rem;
+}
+
+.fill-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.fill-table th {
+  text-align: left;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  padding: 0.45rem 0.5rem;
+  border-bottom: 1px solid rgba(15, 76, 69, 0.12);
+  white-space: nowrap;
+}
+
+.fill-table td {
+  padding: 0.55rem 0.5rem;
+  border-bottom: 1px solid rgba(15, 76, 69, 0.08);
+  vertical-align: top;
+  color: #3f3f46;
+}
+
+.fill-table tr:last-child td {
+  border-bottom: none;
+}
+
+.fill-value {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.35rem;
+  background: rgba(15, 76, 69, 0.08);
+  color: #0f4c45;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
 .shot-frame {
   overflow: hidden;
   border-radius: 1rem;
