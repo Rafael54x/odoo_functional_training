@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "odoo": {
-      "url": "http://localhost:8069/mcp",
+      "url": "http://172.16.2.123:8072/mcp",
       "headers": {
         "Authorization": "Bearer ${env:ODOO_MCP_TOKEN}"
       }
