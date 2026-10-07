@@ -320,11 +320,11 @@ export function LessonClient({
                   </div>
                 )}
 
-                <div className="mt-5 space-y-4">
+                <div className="mt-5 space-y-3">
                   {real ? (
                     <figure className="shot-frame">
                       <div className="flex items-center justify-between gap-2 px-3 py-2 text-[10px] uppercase tracking-[0.16em] text-amber-100/90">
-                        <span>Screenshot Odoo asli</span>
+                        <span>Screenshot Odoo 19 Enterprise (asli)</span>
                         <span>
                           {enterpriseMeta.version} · {enterpriseMeta.edition}
                         </span>
@@ -334,21 +334,46 @@ export function LessonClient({
                         src={real.src}
                         alt={real.caption}
                         className="w-full bg-white"
+                        loading="lazy"
                       />
-                      <figcaption className="px-3 py-2 text-xs leading-relaxed text-teal-50/85">
-                        {real.caption}
+                      <figcaption className="space-y-2 px-3 py-3 text-xs leading-relaxed text-teal-50/90">
+                        <p>{real.caption}</p>
+                        {real.lookFor && real.lookFor.length > 0 && (
+                          <div className="rounded-lg bg-white/10 px-3 py-2">
+                            <p className="text-[10px] font-semibold uppercase tracking-wider text-amber-100/90">
+                              Perhatikan di gambar ini
+                            </p>
+                            <ul className="mt-1.5 space-y-1 text-teal-50/90">
+                              {real.lookFor.map((item) => (
+                                <li key={item}>• {item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </figcaption>
                     </figure>
-                  ) : null}
-                  <div>
-                    <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
-                      Anotasi field (panduan isi)
-                    </p>
-                    <OdooScreen
-                      screen={step.screen}
-                      caption={`Langkah ${index + 1}: ${step.title}`}
-                    />
-                  </div>
+                  ) : (
+                    <div className="rounded-xl border border-amber-300/60 bg-amber-50 px-4 py-3 text-sm text-amber-950">
+                      Screenshot khusus langkah ini belum tersedia. Ikuti tabel{" "}
+                      <strong>Isi field ini</strong> dan jalur klik di atas
+                      langsung di Odoo lab.
+                    </div>
+                  )}
+
+                  {/* Skema mock sengaja disembunyikan agar tidak dikira screenshot */}
+                  {!real && (
+                    <details className="rounded-xl border border-stone-200 bg-white/80 p-3">
+                      <summary className="cursor-pointer text-sm text-stone-600">
+                        Skema field (bukan screenshot Odoo)
+                      </summary>
+                      <div className="mt-3">
+                        <OdooScreen
+                          screen={step.screen}
+                          caption={`Skema: ${step.title}`}
+                        />
+                      </div>
+                    </details>
+                  )}
                 </div>
 
                 {(step.tips?.length || step.pitfalls?.length) && (

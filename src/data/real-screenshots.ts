@@ -1,244 +1,380 @@
 /**
- * Real screenshots captured from Odoo 19.0+e (Enterprise).
- * Source: Runbot build 127573965 — server_version "19.0+e"
+ * Screenshot Odoo 19 Enterprise asli (bukan mock UI).
+ * Dipakai sebagai referensi layar — layout tombol/menu sama di lab Anda
+ * (http://172.16.2.123:8072 · DB odoo). Nama company/data demo di gambar
+ * bisa berbeda; ikuti nilai di tabel "Isi field ini".
  */
 export type RealShot = {
   src: string;
   caption: string;
+  /** Poin yang harus diperhatikan di gambar */
+  lookFor?: string[];
   moduleHint?: string;
 };
 
 export const enterpriseMeta = {
   edition: "Enterprise",
   version: "19.0+e",
-  sourceLabel: "Odoo 19 Enterprise (verified via /web/webclient/version_info)",
+  sourceLabel: "Screenshot UI Odoo 19 Enterprise asli",
 };
+
+const labNote =
+  "UI sama di lab http://172.16.2.123:8072 (DB odoo). Data company di gambar boleh berbeda — ikuti tabel isi field.";
+
+function shot(
+  src: string,
+  caption: string,
+  lookFor?: string[],
+): RealShot {
+  return {
+    src,
+    caption: `${caption} · ${labNote}`,
+    lookFor,
+  };
+}
 
 /** Map lesson step ids → real Enterprise screenshots */
 export const stepScreenshots: Record<string, RealShot> = {
   // Intro
-  "konsep-apps": {
-    src: "/screenshots/odoo19e/01-home-apps.png",
-    caption: "Home Apps Odoo 19 Enterprise — grid modul lengkap · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "login-db": {
-    src: "/screenshots/odoo19e/01-home-apps.png",
-    caption: "Setelah login admin — Home Apps Enterprise · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "verify-menus": {
-    src: "/screenshots/odoo19e/01-home-apps.png",
-    caption: "Verifikasi Purchase, Inventory, Sales, Accounting tersedia · lab http://172.16.2.123:8072 · DB odoo",
-  },
+  "konsep-apps": shot(
+    "/screenshots/odoo19e/01-home-apps.png",
+    "Home Apps — grid modul Odoo 19 Enterprise",
+    [
+      "Cari ikon Contacts, Purchase, Inventory, Sales, Accounting",
+      "Ikon 9 kotak di pojok = ganti Apps",
+    ],
+  ),
+  "login-db": shot(
+    "/screenshots/odoo19e/01-home-apps.png",
+    "Setelah login berhasil — Anda masuk ke Home Apps",
+    ["Bukan lagi form login", "User terlihat di pojok kanan atas"],
+  ),
+  "update-apps-list": shot(
+    "/screenshots/odoo19e/01-home-apps.png",
+    "Apps — tempat Update Apps List & Install modul",
+    ["Buka Apps dari Home", "Gunakan Search untuk cari nama modul"],
+  ),
+  "install-contacts": shot(
+    "/screenshots/odoo19e/01-home-apps.png",
+    "Apps — Install Contacts dari Home/Apps",
+    ["Cari Contacts", "Tombol Install / Activate pada kartu app"],
+  ),
+  "install-purchase-inventory-sales": shot(
+    "/screenshots/odoo19e/01-home-apps.png",
+    "Apps — Purchase, Inventory, Sales, Accounting di Home",
+    ["Pastikan keempat ikon muncul setelah install"],
+  ),
+  "verify-menus": shot(
+    "/screenshots/odoo19e/01-home-apps.png",
+    "Verifikasi modul transaksi tersedia di Home Apps",
+    ["Purchase · Inventory · Sales · Accounting"],
+  ),
 
   // Company
-  "buka-company": {
-    src: "/screenshots/odoo19e/11-settings.png",
-    caption: "Settings — konfigurasi perusahaan · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "isi-identitas": {
-    src: "/screenshots/odoo19e/11-settings.png",
-    caption: "Profil company di Settings · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "fiscal-pack": {
-    src: "/screenshots/odoo19e/11-settings.png",
-    caption: "Accounting / Invoicing settings & localization · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "feature-flags": {
-    src: "/screenshots/odoo19e/11-settings.png",
-    caption: "Feature flags per modul di Settings · lab http://172.16.2.123:8072 · DB odoo",
-  },
+  "buka-company": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Settings — konfigurasi perusahaan",
+    ["Menu Settings / Companies", "Update Info untuk edit profil"],
+  ),
+  "isi-identitas": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Settings — form identitas company",
+    ["Company Name, Address, Tax ID, Currency"],
+  ),
+  "fiscal-pack": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Accounting/Invoicing Settings — Fiscal Localization",
+    ["Package negara / localization sebelum transaksi"],
+  ),
+  "currency-lang": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Settings — Currency, Language, Preferences",
+    ["Aktifkan IDR", "Timezone Asia/Jakarta di Preferences user"],
+  ),
+  "feature-flags": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Settings per modul — Units of Measure, Locations, dll.",
+    ["Save setiap halaman settings", "Menu baru bisa muncul setelah Save"],
+  ),
 
   // Contacts
-  "buka-contacts": {
-    src: "/screenshots/odoo19e/02-contacts-list.png",
-    caption: "Contacts — daftar mitra · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "new-vendor": {
-    src: "/screenshots/odoo19e/03-contacts-form-new.png",
-    caption: "Form Contact baru (vendor/customer) · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "vendor-purchase-tab": {
-    src: "/screenshots/odoo19e/03-contacts-form-new.png",
-    caption: "Form contact — tab Sales & Purchase · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "vendor-accounting": {
-    src: "/screenshots/odoo19e/03-contacts-form-new.png",
-    caption: "Form contact — tab Accounting · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "child-addresses": {
-    src: "/screenshots/odoo19e/03-contacts-form-new.png",
-    caption: "Contacts & Addresses pada company · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "new-customer": {
-    src: "/screenshots/odoo19e/03-contacts-form-new.png",
-    caption: "Form customer baru · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "dual-role": {
-    src: "/screenshots/odoo19e/02-contacts-list.png",
-    caption: "List Contacts — filter customer/vendor · lab http://172.16.2.123:8072 · DB odoo",
-  },
+  "buka-contacts": shot(
+    "/screenshots/odoo19e/02-contacts-list.png",
+    "Contacts — daftar mitra (list/kanban)",
+    ["Tombol New", "Filter Customers / Vendors"],
+  ),
+  "rencana-data": shot(
+    "/screenshots/odoo19e/02-contacts-list.png",
+    "Contacts — tempat menyimpan vendor & customer seed",
+    ["Nanti list terisi PT Sumber Bahan, Toko Maju Jaya, dll."],
+  ),
+  "new-vendor": shot(
+    "/screenshots/odoo19e/03-contacts-form-new.png",
+    "Form Contact baru — buat vendor",
+    [
+      "Pilih Company (bukan Individual)",
+      "Isi Name & Address",
+      "Save di pojok kiri atas / header",
+    ],
+  ),
+  "vendor-purchase-tab": shot(
+    "/screenshots/odoo19e/03-contacts-form-new.png",
+    "Form Contact — buka tab Sales & Purchase",
+    ["Tab di bawah header form", "Bag Purchase: Payment Terms"],
+  ),
+  "vendor-accounting": shot(
+    "/screenshots/odoo19e/03-contacts-form-new.png",
+    "Form Contact — tab Accounting (Payable)",
+    ["Account Payable untuk vendor bill"],
+  ),
+  "child-addresses": shot(
+    "/screenshots/odoo19e/03-contacts-form-new.png",
+    "Form Contact — Contacts & Addresses (child)",
+    ["Add Invoice Address / Contact person"],
+  ),
+  "new-customer": shot(
+    "/screenshots/odoo19e/03-contacts-form-new.png",
+    "Form Contact baru — buat customer",
+    ["Tab Sales & Purchase → Payment Terms & Pricelist"],
+  ),
+  "dual-role": shot(
+    "/screenshots/odoo19e/02-contacts-list.png",
+    "Contacts list — filter Customers & Vendors",
+    ["Satu partner bisa muncul di kedua filter jika dual-role"],
+  ),
 
   // Accounting master
-  "buka-coa": {
-    src: "/screenshots/odoo19e/10-accounting.png",
-    caption: "Accounting overview / Chart of Accounts entry · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "taxes": {
-    src: "/screenshots/odoo19e/16-taxes.png",
-    caption: "Configuration → Taxes · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "journals": {
-    src: "/screenshots/odoo19e/10-accounting.png",
-    caption: "Accounting journals & dashboard · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "payment-terms": {
-    src: "/screenshots/odoo19e/11-settings.png",
-    caption: "Payment terms via Accounting/Invoicing config · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "fiscal-position": {
-    src: "/screenshots/odoo19e/16-taxes.png",
-    caption: "Taxes & fiscal configuration · lab http://172.16.2.123:8072 · DB odoo",
-  },
+  "buka-coa": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Accounting — pintu masuk Chart of Accounts / dashboard",
+    ["Configuration → Chart of Accounts"],
+  ),
+  "akun-produk": shot(
+    "/screenshots/odoo19e/07-products-list.png",
+    "Products — akun Income/Expense di kategori/produk",
+    ["Tab Accounting pada produk atau Product Category"],
+  ),
+  "taxes": shot(
+    "/screenshots/odoo19e/16-taxes.png",
+    "Configuration → Taxes",
+    ["Pajak penjualan & pembelian", "Percentage / tax group"],
+  ),
+  "journals": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Accounting — journals & dashboard",
+    ["Sales, Purchase, Bank, Cash, Miscellaneous"],
+  ),
+  "payment-terms": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Payment Terms lewat Accounting/Invoicing config",
+    ["30 Days, 15 Days dipakai di contact & dokumen"],
+  ),
+  "fiscal-position": shot(
+    "/screenshots/odoo19e/16-taxes.png",
+    "Taxes & fiscal configuration",
+    ["Fiscal Position memetakan pajak domestik/impor"],
+  ),
 
   // Inventory master
-  "overview": {
-    src: "/screenshots/odoo19e/06-inventory-overview.png",
-    caption: "Inventory Overview — operation types · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "warehouse-form": {
-    src: "/screenshots/odoo19e/17-warehouses.png",
-    caption: "Configuration → Warehouses · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "locations": {
-    src: "/screenshots/odoo19e/06-inventory-overview.png",
-    caption: "Inventory locations via Overview · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "operation-types": {
-    src: "/screenshots/odoo19e/06b-inventory-overview.png",
-    caption: "Operation Types di Inventory Overview · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "product-storable": {
-    src: "/screenshots/odoo19e/07-products-list.png",
-    caption: "Products list — storable goods · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "product-service": {
-    src: "/screenshots/odoo19e/07-products-list.png",
-    caption: "Products — termasuk service · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "category": {
-    src: "/screenshots/odoo19e/07-products-list.png",
-    caption: "Product categories dari Products · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "uom": {
-    src: "/screenshots/odoo19e/07-products-list.png",
-    caption: "Products & UoM context · lab http://172.16.2.123:8072 · DB odoo",
-  },
+  "overview": shot(
+    "/screenshots/odoo19e/06-inventory-overview.png",
+    "Inventory Overview — kartu operasi gudang",
+    ["Receipts", "Delivery Orders", "Internal Transfers"],
+  ),
+  "warehouse-form": shot(
+    "/screenshots/odoo19e/17-warehouses.png",
+    "Configuration → Warehouses",
+    ["Incoming/Outgoing steps (1-step vs multi-step)"],
+  ),
+  "locations": shot(
+    "/screenshots/odoo19e/06-inventory-overview.png",
+    "Inventory — lokasi di balik Overview/Configuration",
+    ["WH/Stock, Input, Output"],
+  ),
+  "operation-types": shot(
+    "/screenshots/odoo19e/06b-inventory-overview.png",
+    "Operation Types di Inventory Overview",
+    ["WH/IN Receipts · WH/OUT Delivery · WH/INT Internal"],
+  ),
+  "product-storable": shot(
+    "/screenshots/odoo19e/07-products-list.png",
+    "Products — daftar barang storable",
+    ["New → Product Type Goods", "Can be Purchased & Sold"],
+  ),
+  "product-service": shot(
+    "/screenshots/odoo19e/07-products-list.png",
+    "Products — termasuk tipe Service",
+    ["Service tidak menambah stok gudang"],
+  ),
+  "category": shot(
+    "/screenshots/odoo19e/07-products-list.png",
+    "Products — kategori dari daftar/produk",
+    ["Product Category mengatur akun & costing"],
+  ),
+  "uom": shot(
+    "/screenshots/odoo19e/07-products-list.png",
+    "Products — Unit of Measure pada form produk",
+    ["Units, kg, dll. setelah UoM diaktifkan di Settings"],
+  ),
+  "reordering-optional": shot(
+    "/screenshots/odoo19e/07-products-list.png",
+    "Products — Reordering Rules (opsional)",
+    ["Smart button Reordering / Min-Max pada produk"],
+  ),
 
   // Purchase
-  "new-rfq": {
-    src: "/screenshots/odoo19e/05-purchase-rfq-form.png",
-    caption: "RFQ form baru — status RFQ → RFQ Sent → Purchase Order · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "send-confirm": {
-    src: "/screenshots/odoo19e/05-purchase-rfq-form.png",
-    caption: "RFQ — tombol Send RFQ / Confirm Order · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "receive": {
-    src: "/screenshots/odoo19e/13-inventory-receipts.png",
-    caption: "Inventory Receipts dari PO · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "create-bill": {
-    src: "/screenshots/odoo19e/14-vendor-bills.png",
-    caption: "Vendor Bills · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "pay-bill": {
-    src: "/screenshots/odoo19e/14-vendor-bills.png",
-    caption: "Vendor Bill — Register Payment · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "verify-p2p": {
-    src: "/screenshots/odoo19e/04-purchase-rfq-list.png",
-    caption: "Purchase Orders / RFQ list — status kontrol · lab http://172.16.2.123:8072 · DB odoo",
-  },
+  "new-rfq": shot(
+    "/screenshots/odoo19e/05-purchase-rfq-form.png",
+    "Form RFQ baru — Vendor, Products, status RFQ",
+    [
+      "Field Vendor wajib",
+      "Tab Products → Add a product",
+      "Status bar: RFQ → RFQ Sent → Purchase Order",
+      "Tombol Send RFQ / Confirm Order",
+    ],
+  ),
+  "send-confirm": shot(
+    "/screenshots/odoo19e/05-purchase-rfq-form.png",
+    "RFQ — tombol Send RFQ dan Confirm Order",
+    ["Setelah Confirm, status jadi Purchase Order", "Smart button Receipt muncul"],
+  ),
+  "receive": shot(
+    "/screenshots/odoo19e/13-inventory-receipts.png",
+    "Inventory Receipts — terima barang dari PO",
+    ["Validate receipt", "Qty Done = qty diterima"],
+  ),
+  "create-bill": shot(
+    "/screenshots/odoo19e/14-vendor-bills.png",
+    "Vendor Bills — tagihan dari PO",
+    ["Create Bill dari PO", "Post / Confirm bill"],
+  ),
+  "pay-bill": shot(
+    "/screenshots/odoo19e/14-vendor-bills.png",
+    "Vendor Bill — Register Payment",
+    ["Journal Bank/Cash", "Payment State → Paid"],
+  ),
+  "verify-p2p": shot(
+    "/screenshots/odoo19e/04-purchase-rfq-list.png",
+    "Daftar RFQ / Purchase Orders — kontrol status P2P",
+    ["Receipt status", "Billing status"],
+  ),
 
   // Inventory ops
-  "internal-transfer": {
-    src: "/screenshots/odoo19e/06-inventory-overview.png",
-    caption: "Inventory Overview — Internal Transfers · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "adjustment": {
-    src: "/screenshots/odoo19e/06-inventory-overview.png",
-    caption: "Physical Inventory / Adjustments · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "traceability": {
-    src: "/screenshots/odoo19e/07-products-list.png",
-    caption: "Product moves / On Hand dari Products · lab http://172.16.2.123:8072 · DB odoo",
-  },
+  "internal-transfer": shot(
+    "/screenshots/odoo19e/06-inventory-overview.png",
+    "Inventory Overview — Internal Transfers",
+    ["Kartu Internal Transfers → New"],
+  ),
+  "adjustment": shot(
+    "/screenshots/odoo19e/06-inventory-overview.png",
+    "Physical Inventory / Adjustments dari Overview",
+    ["Sesuaikan On Hand setelah opname"],
+  ),
+  "traceability": shot(
+    "/screenshots/odoo19e/07-products-list.png",
+    "Products — On Hand / Moves untuk telusur stok",
+    ["Smart button On Hand atau Product Moves"],
+  ),
+  "lots-optional": shot(
+    "/screenshots/odoo19e/07-products-list.png",
+    "Products — Lot/Serial Tracking (opsional)",
+    ["Inventory tab → Tracking By Lots / Serial"],
+  ),
 
   // Sales
-  "new-quotation": {
-    src: "/screenshots/odoo19e/09-sales-quotation-form.png",
-    caption: "Sales Quotation form baru · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "confirm-so": {
-    src: "/screenshots/odoo19e/09-sales-quotation-form.png",
-    caption: "Quotation — Confirm → Sales Order · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "validate-delivery": {
-    src: "/screenshots/odoo19e/06-inventory-overview.png",
-    caption: "Delivery Orders di Inventory · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "create-invoice": {
-    src: "/screenshots/odoo19e/15-customer-invoices.png",
-    caption: "Customer Invoices dari SO · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "policy-compare": {
-    src: "/screenshots/odoo19e/08-sales-quotations.png",
-    caption: "Sales quotations list · lab http://172.16.2.123:8072 · DB odoo",
-  },
+  "new-quotation": shot(
+    "/screenshots/odoo19e/09-sales-quotation-form.png",
+    "Form Quotation baru — Customer & order lines",
+    [
+      "Field Customer wajib",
+      "Add product lines",
+      "Status Quotation → Quotation Sent → Sales Order",
+    ],
+  ),
+  "confirm-so": shot(
+    "/screenshots/odoo19e/09-sales-quotation-form.png",
+    "Quotation — Confirm menjadi Sales Order",
+    ["Tombol Confirm", "Smart button Delivery muncul"],
+  ),
+  "validate-delivery": shot(
+    "/screenshots/odoo19e/06-inventory-overview.png",
+    "Delivery Orders di Inventory Overview",
+    ["Validate delivery agar stok keluar"],
+  ),
+  "create-invoice": shot(
+    "/screenshots/odoo19e/15-customer-invoices.png",
+    "Customer Invoices — dari Sales Order",
+    ["Create Invoice → Draft lalu Confirm/Post"],
+  ),
+  "policy-compare": shot(
+    "/screenshots/odoo19e/08-sales-quotations.png",
+    "Daftar Quotations / Sales Orders",
+    ["Invoice Status: To Invoice / Fully Invoiced"],
+  ),
 
   // Invoicing
-  "post-invoice": {
-    src: "/screenshots/odoo19e/15-customer-invoices.png",
-    caption: "Customer Invoices — Confirm/Post · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "journal-items": {
-    src: "/screenshots/odoo19e/10-accounting.png",
-    caption: "Accounting — journal entries · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "customer-payment": {
-    src: "/screenshots/odoo19e/15-customer-invoices.png",
-    caption: "Register Payment customer · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "credit-note": {
-    src: "/screenshots/odoo19e/15-customer-invoices.png",
-    caption: "Credit Note dari invoice · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "bank-statement": {
-    src: "/screenshots/odoo19e/10-accounting.png",
-    caption: "Bank reconciliation di Accounting · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "aged-reports": {
-    src: "/screenshots/odoo19e/10-accounting.png",
-    caption: "Reporting AR/AP di Accounting · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "standalone-bill-invoice": {
-    src: "/screenshots/odoo19e/14-vendor-bills.png",
-    caption: "Vendor Bills standalone · lab http://172.16.2.123:8072 · DB odoo",
-  },
+  "post-invoice": shot(
+    "/screenshots/odoo19e/15-customer-invoices.png",
+    "Customer Invoices — Confirm/Post",
+    ["Status Posted", "Payment State Not Paid → lalu Register Payment"],
+  ),
+  "journal-items": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Accounting — journal entries / items",
+    ["Smart button Journal Items pada invoice"],
+  ),
+  "customer-payment": shot(
+    "/screenshots/odoo19e/15-customer-invoices.png",
+    "Register Payment pada customer invoice",
+    ["Payment State menjadi Paid setelah register"],
+  ),
+  "credit-note": shot(
+    "/screenshots/odoo19e/15-customer-invoices.png",
+    "Credit Note dari invoice customer",
+    ["Tombol Credit Note / Reverse"],
+  ),
+  "bank-statement": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Bank reconciliation di Accounting",
+    ["Bank journal → Statements / Reconciliation"],
+  ),
+  "aged-reports": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Reporting AR/AP di Accounting",
+    ["Aged Receivable / Aged Payable"],
+  ),
+  "standalone-bill-invoice": shot(
+    "/screenshots/odoo19e/14-vendor-bills.png",
+    "Vendor Bills standalone (tanpa PO)",
+    ["Vendors → Bills → New"],
+  ),
 
   // E2E
-  "script-p2p": {
-    src: "/screenshots/odoo19e/04-purchase-rfq-list.png",
-    caption: "Purchase list — siklus P2P · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "script-o2c": {
-    src: "/screenshots/odoo19e/08-sales-quotations.png",
-    caption: "Sales list — siklus O2C · lab http://172.16.2.123:8072 · DB odoo",
-  },
-  "closing-checks": {
-    src: "/screenshots/odoo19e/10-accounting.png",
-    caption: "Accounting control tower · lab http://172.16.2.123:8072 · DB odoo",
-  },
+  "script-p2p": shot(
+    "/screenshots/odoo19e/04-purchase-rfq-list.png",
+    "Purchase list — siklus Procure-to-Pay",
+    ["PO → Receipt → Bill → Payment"],
+  ),
+  "script-o2c": shot(
+    "/screenshots/odoo19e/08-sales-quotations.png",
+    "Sales list — siklus Order-to-Cash",
+    ["SO → Delivery → Invoice → Payment"],
+  ),
+  "closing-checks": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Accounting — cek penutup stok & AR/AP",
+    ["Dashboard & laporan akhir siklus"],
+  ),
+  "common-errors": shot(
+    "/screenshots/odoo19e/01-home-apps.png",
+    "Home Apps — titik balik jika menu/modul hilang",
+    ["Install ulang modul yang kurang", "Cek filter Apps"],
+  ),
+  "competency": shot(
+    "/screenshots/odoo19e/01-home-apps.png",
+    "Home Apps — seluruh modul yang sudah dikuasai",
+    ["Contacts → Purchase → Inventory → Sales → Accounting"],
+  ),
 };
 
 export function getStepScreenshot(stepId: string): RealShot | undefined {

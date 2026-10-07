@@ -15,8 +15,10 @@ Deploy: Vercel (hubungkan ke repo di atas)
 | Login | `admin` / `admin` |
 | MCP | http://172.16.2.123:8072/mcp |
 
-Set token MCP di `.env.local` (`ODOO_MCP_TOKEN`) — lihat `.env.example`.  
-Konfigurasi Cursor MCP: [`.cursor/mcp.json`](./.cursor/mcp.json).
+MCP (opsional, hanya di mesin lokal Anda): salin `.env.example` → `.env.local`, isi `ODOO_MCP_TOKEN`.  
+Konfigurasi Cursor: [`.cursor/mcp.json`](./.cursor/mcp.json) memakai `${env:ODOO_MCP_TOKEN}` — **jangan** commit token ke GitHub.
+
+Screenshot di lesson adalah UI Odoo 19 Enterprise asli. Data company di gambar boleh beda dari lab Anda; ikut tabel **Isi field ini**.
 
 ## Menjalankan web (local)
 

@@ -1,4 +1,5 @@
 import type { OdooScreenConfig } from "@/data/types";
+import { odooLab } from "@/data/odoo-lab";
 import { cn } from "@/lib/utils";
 
 const statusStyles: Record<
@@ -29,10 +30,10 @@ export function OdooScreen({
           <span className="size-2.5 rounded-full bg-[#28c840]" />
         </div>
         <div className="odoo-shot-url">
-          localhost:8069 · {screen.app} · {screen.menu}
+          {odooLab.url.replace("http://", "")} · {screen.app} · {screen.menu}
         </div>
         <div className="text-[10px] uppercase tracking-[0.18em] text-teal-200/80">
-          Odoo 19 UI
+          Skema field (bukan screenshot)
         </div>
       </div>
 

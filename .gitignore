@@ -22,7 +22,6 @@
 
 # misc
 .DS_Store
-*.pem
 
 # debug
 npm-debug.log*
@@ -30,8 +29,13 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env / secrets — never commit real tokens
+.env
+.env.*
+!.env.example
+*.pem
+*.token
+secrets/
 
 # vercel
 .vercel
@@ -50,8 +54,6 @@ odoo19/venv/
 odoo19/filestore/
 odoo19/logs/
 **/__pycache__/
-*.token
-secrets/
 
 # Odoo Enterprise source (large, do not commit)
 odoo19e/src/
