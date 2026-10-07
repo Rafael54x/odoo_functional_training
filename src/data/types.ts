@@ -17,6 +17,20 @@ export type FieldDemo = {
   tab?: string;
 };
 
+/** Panduan isi field satu per satu (tampil sebagai tabel di lesson) */
+export type FillField = {
+  /** Nama field di layar Odoo */
+  field: string;
+  /** Nilai yang harus diisi */
+  value: string;
+  /** Tab / section tempat field berada */
+  where?: string;
+  /** Cara mengisi (ketik / pilih / centang / upload) */
+  how?: string;
+  required?: boolean;
+  note?: string;
+};
+
 export type OdooScreenConfig = {
   kind: ScreenKind;
   app: string;
@@ -50,6 +64,8 @@ export type LessonStep = {
   why: string;
   /** Instruksi klik demi klik, kalimat pendek */
   actions: string[];
+  /** Tabel isi field — nilai konkret yang harus diketik/dipilih */
+  fillFields?: FillField[];
   /** Apa yang harus terlihat di layar jika berhasil */
   expectToSee?: string;
   /** Istilah baru yang muncul di langkah ini */
