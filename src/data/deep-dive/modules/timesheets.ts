@@ -142,6 +142,11 @@ export const timesheetsDeepDive: DeepDiveModule = {
       businessExample: `Jam training ${customer.name} billable; jam meeting internal tidak.`,
       impact:
         "Reporting memisahkan billable hours; wizard invoice timesheets tersedia.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-timesheets.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "ts-encoding-restriction",
@@ -157,6 +162,11 @@ export const timesheetsDeepDive: DeepDiveModule = {
       businessExample: "Konsultan hanya encode project tempat mereka di-invite.",
       impact:
         "Domain project/task di timesheet form menyempit.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-timesheets.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "ts-rounding",
@@ -172,6 +182,11 @@ export const timesheetsDeepDive: DeepDiveModule = {
       businessExample: "Timer 7 menit dibulatkan 15 menit sesuai kontrak ${distributor.name}.",
       impact:
         "Unit amount tersimpan setelah rounding rule.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-timesheets.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "ts-sales-invoice",

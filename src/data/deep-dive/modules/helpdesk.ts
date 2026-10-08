@@ -156,6 +156,11 @@ export const helpdeskDeepDive: DeepDiveModule = {
       businessExample: `Ticket keluhan ${kopi.name} dari ${customer.name} auto-assign ke agent retail yang paling sedikit open ticket.`,
       impact:
         "Field Assigned To terisi otomatis saat create/email-in; My Tickets terisi merata.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w3-helpdesk.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "hd-customer-ratings",
@@ -192,6 +197,11 @@ export const helpdeskDeepDive: DeepDiveModule = {
       businessExample: `Ticket ${distributor.name} "minta penawaran ${kopi.name} 50 kg" → Convert to Opportunity, lanjut Sales.`,
       impact:
         "Tombol Convert to Lead/Opportunity; smart button ke crm.lead; ticket tetap punya jejak asal.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w3-helpdesk.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "hd-portal",

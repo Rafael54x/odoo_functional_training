@@ -113,6 +113,11 @@ export const developerModeDeepDive: DeepDiveModule = {
       whenNot: "Operasi harian — performa jelek.",
       businessExample: "Hanya saat halaman Settings/Website render rusak.",
       impact: "Browser lebih lambat; jangan biarkan menyala.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-settings.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "dev-view-meta",
@@ -154,6 +159,11 @@ export const developerModeDeepDive: DeepDiveModule = {
       whenNot: "Bukan untuk marketing blast (pakai Email Marketing).",
       businessExample: `Email quotation ${kopi.name} ke ${customer.email} status Error → baca failure reason.`,
       impact: "Terlihat apakah masalah template, alamat, atau server.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-settings.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "dev-scheduled",
@@ -165,6 +175,11 @@ export const developerModeDeepDive: DeepDiveModule = {
       whenNot: "Jangan ubah kode Python cron di sini sebagai pengganti development process.",
       businessExample: "Currency rate update scheduled action inactive → multi-currency basi.",
       impact: "Menyalakan/mematikan otomasi platform.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-settings.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "dev-system-params",
@@ -391,6 +406,11 @@ export const developerModeDeepDive: DeepDiveModule = {
           example: company.name,
         },
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-settings.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   procedures: [
@@ -453,6 +473,11 @@ export const developerModeDeepDive: DeepDiveModule = {
       ],
       expectedResult: "Akar masalah jelas (bukan 'Odoo rusak').",
       verification: ["Status menjadi Sent atau error terjelaskan"],
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-settings.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "proc-sequence-check",

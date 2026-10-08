@@ -131,6 +131,11 @@ export const companiesDeepDive: DeepDiveModule = {
       whenNot: "Lab internal murni bisa ditunda.",
       businessExample: `Logo ${company.name}; warna brand; alamat ${company.city}.`,
       impact: "QWeb report layout per company.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-companies.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "co-allowed-users",
@@ -172,6 +177,11 @@ export const companiesDeepDive: DeepDiveModule = {
       whenNot: "Volume jarang — jurnal manual lebih aman dipantau.",
       businessExample: "Retail company beli stok dari trading company dalam grup.",
       impact: "Dokumen cermin otomatis; salah setup = SO/PO ghost.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-companies.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "co-share-partners",
@@ -183,6 +193,11 @@ export const companiesDeepDive: DeepDiveModule = {
       whenNot: "Data sensitif entitas — set company_id ketat.",
       businessExample: `${customer.name} shared; harga/pricelist tetap per company.`,
       impact: "Visibility master vs isolation transaksi.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-companies.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [

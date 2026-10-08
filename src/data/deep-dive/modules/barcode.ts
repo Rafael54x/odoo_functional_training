@@ -197,6 +197,11 @@ export const barcodeDeepDive: DeepDiveModule = {
       businessExample: `Scan ${barcodes.locationStock} lalu ${barcodes.dus} saat pindah ke zona pack ${barcodes.locationPack}.`,
       impact:
         "Alur scan: lokasi → produk → qty; mengurangi salah rak.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w3-barcode.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "bc-qty-behavior",
@@ -212,6 +217,11 @@ export const barcodeDeepDive: DeepDiveModule = {
       businessExample: `Scan ${barcodes.kopi} sebanyak ${seed.po.kopiQty} kali, atau scan sekali lalu ketik Done=${seed.po.kopiQty}.`,
       impact:
         "Kecepatan vs akurasi: salah scan = over-receive; pantau progress line.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w3-barcode.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "bc-show-quantity",

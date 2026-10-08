@@ -156,6 +156,11 @@ export const localizationDeepDive: DeepDiveModule = {
       whenNot: "Semua domestic taxable seragam — jangan over-engineer.",
       businessExample: `Default domestic untuk ${customer.name}; posisi khusus jika ekspor.`,
       impact: "partner.fiscal_position_id mengubah tax di dokumen.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-settings-general.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "loc-currency-idr",
@@ -182,6 +187,11 @@ export const localizationDeepDive: DeepDiveModule = {
       whenNot: "Pure IDR — matikan kompleksitas rate.",
       businessExample: `Penawaran ke ${distributor.name} dalam USD dengan rate harian.`,
       impact: "Field currency di SO/Invoice; selisih kurs di accounting.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-settings-general.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "loc-lang-tz",
@@ -446,6 +456,11 @@ export const localizationDeepDive: DeepDiveModule = {
           example: "Sesuai kurs tengah Bank (latihan)",
         },
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-settings-general.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   procedures: [
@@ -548,6 +563,11 @@ export const localizationDeepDive: DeepDiveModule = {
         "account.move.currency_id = USD",
         "amount_total_signed dalam IDR masuk akal vs rate",
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-settings-general.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   scenarios: [

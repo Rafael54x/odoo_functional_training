@@ -122,6 +122,11 @@ export const inventoryDeepDive: DeepDiveModule = {
         "Two-step receipt: barang ke Input dulu, baru Internal Transfer ke Stock.",
       impact:
         "Operation types bertambah; satu PO bisa menghasilkan lebih dari satu picking.",
+      screenshot: {
+        src: "/screenshots/odoo19e/06-inventory-overview.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "inv-lots",
@@ -137,6 +142,11 @@ export const inventoryDeepDive: DeepDiveModule = {
       businessExample: `Lot KA-2026-10 untuk receipt ${kopi.name} × ${seed.po.kopiQty}.`,
       impact:
         "Move lines meminta Lot/Serial; reporting traceability aktif.",
+      screenshot: {
+        src: "/screenshots/odoo19e/06-inventory-overview.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "inv-expiration",
@@ -152,6 +162,11 @@ export const inventoryDeepDive: DeepDiveModule = {
       businessExample: `Lot kopi expired date +12 bulan dari receipt.`,
       impact:
         "Field Expiration pada lot; removal strategy FEFO tersedia.",
+      screenshot: {
+        src: "/screenshots/odoo19e/06-inventory-overview.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "inv-packaging",
@@ -167,6 +182,11 @@ export const inventoryDeepDive: DeepDiveModule = {
       businessExample: `Packaging "Dus 12" untuk ${teh.name}.`,
       impact:
         "Field Packaging di transfer/SO/PO; konversi qty otomatis.",
+      screenshot: {
+        src: "/screenshots/odoo19e/06-inventory-overview.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "inv-valuation",
@@ -700,6 +720,11 @@ export const inventoryDeepDive: DeepDiveModule = {
           note: "Contoh: sistem 20, fisik 18 → loss 2",
         },
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/06-inventory-overview.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   scenarios: [

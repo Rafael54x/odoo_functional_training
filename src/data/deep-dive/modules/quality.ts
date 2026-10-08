@@ -261,6 +261,11 @@ export const qualityDeepDive: DeepDiveModule = {
       businessExample: `${teh.name} dari vendor lama: sampling periodik; ${kopi.name} dari ${vendor.name}: All receipts sampai 3 lot Pass berturut-turut.`,
       impact:
         "Jumlah quality.check yang ter-generate mengikuti frekuensi; reporting coverage tetap terbaca.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w3-quality.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [

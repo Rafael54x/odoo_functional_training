@@ -125,6 +125,11 @@ export const salesDeepDive: DeepDiveModule = {
       businessExample: `Sales memberi diskon 5% pada ${kopi.name} untuk order pertama ${customer.name}.`,
       impact:
         "Kolom Disc.% muncul di Order Lines; margin laporan sales terpengaruh.",
+      screenshot: {
+        src: "/screenshots/odoo19e/08-sales-quotations.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "sales-quot-template",
@@ -140,6 +145,11 @@ export const salesDeepDive: DeepDiveModule = {
       businessExample: `Template "Paket Retail Kopi" berisi ${kopi.name} × 8 + ${jasa.name} × 1.`,
       impact:
         "Field Quotation Template muncul di form Quotation; line terisi otomatis saat dipilih.",
+      screenshot: {
+        src: "/screenshots/odoo19e/08-sales-quotations.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "sales-online-signature",
@@ -155,6 +165,11 @@ export const salesDeepDive: DeepDiveModule = {
       businessExample: `${customer.name} menandatangani Quotation di portal sebelum Confirm SO.`,
       impact:
         "Tombol Send by Email membawa link signature; status bisa jadi Quotation Sent dengan signed flag.",
+      screenshot: {
+        src: "/screenshots/odoo19e/08-sales-quotations.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "sales-lock-confirmed",
@@ -170,6 +185,11 @@ export const salesDeepDive: DeepDiveModule = {
       businessExample: `Setelah SO ke ${customer.name} confirmed, gudang pick berdasarkan qty terkunci.`,
       impact:
         "SO confirmed masuk mode read-only (kecuali unlock oleh Manager); perubahan butuh prosedur khusus.",
+      screenshot: {
+        src: "/screenshots/odoo19e/08-sales-quotations.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "sales-invoicing-policy",
@@ -185,6 +205,11 @@ export const salesDeepDive: DeepDiveModule = {
       businessExample: `${kopi.name} memakai Delivered quantities; ${jasa.name} memakai Ordered quantities.`,
       impact:
         "Tombol Create Invoice hanya menginvoice qty sesuai policy; status invoicing SO berubah sesuai delivery.",
+      screenshot: {
+        src: "/screenshots/odoo19e/08-sales-quotations.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "sales-down-payment",
@@ -200,6 +225,11 @@ export const salesDeepDive: DeepDiveModule = {
       businessExample: `${distributor.name} order besar: invoice DP 30% sebelum pengiriman penuh.`,
       impact:
         "Wizard Create Invoice menawarkan Down payment (percentage/fixed); sisa diinvoice di akhir.",
+      screenshot: {
+        src: "/screenshots/odoo19e/08-sales-quotations.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [

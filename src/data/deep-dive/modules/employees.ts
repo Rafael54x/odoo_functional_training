@@ -151,6 +151,11 @@ export const employeesDeepDive: DeepDiveModule = {
         "Isi private address & emergency contact untuk karyawan tetap.",
       impact:
         "Tab Private Information / HR settings bertambah field.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-employees.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "emp-update-rights",
@@ -167,6 +172,11 @@ export const employeesDeepDive: DeepDiveModule = {
         "Karyawan boleh ubah Mobile Work, tidak boleh ubah Department.",
       impact:
         "Form self-service membatasi editable fields.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-employees.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "emp-org-chart",
@@ -205,6 +215,11 @@ export const employeesDeepDive: DeepDiveModule = {
         `Warehouse staff di lokasi gudang; consultant sering di site ${customer.name}.`,
       impact:
         "Field Work Location di employee; filter direktori.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-employees.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [

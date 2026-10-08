@@ -137,6 +137,11 @@ export const websiteDeepDive: DeepDiveModule = {
       whenNot: "Menu terlalu dalam (>2 level) untuk situs brochure sederhana.",
       businessExample: "Menu: Beranda | Tentang Kami | Produk | Kontak.",
       impact: "website.menu mengontrol header; halaman orphan sulit ditemukan.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-website.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "web-seo",
@@ -148,6 +153,11 @@ export const websiteDeepDive: DeepDiveModule = {
       whenNot: "Lab internal murni — SEO boleh ditunda.",
       businessExample: `Title: "${company.name} — Kopi & Distribusi ${company.city}".`,
       impact: "Snippet pencarian & Open Graph memakai meta halaman.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-website.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "web-contact-form",
@@ -159,6 +169,11 @@ export const websiteDeepDive: DeepDiveModule = {
       whenNot: "Tidak ada proses follow-up — form jadi black hole.",
       businessExample: `Form "Hubungi Kami" ke ${company.email}; field Nama, Email, Pesan.`,
       impact: "Submission memicu mail atau crm.lead tergantung action form.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-website.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "web-multi-website",
@@ -185,6 +200,11 @@ export const websiteDeepDive: DeepDiveModule = {
       whenNot: "Jangan biarkan halaman penting tetap Unpublished setelah go-live.",
       businessExample: "About page diedit dulu, Publish setelah review legal.",
       impact: "Unpublished page 404 untuk publik; editor masih bisa preview.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-website.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [
@@ -475,6 +495,11 @@ export const websiteDeepDive: DeepDiveModule = {
           example: `Send email to ${company.email}`,
         },
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-website.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   procedures: [
@@ -578,6 +603,11 @@ export const websiteDeepDive: DeepDiveModule = {
           required: true,
         },
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-website.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "proc-seo-home",
@@ -592,6 +622,11 @@ export const websiteDeepDive: DeepDiveModule = {
       ],
       expectedResult: "Preview SEO menampilkan title/description kustom.",
       verification: ["View page source / SEO dialog menampilkan meta baru"],
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-website.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   scenarios: [

@@ -131,6 +131,11 @@ export const ecommerceDeepDive: DeepDiveModule = {
       whenNot: "2–3 produk — kategori berlebih membingungkan.",
       businessExample: `Kategori "Kopi & Teh" berisi ${kopi.name}, ${teh.name}.`,
       impact: "URL /shop/category/... dan menu shop terisi.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-ecommerce.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "ecom-pricelist",
@@ -157,6 +162,11 @@ export const ecommerceDeepDive: DeepDiveModule = {
       whenNot: "Campur tanpa aturan — data customer berantakan.",
       businessExample: `Guest OK untuk order kecil ${kopi.name}; portal untuk ${distributor.name}.`,
       impact: "res.partner dibuat saat checkout; SO terhubung partner.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-ecommerce.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "ecom-stock",
@@ -168,6 +178,11 @@ export const ecommerceDeepDive: DeepDiveModule = {
       whenNot: "Service murni atau MTO yang sengaja boleh preorder.",
       businessExample: `Sembunyikan / disable Add to cart jika On Hand ${kopi.name} = 0.`,
       impact: "Cart validation membaca quants Inventory.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-ecommerce.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "ecom-tax",
@@ -179,6 +194,11 @@ export const ecommerceDeepDive: DeepDiveModule = {
       whenNot: "Jangan matikan tax hanya agar harga 'terlihat murah'.",
       businessExample: `${kopi.name} → ${kopi.salesTax} di line SO web.`,
       impact: "Total checkout termasuk tax; invoice mewarisi tax lines.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-ecommerce.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "ecom-payment",
@@ -621,6 +641,11 @@ export const ecommerceDeepDive: DeepDiveModule = {
       ],
       expectedResult: "Tidak terbentuk SO yang mustahil di-deliver tanpa peringatan.",
       verification: ["Tidak ada SO ghost qty besar tanpa stok"],
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-ecommerce.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   scenarios: [

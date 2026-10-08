@@ -147,6 +147,11 @@ export const invoicingDeepDive: DeepDiveModule = {
       whenNot: "Customer hanya terima lewat portal/WA — sesuaikan SOP.",
       businessExample: `Kirim invoice ke ${customer.email}.`,
       impact: "mail.mail + attachment; status invoice Sent.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-invoicing.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "inv-credit-notes",
@@ -158,6 +163,11 @@ export const invoicingDeepDive: DeepDiveModule = {
       whenNot: "Draft masih bisa diedit/cancel — jangan credit note prematur.",
       businessExample: `Credit note sebagian qty ${kopi.name} yang diretur ${customer.name}.`,
       impact: "out_refund/in_refund mengurangi residual piutang/hutang.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-invoicing.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "inv-register-payment",
@@ -214,6 +224,11 @@ export const invoicingDeepDive: DeepDiveModule = {
       whenNot: "B2B yang hanya terima email PDF.",
       businessExample: `${customer.name} unduh invoice dari portal.`,
       impact: "Transparansi AR; mengurangi tanya status ke sales.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-invoicing.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [
@@ -528,6 +543,11 @@ export const invoicingDeepDive: DeepDiveModule = {
           example: "Transfer dari Toko Maju Jaya",
         },
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-invoicing.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   procedures: [
@@ -679,6 +699,11 @@ export const invoicingDeepDive: DeepDiveModule = {
       ],
       expectedResult: "AP residual 0.",
       verification: ["Aged Payable bersih untuk bill ini"],
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-invoicing.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "proc-credit-note",

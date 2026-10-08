@@ -138,6 +138,11 @@ export const recruitmentDeepDive: DeepDiveModule = {
         "Form skor komunikasi & product knowledge untuk kandidat Sales Rep kopi/jasa.",
       impact:
         "Tombol Send Interview Survey / form linked di applicant; jawaban tersimpan.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w3-recruitment.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "rec-cv-display",
@@ -218,6 +223,11 @@ export const recruitmentDeepDive: DeepDiveModule = {
         "Applicant Sales ditolak reason 'Pengalaman B2B kurang' setelah interview retail vs distributor.",
       impact:
         "Wizard Refuse meminta reason; laporan refused by reason.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w3-recruitment.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [
@@ -656,6 +666,11 @@ export const recruitmentDeepDive: DeepDiveModule = {
           example: "Centang + template default",
         },
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/w3-recruitment.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   procedures: [

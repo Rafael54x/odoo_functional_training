@@ -43,7 +43,7 @@ export const learningPaths: LearningPath[] = [
       { title: "Invoicing & payment", target: "/modul/flow-invoicing", level: "intermediate" },
       { title: "E2E cycle", target: "/modul/flow-end-to-end", level: "intermediate" },
       {
-        title: "Deep Dive Sales (Wave 1)",
+        title: "Deep Dive Sales",
         target: "/kurikulum#mod-sales",
         level: "intermediate",
       },
@@ -80,15 +80,15 @@ export const learningPaths: LearningPath[] = [
     id: "path-consultant",
     title: "Path C — Implementation Consultant",
     audience: "Functional consultant / implementor",
-    durationHint: "3–6 minggu (bertahap per wave)",
+    durationHint: "3–6 minggu (bertahap per modul)",
     description:
-      "Core Flow lengkap → Deep Dive Wave 1 (Sales/Purchase/Inventory/Accounting/Contacts) → Users/Security → Wave 2 industri (CRM/MRP/Project/HR/Web) → Final Project retail.",
+      "Core Flow lengkap → Deep Dive fondasi (Sales/Purchase/Inventory/Accounting/Contacts) → Users/Security → modul adjacent (CRM/MRP/Project/HR/Web) → Final Project retail.",
     steps: [
       { title: "Core Flow end-to-end", target: "/silabus", level: "beginner" },
-      { title: "Wave 1 Deep Dives", target: "/kurikulum#wave-1", level: "advanced" },
+      { title: "Deep Dive fondasi", target: "/kurikulum#deep-dive", level: "advanced" },
       { title: "Security & multi-user design", target: "/kurikulum#mod-users", level: "advanced" },
       { title: "Integration map mastery", target: "/kurikulum#cross-integration", level: "advanced" },
-      { title: "Wave 2 adjacent modules", target: "/kurikulum#wave-2", level: "expert" },
+      { title: "Modul adjacent & suite", target: "/materi", level: "expert" },
       { title: "Final Project Retail Company", target: "/kurikulum#final-project", level: "expert" },
       {
         title: "Optimization & best practices pack",

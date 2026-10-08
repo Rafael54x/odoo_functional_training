@@ -148,6 +148,11 @@ export const accountingDeepDive: DeepDiveModule = {
         "PPN baru diakui saat ${customer.name} membayar invoice.",
       impact:
         "Tax grid & journal tax mengikuti payment reconciliation.",
+      screenshot: {
+        src: "/screenshots/odoo19e/10-accounting.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "acc-payment-terms",
@@ -163,6 +168,11 @@ export const accountingDeepDive: DeepDiveModule = {
       businessExample: `${customer.name}: ${customer.paymentTerms}; ${vendor.name}: ${vendor.paymentTerms}; ${distributor.name}: ${distributor.paymentTerms}.`,
       impact:
         "Invoice/Bill mendapat Invoice Date + Due Date otomatis.",
+      screenshot: {
+        src: "/screenshots/odoo19e/10-accounting.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "acc-incoterm",
@@ -178,6 +188,11 @@ export const accountingDeepDive: DeepDiveModule = {
       businessExample: "SO ekspor ke customer luar negeri memakai FOB.",
       impact:
         "Field Incoterm muncul di invoice/SO.",
+      screenshot: {
+        src: "/screenshots/odoo19e/10-accounting.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "acc-analytics",
@@ -193,6 +208,11 @@ export const accountingDeepDive: DeepDiveModule = {
       businessExample: `Tag analytic "Retail" pada invoice ${customer.name}.`,
       impact:
         "Analytic lines wajib/opsional di account.move.line; report analytic tersedia.",
+      screenshot: {
+        src: "/screenshots/odoo19e/10-accounting.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "acc-lock-dates",
@@ -208,6 +228,11 @@ export const accountingDeepDive: DeepDiveModule = {
       businessExample: "Lock all entries sebelum 2026-10-01 setelah closing September.",
       impact:
         "User biasa tidak bisa post/ubah entry sebelum lock date.",
+      screenshot: {
+        src: "/screenshots/odoo19e/10-accounting.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [

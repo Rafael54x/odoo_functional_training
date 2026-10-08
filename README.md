@@ -35,7 +35,7 @@ App: http://127.0.0.1:43129
 2. **Core Flow** di `/silabus` — alur bisnis (termasuk Users & Access + Closing)
 3. **Materi Modul** di `/materi` — Deep Dive per app (26 modul: fondasi, adjacent, suite lanjutan, growth/kustomisasi)
 4. Kerjakan di http://172.16.2.123:8072 (DB `odoo`)
-5. Peta arsitektur: `/kurikulum` · [`CURRICULUM.md`](./CURRICULUM.md)
+5. Peta belajar (mindmap Core Flow ↔ modul ↔ hubungan): `/kurikulum`
 
 ## Docker (opsional, package odoo19e)
 

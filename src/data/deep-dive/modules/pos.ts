@@ -209,6 +209,11 @@ export const posDeepDive: DeepDiveModule = {
       businessExample: `Shop memakai IDR Public Pricelist; ${kopi.name} tampil Rp ${kopi.salesPrice} + ${kopi.salesTax}.`,
       impact:
         "Line order memakai price unit & tax; total receipt dan jurnal pendapatan mengikuti.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w3-pos.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "pos-session-control",

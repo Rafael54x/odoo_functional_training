@@ -181,6 +181,11 @@ export const subscriptionsDeepDive: DeepDiveModule = {
       businessExample: `${customer.name} close karena "Budget retail turun" — masuk laporan churn reason.`,
       impact:
         "Action Close meminta reason; reporting retention memisahkan voluntary vs lain.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w4-subscriptions.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "sub-upsell-renew",

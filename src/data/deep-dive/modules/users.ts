@@ -138,6 +138,11 @@ export const usersDeepDive: DeepDiveModule = {
       whenNot: "Sales User tidak otomatis butuh Purchase Admin.",
       businessExample: `Buyer PO ke ${seed.vendors.bahan.name} = Purchase User.`,
       impact: "Tanpa Purchase User, menu Purchase tidak efektif / read-only terbatas.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-users-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "cfg-inventory-groups",
@@ -151,6 +156,11 @@ export const usersDeepDive: DeepDiveModule = {
       businessExample:
         "Petugas receiving = Inventory User; desain 1-step WH = Inventory Admin.",
       impact: "User tanpa Inventory tidak bisa Validate picking.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-users-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "cfg-accounting-groups",
@@ -179,6 +189,11 @@ export const usersDeepDive: DeepDiveModule = {
       whenNot: "Jangan berikan ke Sales/Purchase User harian.",
       businessExample: `Hanya admin lab (${odooLab.user}) yang Manage Users di latihan.`,
       impact: "Pemegang Access Rights bisa menaikkan privilege diri/orang lain — risiko tinggi.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-users-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "cfg-multi-company-user",
@@ -190,6 +205,11 @@ export const usersDeepDive: DeepDiveModule = {
       whenNot: "Jangan ekspos semua company ke magang.",
       businessExample: `Lab: hanya ${company.name}.`,
       impact: "Record rules memfilter data per company.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-users-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [
@@ -514,6 +534,11 @@ export const usersDeepDive: DeepDiveModule = {
           how: "Pilih",
         },
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-users-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "proc-manager-vs-user",
@@ -559,6 +584,11 @@ export const usersDeepDive: DeepDiveModule = {
         "Access Error muncul saat menyentuh Manage Users",
         "Dokumen berhasil pada tugas masing-masing",
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-users-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   scenarios: [

@@ -127,6 +127,11 @@ export const crmDeepDive: DeepDiveModule = {
       businessExample: `Plan "Retail Closing": Call hari 0, Email penawaran hari 2, Meeting hari 5 untuk ${customer.name}.`,
       impact:
         "Tombol Activity / Launch Plan menambahkan beberapa mail.activity sekaligus.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-crm-pipeline.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "crm-lead-enrichment",
@@ -164,6 +169,11 @@ export const crmDeepDive: DeepDiveModule = {
       businessExample: `Team "Retail Jakarta" untuk ${customer.name}; team "Distributor" untuk ${distributor.name}.`,
       impact:
         "Field Sales Team di opportunity; filter pipeline per team; reporting terpisah.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-crm-pipeline.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "crm-probability",
@@ -200,6 +210,11 @@ export const crmDeepDive: DeepDiveModule = {
       businessExample: `Opportunity ${distributor.name} Lost dengan reason "Harga terlalu tinggi" → review pricelist.`,
       impact:
         "Lost memindahkan ke stage lost + reason; Won menandai success dan siap/lanjut Quotation.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-crm-pipeline.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [

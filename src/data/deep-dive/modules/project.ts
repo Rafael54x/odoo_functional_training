@@ -122,6 +122,11 @@ export const projectDeepDive: DeepDiveModule = {
       businessExample: `Task "Onboarding ${distributor.name}" → sub-task Survey, Training, Go-Live.`,
       impact:
         "Tab/field Sub-tasks; progress induk bisa agregat anak.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-project.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "proj-dependencies",
@@ -158,6 +163,11 @@ export const projectDeepDive: DeepDiveModule = {
       businessExample: `Milestone "Go-Live ${distributor.name}" tanggal akhir bulan.`,
       impact:
         "Menu/field Milestone di project; task bisa ditautkan milestone.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-project.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "proj-recurring",
@@ -173,6 +183,11 @@ export const projectDeepDive: DeepDiveModule = {
       businessExample: "Task mingguan 'Review pipeline CRM × Project handover'.",
       impact:
         "Opsi Recurrence di form task; instance baru ter-generate.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-project.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "proj-billable",

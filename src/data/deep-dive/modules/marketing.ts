@@ -200,6 +200,11 @@ export const marketingDeepDive: DeepDiveModule = {
       businessExample: `${customer.name} unsubscribe dari newsletter retail — mailing berikutnya otomatis mengecualikan.`,
       impact:
         "Kontak masuk blacklist/opt-out; mailing skip penerima tersebut.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w4-marketing.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "mkt-crm-domain",

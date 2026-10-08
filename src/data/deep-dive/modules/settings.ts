@@ -137,6 +137,11 @@ export const settingsDeepDive: DeepDiveModule = {
       whenNot: "Campur timezone user tanpa standar — laporan waktu kacau.",
       businessExample: "Bahasa: Indonesian atau English; TZ: Asia/Jakarta.",
       impact: "Format tanggal/waktu di dokumen dan activity.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-settings.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "cfg-fiscal-localization",
@@ -183,6 +188,11 @@ export const settingsDeepDive: DeepDiveModule = {
       businessExample:
         "Bill control berbasis received quantities untuk PO Dus partial.",
       impact: "Perilaku Create Bill dari PO berubah.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-settings.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "cfg-inventory-features",
@@ -587,6 +597,11 @@ export const settingsDeepDive: DeepDiveModule = {
         "Pajak 11% selectable",
         "Customer pricelist field ada",
       ],
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-settings.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   scenarios: [

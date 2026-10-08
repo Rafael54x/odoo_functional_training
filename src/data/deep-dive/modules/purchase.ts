@@ -122,6 +122,11 @@ export const purchaseDeepDive: DeepDiveModule = {
       businessExample: `${kopi.name} = Received quantities; jasa angkut vendor = Ordered.`,
       impact:
         "Create Bill hanya mengambil qty sesuai policy; menghindari overbilling.",
+      screenshot: {
+        src: "/screenshots/odoo19e/04-purchase-rfq-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "pur-warnings",
@@ -137,6 +142,11 @@ export const purchaseDeepDive: DeepDiveModule = {
       businessExample: `Warning pada ${vendor.name}: "Lead time 5 hari — jangan janjikan receipt H+1".`,
       impact:
         "Popup warning saat pilih partner/product di purchase.order.",
+      screenshot: {
+        src: "/screenshots/odoo19e/04-purchase-rfq-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "pur-agreements",
@@ -152,6 +162,11 @@ export const purchaseDeepDive: DeepDiveModule = {
       businessExample: `Blanket order ${kopi.name} 12 bulan dengan ${vendor.name}.`,
       impact:
         "Menu Purchase Agreements muncul; RFQ bisa digenerate dari agreement.",
+      screenshot: {
+        src: "/screenshots/odoo19e/04-purchase-rfq-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "pur-uom",
@@ -167,6 +182,11 @@ export const purchaseDeepDive: DeepDiveModule = {
       businessExample: `${dus.name} dibeli per pack; stok dicatat per unit setelah konversi.`,
       impact:
         "Field UoM & Purchase UoM aktif di produk dan line PO.",
+      screenshot: {
+        src: "/screenshots/odoo19e/04-purchase-rfq-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "pur-dropship",
@@ -183,6 +203,11 @@ export const purchaseDeepDive: DeepDiveModule = {
         "SO customer memicu PO dropship; receipt/delivery khusus route Dropship.",
       impact:
         "Route Dropship tersedia; PO terkait SO tanpa stok di WH/Stock.",
+      screenshot: {
+        src: "/screenshots/odoo19e/04-purchase-rfq-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "pur-lock-confirmed",
@@ -198,6 +223,11 @@ export const purchaseDeepDive: DeepDiveModule = {
       businessExample: `Setelah PO ${vendor.name} confirmed, qty ${seed.po.kopiQty} terkunci untuk receipt.`,
       impact:
         "PO read-only setelah Confirm kecuali di-unlock Manager.",
+      screenshot: {
+        src: "/screenshots/odoo19e/04-purchase-rfq-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [

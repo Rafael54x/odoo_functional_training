@@ -172,6 +172,11 @@ export const contactsDeepDive: DeepDiveModule = {
       businessExample: `${c1.name} = ${c1.paymentTerms}; ${c2.name} = ${c2.paymentTerms}; ${v1.name} = ${v1.paymentTerms}.`,
       impact:
         "Invoice/Bill mendapat due date otomatis; aging bucket 0–30/30–60 bergerak sesuai terms.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-contacts-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "cfg-pricelist",
@@ -185,6 +190,11 @@ export const contactsDeepDive: DeepDiveModule = {
         "Satu harga untuk semua dan belum ada aturan diskon → biarkan default IDR Public.",
       businessExample: `${c1.name} dan ${c2.name} memakai ${c1.pricelist} di lab.`,
       impact: "Line SO menghitung unit price dari pricelist Contact.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-contacts-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "cfg-accounting-accounts",
@@ -199,6 +209,11 @@ export const contactsDeepDive: DeepDiveModule = {
         "Pemula: biarkan default dari Account Properties — jangan buat akun AR per customer tanpa kebijakan.",
       businessExample: `Default Receivable/Payable Indonesia untuk semua seed Contact di ${company.name}.`,
       impact: "Journal items invoice/bill memakai akun tersebut.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w1-contacts-list.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [

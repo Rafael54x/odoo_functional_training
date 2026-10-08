@@ -132,6 +132,11 @@ export const manufacturingDeepDive: DeepDiveModule = {
         "Hanya satu FG — by-product membingungkan costing awal.",
       businessExample: "Trim kemasan rusak dicatat sebagai scrap product.",
       impact: "Tab By-products di BoM/MO.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-mrp.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "mrp-subcontracting",
@@ -167,6 +172,11 @@ export const manufacturingDeepDive: DeepDiveModule = {
         "Job shop sporadis — cukup MO manual/MTO.",
       businessExample: `MPS mingguan Paket Oleh-Oleh untuk suplai ${distributor.name}.`,
       impact: "Menu MPS; saran kuantitas produksi.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-mrp.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
     {
       id: "mrp-traceability",
@@ -202,6 +212,11 @@ export const manufacturingDeepDive: DeepDiveModule = {
       businessExample: `SO ${distributor.name} memicu MO Paket Oleh-Oleh.`,
       impact:
         "MO generated from SO; dual link Sales↔Manufacturing.",
+      screenshot: {
+        src: "/screenshots/odoo19e/w2-mrp.png",
+        caption: "Tampilan terkait di Odoo 19 Enterprise",
+        whatYouSee: "UI modul pada lab / runbot Enterprise",
+      },
     },
   ],
   masterData: [
