@@ -8,7 +8,7 @@ const kopi = seed.products.kopi;
 const company = seed.company;
 
 /**
- * Deep Dive — Project (Wave 2)
+ * Deep Dive — Project
  * Project, Task, Stage, profitability dengan Timesheets.
  */
 export const projectDeepDive: DeepDiveModule = {
@@ -805,7 +805,7 @@ export const projectDeepDive: DeepDiveModule = {
         "Aktifkan opsi timesheets on tasks",
         "Refresh browser",
       ],
-      prevention: "Checklist install Wave 2: Project + Timesheets bersama",
+      prevention: "Checklist install: Project + Timesheets bersama",
     },
     {
       id: "t-proj-cannot-see",

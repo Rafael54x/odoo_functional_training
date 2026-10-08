@@ -8,7 +8,7 @@ const jasa = seed.products.jasa;
 const company = seed.company;
 
 /**
- * Deep Dive — Helpdesk (Wave 3)
+ * Deep Dive — Helpdesk
  * Teams, Tickets, Stages, SLA, Assign, Portal; opsional Convert to Lead/CRM.
  */
 export const helpdeskDeepDive: DeepDiveModule = {
@@ -824,7 +824,7 @@ export const helpdeskDeepDive: DeepDiveModule = {
         "Proses replacement / credit",
         "Stage Solved + rating",
       ],
-      notes: "Jalur default latihan Wave 3 Helpdesk after-sales.",
+      notes: "Jalur default latihan Helpdesk after-sales.",
     },
     {
       id: "sc-hd-portal-intake",
@@ -1019,7 +1019,7 @@ export const helpdeskDeepDive: DeepDiveModule = {
         "Aktifkan convert di Settings",
         "Login ulang setelah group diubah",
       ],
-      prevention: "Lab Wave 3: Helpdesk + CRM jika skenario upsell dipakai",
+      prevention: "Lab: Helpdesk + CRM jika skenario upsell dipakai",
     },
     {
       id: "t-hd-kanban-empty",

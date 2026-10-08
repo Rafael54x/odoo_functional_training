@@ -9,7 +9,7 @@ const teh = seed.products.teh;
 const jasa = seed.products.jasa;
 
 /**
- * Deep Dive — eCommerce (Wave 2)
+ * Deep Dive — eCommerce
  * Catalog online → cart → checkout → Sales Order → delivery/invoice.
  */
 export const ecommerceDeepDive: DeepDiveModule = {

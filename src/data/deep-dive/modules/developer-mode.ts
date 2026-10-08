@@ -6,7 +6,7 @@ const customer = seed.customers.toko;
 const kopi = seed.products.kopi;
 
 /**
- * Deep Dive — Developer Mode & Technical Settings (Wave 2)
+ * Deep Dive — Developer Mode & Technical Settings
  * Functional view of technical menus — NOT a coding course.
  */
 export const developerModeDeepDive: DeepDiveModule = {
@@ -33,7 +33,7 @@ export const developerModeDeepDive: DeepDiveModule = {
     ],
     whenNeeded:
       "Saat konfigurasi UI tidak cukup: investigasi field, akses, sequence, scheduled action status, template email, atau metadata record. Matikan setelah selesai jika tidak diperlukan sehari-hari.",
-    relatedModules: ["Settings", "Users & Access Rights", "Automation (Wave 3)", "Email Templates"],
+    relatedModules: ["Settings", "Users & Access Rights", "Automation", "Email Templates"],
     businessScenario: `Di lab ${company.name}, consultant mengaktifkan Developer Mode untuk: (1) cek technical name field Pricelist di SO ke ${customer.name}, (2) lihat model sale.order dari tombol bug, (3) periksa sequence Customer Invoice, (4) diagnosa email quotation ${kopi.name} yang tertahan di Outgoing Emails — tanpa menulis kode.`,
   },
   prerequisites: {
@@ -537,7 +537,7 @@ export const developerModeDeepDive: DeepDiveModule = {
       id: "int-dev-automation",
       withModule: "Automation / Scheduled Actions",
       relationship: "Pintu cron & server actions",
-      whatHappens: "Wave 3 memperdalam otomasi; di sini hanya inspeksi on/off & last run.",
+      whatHappens: "Otomasi lanjutan di luar scope; di sini hanya inspeksi on/off & last run.",
     },
     {
       id: "int-dev-email",
@@ -668,7 +668,7 @@ export const developerModeDeepDive: DeepDiveModule = {
       "Audit siapa punya Administration Settings",
       "Jangan commit perubahan view ad-hoc",
     ],
-    note: "Deep Dive ini sengaja berhenti di inspeksi & konfigurasi aman. Custom module development di luar scope Wave 2 functional.",
+    note: "Deep Dive ini sengaja berhenti di inspeksi & konfigurasi aman. Custom module development di luar scope functional dasar.",
   },
   reporting: [
     {

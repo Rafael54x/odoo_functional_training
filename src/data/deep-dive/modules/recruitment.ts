@@ -8,7 +8,7 @@ const jasa = seed.products.jasa;
 const kopi = seed.products.kopi;
 
 /**
- * Deep Dive — Recruitment (Wave 3)
+ * Deep Dive — Recruitment
  * Job Positions, Applicant pipeline, interview, offer/refuse, handoff ke Employees.
  */
 export const recruitmentDeepDive: DeepDiveModule = {

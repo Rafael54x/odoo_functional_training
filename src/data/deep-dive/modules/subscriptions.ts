@@ -9,7 +9,7 @@ const teh = seed.products.teh;
 const company = seed.company;
 
 /**
- * Deep Dive — Subscriptions (Wave 4)
+ * Deep Dive — Subscriptions
  * Recurring products, plans/recurrence, sale.order subscription,
  * close/renew/upsell, invoicing cadence, MRR untuk pemula.
  */
@@ -904,7 +904,7 @@ export const subscriptionsDeepDive: DeepDiveModule = {
         "Generate & post invoice periode 1",
         "Pantau Next Invoice Date",
       ],
-      notes: "Jalur default latihan Wave 4 Subscriptions.",
+      notes: "Jalur default latihan Subscriptions.",
     },
     {
       id: "sc-sub-distributor-yearly",
@@ -939,7 +939,7 @@ export const subscriptionsDeepDive: DeepDiveModule = {
         "Close + reason",
         "Stop billing",
         "Analisis churn di report",
-        "Opsional: win-back campaign (Email Marketing Wave 4)",
+        "Opsional: win-back campaign (Email Marketing)",
       ],
     },
     {

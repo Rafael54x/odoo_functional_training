@@ -7,7 +7,7 @@ const teh = seed.products.teh;
 const company = seed.company;
 
 /**
- * Deep Dive — Point of Sale (Wave 3)
+ * Deep Dive — Point of Sale
  * Shop/config, open session, jual storable di register, payment, close session;
  * dampak Inventory & Accounting.
  */
@@ -876,7 +876,7 @@ export const posDeepDive: DeepDiveModule = {
         "Serahkan barang",
         "Close Session akhir shift",
       ],
-      notes: "Jalur default latihan Wave 3 POS + Inventory + Accounting.",
+      notes: "Jalur default latihan POS + Inventory + Accounting.",
     },
     {
       id: "sc-pos-known-customer",

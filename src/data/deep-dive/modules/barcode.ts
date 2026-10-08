@@ -23,7 +23,7 @@ const barcodes = {
 } as const;
 
 /**
- * Deep Dive — Barcode (Wave 3)
+ * Deep Dive — Barcode
  * Aplikasi Barcode Odoo 19 Enterprise: menu utama mobile/ops, scan receipt/delivery/internal,
  * barcode produk, lembar data demo, dan perbandingan vs Inventory klasik.
  */
@@ -159,7 +159,7 @@ export const barcodeDeepDive: DeepDiveModule = {
         src: "/screenshots/odoo19e/w3-barcode.png",
         caption: "Barcode main menu — tile operasi gudang",
         whatYouSee: "Menu utama aplikasi Barcode dengan pintasan operasi",
-        why: "Titik awal semua alur scan Wave 3",
+        why: "Titik awal semua alur scan Barcode",
       },
     },
     {
@@ -323,7 +323,7 @@ export const barcodeDeepDive: DeepDiveModule = {
       id: "md-demo-sheet",
       name: "Demo Data Sheet — Barcode Latihan",
       purpose:
-        "Lembar referensi kode untuk lab Wave 3 agar seluruh peserta scan nilai yang sama.",
+        "Lembar referensi kode agar seluruh peserta lab scan nilai yang sama.",
       required: true,
       whyNeeded:
         "Tanpa sheet bersama, tiap orang membuat barcode berbeda dan prosedur seed tidak reproducible.",
@@ -695,7 +695,7 @@ export const barcodeDeepDive: DeepDiveModule = {
         src: "/screenshots/odoo19e/w3-barcode.png",
         caption: "Barcode main menu — home operator mobile",
         whatYouSee: "Tile operasi aplikasi Barcode",
-        why: "Orientasi pertama Wave 3 sebelum scan receipt",
+        why: "Orientasi pertama sebelum scan receipt",
       },
     },
     {
@@ -965,7 +965,7 @@ export const barcodeDeepDive: DeepDiveModule = {
     },
     {
       id: "int-bc-quality",
-      withModule: "Quality (opsional Wave 3)",
+      withModule: "Quality (opsional)",
       relationship: "Quality checks pada picking",
       whatHappens:
         "Jika Quality aktif, scan receipt bisa memicu check sebelum putaway selesai.",

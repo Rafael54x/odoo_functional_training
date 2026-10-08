@@ -5,7 +5,7 @@ import { odooLab } from "../../odoo-lab";
 const company = seed.company;
 
 /**
- * Deep Dive — Users & Access Rights (Wave 1)
+ * Deep Dive — Users & Access Rights
  * Fokus least privilege, groups Sales/Purchase/Inventory/Accounting User vs Manager.
  */
 export const usersDeepDive: DeepDiveModule = {
@@ -53,7 +53,7 @@ export const usersDeepDive: DeepDiveModule = {
     ],
     configuration: [
       "Settings → Users & Companies → Users",
-      "Developer Mode hanya jika perlu meninjau Technical groups (opsional Wave 2)",
+      "Developer Mode hanya jika perlu meninjau Technical groups (opsional Developer Mode)",
     ],
     access: [
       "Hanya Admin / Settings Manager yang boleh membuat user & mengubah groups",
@@ -186,7 +186,7 @@ export const usersDeepDive: DeepDiveModule = {
       location: "Users → form → Companies / Multi-company fields",
       what: "Company mana yang boleh diakses user.",
       whyEnable: "Di lingkungan multi-company, membatasi data antar entitas.",
-      whenEnable: "Wave 2 multi-company; di lab single-company cukup default.",
+      whenEnable: "Multi-company; di lab single-company cukup default.",
       whenNot: "Jangan ekspos semua company ke magang.",
       businessExample: `Lab: hanya ${company.name}.`,
       impact: "Record rules memfilter data per company.",

@@ -7,7 +7,7 @@ const kopi = seed.products.kopi;
 const jasa = seed.products.jasa;
 
 /**
- * Deep Dive — Website CMS (Wave 2)
+ * Deep Dive — Website CMS
  * Fokus halaman publik, editor, menu, SEO — fondasi sebelum eCommerce.
  */
 export const websiteDeepDive: DeepDiveModule = {

@@ -8,7 +8,7 @@ const kopi = seed.products.kopi;
 const company = seed.company;
 
 /**
- * Deep Dive — Timesheets (Wave 2)
+ * Deep Dive — Timesheets
  * Time tracking → project/task → analytic → invoice.
  */
 export const timesheetsDeepDive: DeepDiveModule = {

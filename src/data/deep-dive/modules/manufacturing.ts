@@ -11,7 +11,7 @@ const dus = seed.products.dus;
 const company = seed.company;
 
 /**
- * Deep Dive — Manufacturing / MRP (Wave 2)
+ * Deep Dive — Manufacturing / MRP
  * BoM, Manufacturing Order, konsumsi komponen, finished goods.
  * Slug katalog deep dive: manufacturing (app Odoo: Manufacturing / mrp).
  */

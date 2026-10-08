@@ -197,7 +197,7 @@ export const inventoryDeepDive: DeepDiveModule = {
       whenEnable:
         "Vendor sering kirim cacat; ada tim QC.",
       whenNot:
-        "Wave 1 demo tanpa Quality app — lewati dulu.",
+        "Demo tanpa Quality app — lewati dulu.",
       businessExample: `QC check visual pada receipt ${vendor.name}.`,
       impact:
         "Quality checks muncul di picking; fail bisa block putaway.",

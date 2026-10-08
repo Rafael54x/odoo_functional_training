@@ -8,7 +8,7 @@ const c2 = seed.customers.distributor;
 const company = seed.company;
 
 /**
- * Deep Dive — Contacts (Wave 1)
+ * Deep Dive — Contacts
  * Konten fungsional lengkap bahasa Indonesia untuk Odoo 19 Enterprise.
  */
 export const contactsDeepDive: DeepDiveModule = {

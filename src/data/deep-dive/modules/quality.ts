@@ -10,7 +10,7 @@ const dus = seed.products.dus;
 const po = seed.po;
 
 /**
- * Deep Dive — Quality (Wave 3)
+ * Deep Dive — Quality
  * Control Points, Quality Checks, Alerts, Teams; gate pada Receipt & MO.
  * Odoo 19 Enterprise: quality.point → quality.check → Pass/Fail/Measure + Quality Alert.
  */
@@ -1059,7 +1059,7 @@ export const qualityDeepDive: DeepDiveModule = {
         "Validate Receipt",
         "Stok available; Purchase boleh lanjut invoice",
       ],
-      notes: "Jalur bahagia latihan Wave 3 Quality + Inventory.",
+      notes: "Jalur bahagia latihan Quality + Inventory.",
     },
     {
       id: "sc-qc-incoming-fail-return",

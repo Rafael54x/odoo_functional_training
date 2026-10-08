@@ -8,7 +8,7 @@ const jasa = seed.products.jasa;
 const company = seed.company;
 
 /**
- * Deep Dive — Odoo Studio (Wave 4)
+ * Deep Dive — Odoo Studio
  * No-code customization: fields, views, menus, approval rules;
  * kapan TIDAK memakai Studio; kaitan Developer Mode.
  */

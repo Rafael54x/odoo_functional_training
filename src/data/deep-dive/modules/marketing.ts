@@ -9,7 +9,7 @@ const jasa = seed.products.jasa;
 const company = seed.company;
 
 /**
- * Deep Dive — Email Marketing / Mailing (Wave 4)
+ * Deep Dive — Email Marketing / Mailing
  * Mailing lists, campaigns, templates/A/B, contacts, send & reporting.
  * App Odoo sering bernama "Email Marketing".
  */
@@ -779,7 +779,7 @@ export const marketingDeepDive: DeepDiveModule = {
         "Test → Schedule",
         "Baca open rate minggu berikutnya",
       ],
-      notes: "Jalur default latihan Wave 4 Email Marketing.",
+      notes: "Jalur default latihan Email Marketing.",
     },
     {
       id: "sc-mkt-b2b-catalog",

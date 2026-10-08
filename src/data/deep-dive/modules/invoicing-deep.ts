@@ -11,7 +11,7 @@ const jasa = seed.products.jasa;
 const dus = seed.products.dus;
 
 /**
- * Deep Dive — Invoicing AR/AP operasional (Wave 2)
+ * Deep Dive — Invoicing AR/AP operasional
  * Slug: invoicing — fokus workflow invoice/bill/payment/portal di luar Accounting wave 1.
  */
 export const invoicingDeepDive: DeepDiveModule = {
@@ -23,11 +23,11 @@ export const invoicingDeepDive: DeepDiveModule = {
   wave: 2,
   availability: "available",
   availabilityNote:
-    "Invoicing app tersedia di lab; overlap dengan Accounting wave 1 disengaja — modul ini memperdalam operasi harian AR/AP, credit note, payment matching, dan portal pelanggan.",
+    "Invoicing app tersedia di lab; overlap dengan Accounting disengaja — modul ini memperdalam operasi harian AR/AP, credit note, payment matching, dan portal pelanggan.",
   apps: ["Invoicing", "Accounting", "Sales", "Purchase"],
   overview: {
     function:
-      "Invoicing mengelola siklus piutang & hutang operasional: Customer Invoice, Vendor Bill, Credit Note/Refund, Register Payment, rekonsiliasi sederhana, follow-up jatuh tempo, dan portal pembayaran. Di Odoo 19 Enterprise dokumen tetap account.move (out_invoice/in_invoice/out_refund/in_refund) — Wave 2 menekankan prosedur harian AR/AP, bukan setup CoA (sudah di Accounting wave 1).",
+      "Invoicing mengelola siklus piutang & hutang operasional: Customer Invoice, Vendor Bill, Credit Note/Refund, Register Payment, rekonsiliasi sederhana, follow-up jatuh tempo, dan portal pembayaran. Di Odoo 19 Enterprise dokumen tetap account.move (out_invoice/in_invoice/out_refund/in_refund) — modul ini menekankan prosedur harian AR/AP, bukan setup CoA (sudah di Deep Dive Accounting).",
     businessProblem:
       "Tim AR/AP sering membuat invoice lepas dari SO/PO, salah payment terms, menumpuk draft, atau Register Payment tanpa matching — Aged Receivable tidak bersih dan cash application lambat. Vendor bill tanpa 3-way match memicu bayar berlebih.",
     typicalUsers: [
@@ -48,7 +48,7 @@ export const invoicingDeepDive: DeepDiveModule = {
       "Invoicing atau Accounting terpasang",
       "Sales (untuk invoice dari SO)",
       "Purchase (untuk bill dari PO)",
-      "Accounting wave 1 (CoA & taxes dasar)",
+      "Accounting (CoA & taxes dasar)",
     ],
     masterData: [
       `Customer ${customer.name}, ${distributor.name}`,
@@ -953,7 +953,7 @@ export const invoicingDeepDive: DeepDiveModule = {
       "Pisahkan siapa buat draft vs siapa post & bayar",
       "Vendor bill create vs payment approval dual control ideal",
     ],
-    note: "Wave 1 Accounting = fondasi CoA/pajak/laporan; Wave 2 Invoicing = ritme harian AR/AP & koreksi.",
+    note: "Accounting = fondasi CoA/pajak/laporan; Invoicing = ritme harian AR/AP & koreksi.",
   },
   reporting: [
     {

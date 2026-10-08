@@ -8,7 +8,7 @@ const kopi = seed.products.kopi;
 const distributor = seed.customers.distributor;
 
 /**
- * Deep Dive — Localization & Multi-currency (Wave 2)
+ * Deep Dive — Localization & Multi-currency
  * Fiscal pack, taxes, currency rates — operational finance config.
  */
 export const localizationDeepDive: DeepDiveModule = {
@@ -24,7 +24,7 @@ export const localizationDeepDive: DeepDiveModule = {
   apps: ["Accounting", "Settings", "Invoicing"],
   overview: {
     function:
-      "Localization mengatur kecocokan Odoo dengan negara operasi: Chart of Accounts, pajak, posisi fiskal, format tanggal/angka, dan mata uang. Multi-currency menambah kurs (res.currency.rate) agar transaksi USD/asing bisa diposting lalu dinilai ulang ke IDR. Wave 2 memperdalam keputusan 'pasang pack kapan' dan edge case kurs — bukan sekadar centang wizard.",
+      "Localization mengatur kecocokan Odoo dengan negara operasi: Chart of Accounts, pajak, posisi fiskal, format tanggal/angka, dan mata uang. Multi-currency menambah kurs (res.currency.rate) agar transaksi USD/asing bisa diposting lalu dinilai ulang ke IDR. Modul ini memperdalam keputusan 'pasang pack kapan' dan edge case kurs — bukan sekadar centang wizard.",
     businessProblem:
       "Salah localization membuat akun pajak tidak muncul, PPN 11% tidak konsisten, atau laporan memakai currency salah. Mengganti pack setelah jurnal posted berisiko tinggi. Multi-currency tanpa update rate membuat laba selisih kurs kacau.",
     typicalUsers: [

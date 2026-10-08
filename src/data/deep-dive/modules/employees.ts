@@ -6,7 +6,7 @@ const customer = seed.customers.toko;
 const jasa = seed.products.jasa;
 
 /**
- * Deep Dive — Employees / HR (Wave 2)
+ * Deep Dive — Employees / HR
  * Master karyawan, departemen, job — fondasi apps HR & Timesheets.
  */
 export const employeesDeepDive: DeepDiveModule = {

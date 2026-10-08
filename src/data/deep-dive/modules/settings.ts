@@ -5,7 +5,7 @@ import { odooLab } from "../../odoo-lab";
 const company = seed.company;
 
 /**
- * Deep Dive — General Settings / Companies (Wave 1)
+ * Deep Dive — General Settings / Companies
  */
 export const settingsDeepDive: DeepDiveModule = {
   slug: "settings",
@@ -52,7 +52,7 @@ export const settingsDeepDive: DeepDiveModule = {
     ],
     configuration: [
       "Akses Settings app",
-      "Opsional: Developer Mode untuk technical menus (Wave 2)",
+      "Opsional: Developer Mode untuk technical menus (Developer Mode)",
     ],
     access: [
       "Administration = Settings minimal untuk mengubah General Settings",
@@ -618,11 +618,11 @@ export const settingsDeepDive: DeepDiveModule = {
     },
     {
       id: "sc-single-vs-multi-company",
-      title: "Tetap single-company di Wave 1",
+      title: "Tetap single-company dulu",
       whenToUse: "Lab pemula.",
       flow: [
         "Satu company saja",
-        "Jangan create company kedua sebelum Wave 2",
+        "Jangan create company kedua sebelum multi-company",
         "Fokus kelengkapan profil & settings app",
       ],
     },
@@ -676,7 +676,7 @@ export const settingsDeepDive: DeepDiveModule = {
       problem: "Mengaktifkan semua fitur advanced sekaligus",
       why: "UI penuh; jalur belajar pemula buyar",
       detect: "Banyak menu Configuration yang belum diajarkan",
-      fix: "Nonaktifkan yang tidak dipakai silabus Wave 1",
+      fix: "Nonaktifkan yang tidak dipakai silabus fondasi",
       prevent: "Change log: hanya fitur yang ada di kurikulum",
     },
     {
@@ -844,7 +844,7 @@ export const settingsDeepDive: DeepDiveModule = {
     advanced: [
       "Dampak toggle terhadap field & menu",
       "Kapan install modul otomatis terjadi",
-      "Multi-company readiness (persiapan Wave 2)",
+      "Multi-company readiness (persiapan multi-company)",
       "Branding PDF konsisten multi-dokumen",
     ],
     expert: [

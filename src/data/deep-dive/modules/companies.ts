@@ -7,7 +7,7 @@ const vendor = seed.vendors.bahan;
 const kopi = seed.products.kopi;
 
 /**
- * Deep Dive — Companies / Multi-company (Wave 2)
+ * Deep Dive — Companies / Multi-company
  * Single company dulu; multi-company sebagai advanced operational isolation.
  */
 export const companiesDeepDive: DeepDiveModule = {
@@ -21,7 +21,7 @@ export const companiesDeepDive: DeepDiveModule = {
   apps: ["Settings", "Contacts", "Accounting"],
   overview: {
     function:
-      "Companies (res.company) adalah entitas legal di Odoo: nama, alamat, NPWP, mata uang, logo, dan batas data multi-company. Di Odoo 19 Enterprise, hampir semua dokumen transaksi (SO, PO, Invoice, Stock) punya company_id. Wave 2 memperdalam setup single company yang benar lalu pola multi-company (inter-company, user allowed companies, shared partners).",
+      "Companies (res.company) adalah entitas legal di Odoo: nama, alamat, NPWP, mata uang, logo, dan batas data multi-company. Di Odoo 19 Enterprise, hampir semua dokumen transaksi (SO, PO, Invoice, Stock) punya company_id. Modul ini memperdalam setup single company yang benar lalu pola multi-company (inter-company, user allowed companies, shared partners).",
     businessProblem:
       "Database masih 'My Company', currency salah, atau user melihat/mencampur dokumen dua entitas legal membuat laporan pajak dan stok tidak bisa diaudit. Multi-company tanpa aturan share malah bocor data antar PT.",
     typicalUsers: [
@@ -892,7 +892,7 @@ export const companiesDeepDive: DeepDiveModule = {
       id: "ex-co-warehouse",
       title: "Diskusi: cabang = warehouse",
       objective: "Tidak membuat company untuk cabang stok",
-      prerequisites: ["Inventory wave 1"],
+      prerequisites: ["Inventory fondasi"],
       task: [
         "Tulis alasan kapan company vs warehouse",
         "Buat warehouse tambahan sebagai alternatif",

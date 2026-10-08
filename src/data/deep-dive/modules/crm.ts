@@ -8,7 +8,7 @@ const jasa = seed.products.jasa;
 const company = seed.company;
 
 /**
- * Deep Dive — CRM (Wave 2)
+ * Deep Dive — CRM
  * Pipeline, Lead/Opportunity, Activity; konversi ke Sales Quotation.
  */
 export const crmDeepDive: DeepDiveModule = {
@@ -702,7 +702,7 @@ export const crmDeepDive: DeepDiveModule = {
         "New Quotation",
         "Mark Won setelah deal",
       ],
-      notes: "Jalur default latihan Wave 2 CRM → Sales.",
+      notes: "Jalur default latihan CRM → Sales.",
     },
     {
       id: "sc-crm-lead-convert",
@@ -831,7 +831,7 @@ export const crmDeepDive: DeepDiveModule = {
         "Convert Lead to Opportunity",
         "Login ulang setelah hak akses diubah",
       ],
-      prevention: "Checklist Wave 2: CRM + Sales + Contacts sebelum latihan convert",
+      prevention: "Checklist: CRM + Sales + Contacts sebelum latihan convert",
     },
     {
       id: "t-crm-pipeline-empty",
