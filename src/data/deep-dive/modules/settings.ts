@@ -122,9 +122,9 @@ export const settingsDeepDive: DeepDiveModule = {
       businessExample: `Currency = ${company.currency}`,
       impact: "Simbol harga, reporting, dan konversi multi-currency.",
       screenshot: {
+        src: "/screenshots/odoo19e/w1-companies.png",
         caption: "Currency IDR pada Company / Currencies",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "Screenshot Odoo 19 Enterprise",
       },
     },
     {
@@ -167,9 +167,9 @@ export const settingsDeepDive: DeepDiveModule = {
       businessExample: "Pricelists ON agar Contact customer punya field Pricelist.",
       impact: "Field & menu Sales Configuration bertambah.",
       screenshot: {
+        src: "/screenshots/odoo19e/w1-settings.png",
         caption: "Blok Settings → Sales",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "Screenshot Odoo 19 Enterprise",
       },
     },
     {
@@ -211,9 +211,9 @@ export const settingsDeepDive: DeepDiveModule = {
       businessExample: `Logo ${company.name} di header Invoice.`,
       impact: "Semua QWeb report eksternal memakai layout.",
       screenshot: {
+        src: "/screenshots/odoo19e/w1-settings.png",
         caption: "Document layout wizard",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "Screenshot Odoo 19 Enterprise",
       },
     },
   ],
@@ -304,9 +304,9 @@ export const settingsDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-settings.png",
         caption: "Settings → Languages",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "Screenshot Odoo 19 Enterprise",
       },
     },
   ],
@@ -415,9 +415,9 @@ export const settingsDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-companies.png",
         caption: "Form Company lengkap",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED] Company form dengan seed terisi",
+        whatYouSee: "Company form Odoo 19 Enterprise",
         whatToFill: "Seluruh field seed.company",
         expectedResult: `Header menampilkan ${company.name}`,
       },
@@ -544,9 +544,9 @@ export const settingsDeepDive: DeepDiveModule = {
         "SO mengambil harga sesuai pricelist",
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-settings.png",
         caption: "Sales Settings — Pricelists aktif",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "Screenshot Odoo 19 Enterprise",
       },
     },
     {
@@ -564,9 +564,9 @@ export const settingsDeepDive: DeepDiveModule = {
       expectedResult: "PDF menampilkan branding lab.",
       verification: ["Logo terlihat", "Alamat company benar di footer/header"],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-settings.png",
         caption: "Wizard Document Layout",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "Screenshot Odoo 19 Enterprise",
       },
     },
     {

@@ -202,8 +202,8 @@ export const inventoryDeepDive: DeepDiveModule = {
       impact:
         "Quality checks muncul di picking; fail bisa block putaway.",
       screenshot: {
-        required: true,
-        caption: "[SCREENSHOT REQUIRED] Quality check pada incoming receipt (Enterprise)",
+        src: "/screenshots/odoo19e/w3-quality.png",
+        caption: "Quality check pada incoming receipt (Enterprise)",
       },
     },
   ],
@@ -564,8 +564,8 @@ export const inventoryDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
-        required: true,
-        caption: "[SCREENSHOT REQUIRED] Physical Inventory / Apply adjustment screen",
+        src: "/screenshots/odoo19e/06-inventory-overview.png",
+        caption: "Physical Inventory / Apply adjustment screen",
       },
     },
   ],
@@ -651,8 +651,8 @@ export const inventoryDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
-        required: true,
-        caption: "[SCREENSHOT REQUIRED] Delivery Order form Ready to Validate untuk Toko Maju Jaya",
+        src: "/screenshots/odoo19e/w1-delivery-orders.png",
+        caption: "Delivery Order form Ready to Validate untuk Toko Maju Jaya",
       },
     },
     {

@@ -104,9 +104,9 @@ export const usersDeepDive: DeepDiveModule = {
         "Kasir/admin sales = Internal; customer portal Toko Maju Jaya = Portal (lanjutan).",
       impact: "Portal tidak melihat Apps backend; Internal melihat sesuai groups.",
       screenshot: {
+        src: "/screenshots/odoo19e/w1-user-form-new.png",
         caption: "Form User — tipe dan Access Rights",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED] Settings Users form Access Rights",
+        whatYouSee: "Settings Users form Access Rights",
       },
     },
     {
@@ -123,9 +123,9 @@ export const usersDeepDive: DeepDiveModule = {
       impact:
         "User: dokumen milik sendiri/tim; Manager: lihat semua + settings Sales.",
       screenshot: {
+        src: "/screenshots/odoo19e/w1-user-form-new.png",
         caption: "Dropdown Sales access level pada User",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "",
       },
     },
     {
@@ -164,9 +164,9 @@ export const usersDeepDive: DeepDiveModule = {
         "AR clerk post invoice customer; Accounting Admin setup pajak 11%.",
       impact: "Posting & laporan keuangan terkunci sesuai level.",
       screenshot: {
+        src: "/screenshots/odoo19e/w1-user-form-new.png",
         caption: "Accounting access levels",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "",
       },
     },
     {
@@ -247,9 +247,9 @@ export const usersDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-user-form-new.png",
         caption: "Form User baru Internal",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED] New User form",
+        whatYouSee: "New User form",
       },
     },
     {
@@ -306,9 +306,9 @@ export const usersDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-user-form-new.png",
         caption: "Tab Access Rights terisi level User (bukan Admin)",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "",
       },
     },
   ],
@@ -387,9 +387,9 @@ export const usersDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-settings.png",
         caption: "Form Users di Settings",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "",
         whatToFill: "Name, Email, Access Rights",
       },
     },
@@ -407,9 +407,9 @@ export const usersDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-user-form-new.png",
         caption: "Wizard ganti password user",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "",
       },
     },
   ],
@@ -471,9 +471,9 @@ export const usersDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-user-form-new.png",
         caption: "Sales User setelah Access Rights di-set",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "",
       },
     },
     {
@@ -537,9 +537,9 @@ export const usersDeepDive: DeepDiveModule = {
         "Catatan: Manager melihat order milik user lain",
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-users-list.png",
         caption: "Perbandingan menu Sales User vs Manager",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "",
       },
     },
     {

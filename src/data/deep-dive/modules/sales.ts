@@ -677,8 +677,8 @@ export const salesDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
-        required: true,
-        caption: "[SCREENSHOT REQUIRED] Delivery Order outgoing setelah Confirm SO — Validate picking",
+        src: "/screenshots/odoo19e/w1-delivery-orders.png",
+        caption: "Delivery Order outgoing setelah Confirm SO — Validate picking",
       },
     },
     {

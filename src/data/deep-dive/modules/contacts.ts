@@ -113,9 +113,9 @@ export const contactsDeepDive: DeepDiveModule = {
       impact:
         "Filter & group-by Tags di list Contacts; tag ikut terbawa ke beberapa laporan/segmentasi.",
       screenshot: {
+        src: "/screenshots/odoo19e/w1-contact-tags.png",
         caption: "Daftar Contact Tags di Configuration",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED] List tag dengan warna",
+        whatYouSee: "List tag dengan warna",
         why: "Menunjukkan lokasi konfigurasi tag sebelum dipakai di form Contact",
       },
     },
@@ -155,9 +155,9 @@ export const contactsDeepDive: DeepDiveModule = {
       impact:
         "Visibility di filter; field Salesperson/Buyer & pricelist menjadi relevan.",
       screenshot: {
+        src: "/screenshots/odoo19e/w1-contact-form.png",
         caption: "Tab Sales & Purchase dengan flag Customer/Vendor",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED] Tab Sales & Purchase Contact",
+        whatYouSee: "Tab Sales & Purchase Contact",
       },
     },
     {
@@ -322,9 +322,9 @@ export const contactsDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-contacts-list.png",
         caption: "Individual child di bawah Company",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED] Contact Individual dengan Related Company",
+        whatYouSee: "Contact Individual dengan Related Company",
       },
     },
     {
@@ -356,9 +356,9 @@ export const contactsDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/15-customer-invoices.png",
         caption: "Child address Invoice/Delivery",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED] Contacts dengan type address",
+        whatYouSee: "Contacts dengan type address",
       },
     },
     {
@@ -558,9 +558,9 @@ export const contactsDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-contact-form.png",
         caption: "Tab Sales & Purchase Contact",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "",
       },
     },
     {
@@ -591,9 +591,9 @@ export const contactsDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/w1-contacts-list.png",
         caption: "Tab Accounting pada Contact",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "",
       },
     },
   ],
@@ -724,9 +724,9 @@ export const contactsDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/01-home-apps.png",
         caption: "Customer Toko Maju Jaya tersimpan",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED] Form customer setelah Save",
+        whatYouSee: "Form customer setelah Save",
       },
     },
     {
@@ -749,9 +749,9 @@ export const contactsDeepDive: DeepDiveModule = {
         "SO menampilkan alamat kirim yang dipilih",
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/01-home-apps.png",
         caption: "Delivery address child",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED]",
+        whatYouSee: "",
       },
     },
     {
@@ -775,9 +775,9 @@ export const contactsDeepDive: DeepDiveModule = {
         "SO/PO historis masih terbuka tanpa error partner",
       ],
       screenshot: {
+        src: "/screenshots/odoo19e/01-home-apps.png",
         caption: "Wizard Merge Contacts",
-        required: true,
-        whatYouSee: "[SCREENSHOT REQUIRED] Action Merge",
+        whatYouSee: "Action Merge",
       },
     },
   ],

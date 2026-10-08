@@ -731,8 +731,8 @@ export const accountingDeepDive: DeepDiveModule = {
         },
       ],
       screenshot: {
-        required: true,
-        caption: "[SCREENSHOT REQUIRED] Wizard Register Payment pada Customer Invoice",
+        src: "/screenshots/odoo19e/15-customer-invoices.png",
+        caption: "Wizard Register Payment pada Customer Invoice",
       },
     },
   ],

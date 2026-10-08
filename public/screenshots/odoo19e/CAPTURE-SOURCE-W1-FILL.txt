@@ -1,0 +1,5 @@
+Odoo 19 Enterprise foundation fill shots
+server_version: 19.0+e
+source: https://127871400-19-0.runbot114.odoo.com
+db: 127871400-19-0-all
+captured: 2026-10-08T04:45:39.045Z
