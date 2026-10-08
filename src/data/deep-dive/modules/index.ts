@@ -6,6 +6,12 @@ import { accountingDeepDive } from "./accounting";
 import { contactsDeepDive } from "./contacts";
 import { usersDeepDive } from "./users";
 import { settingsDeepDive } from "./settings";
+import { websiteDeepDive } from "./website";
+import { ecommerceDeepDive } from "./ecommerce";
+import { companiesDeepDive } from "./companies";
+import { localizationDeepDive } from "./localization";
+import { developerModeDeepDive } from "./developer-mode";
+import { invoicingDeepDive } from "./invoicing-deep";
 
 /** Wave 1 Deep Dive modules dengan konten penuh */
 export const wave1DeepDives: DeepDiveModule[] = [
@@ -18,6 +24,16 @@ export const wave1DeepDives: DeepDiveModule[] = [
   settingsDeepDive,
 ];
 
+/** Wave 2 Deep Dive modules dengan konten penuh */
+export const wave2DeepDives: DeepDiveModule[] = [
+  websiteDeepDive,
+  ecommerceDeepDive,
+  companiesDeepDive,
+  localizationDeepDive,
+  developerModeDeepDive,
+  invoicingDeepDive,
+];
+
 export {
   salesDeepDive,
   purchaseDeepDive,
@@ -26,6 +42,12 @@ export {
   contactsDeepDive,
   usersDeepDive,
   settingsDeepDive,
+  websiteDeepDive,
+  ecommerceDeepDive,
+  companiesDeepDive,
+  localizationDeepDive,
+  developerModeDeepDive,
+  invoicingDeepDive,
 };
 
 export type DeepDivePlaceholder = {
@@ -47,13 +69,6 @@ export const laterPlaceholders: DeepDivePlaceholder[] = [
     wave: 2,
     availability: "verify",
     note: "Pipeline, lead/opportunity; verifikasi install di lab sebelum klaim available.",
-  },
-  {
-    slug: "invoicing",
-    name: "Invoicing (fokus AR/AP operasional)",
-    wave: 2,
-    availability: "available",
-    note: "Sebagian overlap Accounting wave 1; deep dive khusus invoice workflow & portal.",
   },
   {
     slug: "pos",
@@ -84,13 +99,6 @@ export const laterPlaceholders: DeepDivePlaceholder[] = [
     note: "Task, timesheet linkage ke Sales/Services.",
   },
   {
-    slug: "website",
-    name: "Website / eCommerce",
-    wave: 4,
-    availability: "verify",
-    note: "Front-end publik; depends on Sales & Products.",
-  },
-  {
     slug: "studio",
     name: "Studio",
     wave: 4,
@@ -100,7 +108,10 @@ export const laterPlaceholders: DeepDivePlaceholder[] = [
 ];
 
 /** Semua Deep Dive yang sudah tersedia (konten penuh) */
-export const deepDiveModules: DeepDiveModule[] = [...wave1DeepDives];
+export const deepDiveModules: DeepDiveModule[] = [
+  ...wave1DeepDives,
+  ...wave2DeepDives,
+];
 
 export function getDeepDive(slug: string): DeepDiveModule | undefined {
   return deepDiveModules.find((m) => m.slug === slug);
