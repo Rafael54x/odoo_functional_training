@@ -1,0 +1,14 @@
+Odoo 19 Enterprise screenshots (Wave 2)
+server_version: 19.0+e
+
+Main gallery (w2-crm-pipeline, w2-project, w2-mrp, w2-employees, w2-website, …):
+  source: https://127865295-19-0.runbot242.odoo.com
+  db: 127865295-19-0-all
+  note: pixels were saved upside-down because the demo website CSS set body { transform: rotate(180deg) }. Files in this folder were rotated upright.
+
+Detail pass (settings, lead form, task form, department, org chart, work orders, subcontracting):
+  source: https://127871400-19-0.runbot114.odoo.com
+  db: 127871400-19-0-all
+  login: public runbot demo Mitchell Admin
+  captured: 2026-10-08
+  verified via /web/webclient/version_info → server_version 19.0+e

@@ -226,9 +226,12 @@ export const implementationPhases = [
   {
     phase: 4,
     title: "Deep Dive Wave 2 — Adjacent Ops",
-    goal: "CRM, Manufacturing, Project, Timesheets, HR basics, Website/eCommerce overview.",
-    deliverables: ["Mini-courses per modul", "Availability flags dari environment lab"],
-    status: "planned",
+    goal: "CRM, Manufacturing, Project, Timesheets, Employees, Website, eCommerce, Companies, Localization, Developer Mode, Invoicing.",
+    deliverables: [
+      "Mini-courses per modul",
+      "Screenshot Odoo 19.0+e dari runbot Enterprise",
+    ],
+    status: "done",
   },
   {
     phase: 5,

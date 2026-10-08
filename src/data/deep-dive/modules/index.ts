@@ -6,6 +6,11 @@ import { accountingDeepDive } from "./accounting";
 import { contactsDeepDive } from "./contacts";
 import { usersDeepDive } from "./users";
 import { settingsDeepDive } from "./settings";
+import { crmDeepDive } from "./crm";
+import { projectDeepDive } from "./project";
+import { timesheetsDeepDive } from "./timesheets";
+import { employeesDeepDive } from "./employees";
+import { manufacturingDeepDive } from "./manufacturing";
 import { websiteDeepDive } from "./website";
 import { ecommerceDeepDive } from "./ecommerce";
 import { companiesDeepDive } from "./companies";
@@ -26,6 +31,11 @@ export const wave1DeepDives: DeepDiveModule[] = [
 
 /** Wave 2 Deep Dive modules dengan konten penuh */
 export const wave2DeepDives: DeepDiveModule[] = [
+  crmDeepDive,
+  projectDeepDive,
+  timesheetsDeepDive,
+  employeesDeepDive,
+  manufacturingDeepDive,
   websiteDeepDive,
   ecommerceDeepDive,
   companiesDeepDive,
@@ -42,6 +52,11 @@ export {
   contactsDeepDive,
   usersDeepDive,
   settingsDeepDive,
+  crmDeepDive,
+  projectDeepDive,
+  timesheetsDeepDive,
+  employeesDeepDive,
+  manufacturingDeepDive,
   websiteDeepDive,
   ecommerceDeepDive,
   companiesDeepDive,
@@ -60,16 +75,8 @@ export type DeepDivePlaceholder = {
 
 /**
  * Modul Deep Dive gelombang berikutnya — belum punya file konten penuh.
- * Dipakai katalog /kurikulum sebagai penanda rencana.
  */
 export const laterPlaceholders: DeepDivePlaceholder[] = [
-  {
-    slug: "crm",
-    name: "CRM",
-    wave: 2,
-    availability: "verify",
-    note: "Pipeline, lead/opportunity; verifikasi install di lab sebelum klaim available.",
-  },
   {
     slug: "pos",
     name: "Point of Sale",
@@ -78,32 +85,39 @@ export const laterPlaceholders: DeepDivePlaceholder[] = [
     note: "Retail counter; butuh produk & payment method.",
   },
   {
-    slug: "mrp",
-    name: "Manufacturing",
+    slug: "helpdesk",
+    name: "Helpdesk",
     wave: 3,
     availability: "verify",
-    note: "BoM, MO, work orders — verifikasi lisensi Enterprise lab.",
+    note: "Support tickets — Wave 3.",
   },
   {
-    slug: "hr",
-    name: "Employees / HR",
+    slug: "quality",
+    name: "Quality",
     wave: 3,
     availability: "verify",
-    note: "Master karyawan & struktur departemen.",
+    note: "Quality checks on receipt/production.",
   },
   {
-    slug: "project",
-    name: "Project",
+    slug: "barcode",
+    name: "Barcode",
     wave: 3,
     availability: "verify",
-    note: "Task, timesheet linkage ke Sales/Services.",
+    note: "Mobile scanning ops.",
+  },
+  {
+    slug: "recruitment",
+    name: "Recruitment",
+    wave: 3,
+    availability: "verify",
+    note: "Hiring pipeline.",
   },
   {
     slug: "studio",
     name: "Studio",
     wave: 4,
     availability: "verify",
-    note: "Kustomisasi no-code — hanya setelah fondasi functional kuat.",
+    note: "Kustomisasi no-code — setelah fondasi functional kuat.",
   },
 ];
 
