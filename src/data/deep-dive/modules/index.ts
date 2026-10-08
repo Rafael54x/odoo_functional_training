@@ -6,6 +6,11 @@ import { accountingDeepDive } from "./accounting";
 import { contactsDeepDive } from "./contacts";
 import { usersDeepDive } from "./users";
 import { settingsDeepDive } from "./settings";
+import { crmDeepDive } from "./crm";
+import { projectDeepDive } from "./project";
+import { timesheetsDeepDive } from "./timesheets";
+import { employeesDeepDive } from "./employees";
+import { manufacturingDeepDive } from "./manufacturing";
 
 /** Wave 1 Deep Dive modules dengan konten penuh */
 export const wave1DeepDives: DeepDiveModule[] = [
@@ -18,6 +23,15 @@ export const wave1DeepDives: DeepDiveModule[] = [
   settingsDeepDive,
 ];
 
+/** Wave 2 Deep Dive modules dengan konten penuh */
+export const wave2DeepDives: DeepDiveModule[] = [
+  crmDeepDive,
+  projectDeepDive,
+  timesheetsDeepDive,
+  employeesDeepDive,
+  manufacturingDeepDive,
+];
+
 export {
   salesDeepDive,
   purchaseDeepDive,
@@ -26,6 +40,11 @@ export {
   contactsDeepDive,
   usersDeepDive,
   settingsDeepDive,
+  crmDeepDive,
+  projectDeepDive,
+  timesheetsDeepDive,
+  employeesDeepDive,
+  manufacturingDeepDive,
 };
 
 export type DeepDivePlaceholder = {
@@ -42,13 +61,6 @@ export type DeepDivePlaceholder = {
  */
 export const laterPlaceholders: DeepDivePlaceholder[] = [
   {
-    slug: "crm",
-    name: "CRM",
-    wave: 2,
-    availability: "verify",
-    note: "Pipeline, lead/opportunity; verifikasi install di lab sebelum klaim available.",
-  },
-  {
     slug: "invoicing",
     name: "Invoicing (fokus AR/AP operasional)",
     wave: 2,
@@ -61,27 +73,6 @@ export const laterPlaceholders: DeepDivePlaceholder[] = [
     wave: 3,
     availability: "verify",
     note: "Retail counter; butuh produk & payment method.",
-  },
-  {
-    slug: "mrp",
-    name: "Manufacturing",
-    wave: 3,
-    availability: "verify",
-    note: "BoM, MO, work orders — verifikasi lisensi Enterprise lab.",
-  },
-  {
-    slug: "hr",
-    name: "Employees / HR",
-    wave: 3,
-    availability: "verify",
-    note: "Master karyawan & struktur departemen.",
-  },
-  {
-    slug: "project",
-    name: "Project",
-    wave: 3,
-    availability: "verify",
-    note: "Task, timesheet linkage ke Sales/Services.",
   },
   {
     slug: "website",
@@ -100,7 +91,10 @@ export const laterPlaceholders: DeepDivePlaceholder[] = [
 ];
 
 /** Semua Deep Dive yang sudah tersedia (konten penuh) */
-export const deepDiveModules: DeepDiveModule[] = [...wave1DeepDives];
+export const deepDiveModules: DeepDiveModule[] = [
+  ...wave1DeepDives,
+  ...wave2DeepDives,
+];
 
 export function getDeepDive(slug: string): DeepDiveModule | undefined {
   return deepDiveModules.find((m) => m.slug === slug);

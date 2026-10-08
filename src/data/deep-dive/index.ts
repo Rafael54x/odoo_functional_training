@@ -3,6 +3,7 @@ export * from "./types";
 export {
   deepDiveModules,
   wave1DeepDives,
+  wave2DeepDives,
   laterPlaceholders,
   getDeepDive,
   getDeepDiveOrPlaceholder,
