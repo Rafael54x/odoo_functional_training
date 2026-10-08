@@ -64,7 +64,7 @@ export default function HomePage() {
         <h2 className="font-heading mt-2 text-3xl text-teal-950 sm:text-4xl">
           Satu langkah, kerjakan, baru lanjut
         </h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             {
               icon: BookOpenCheck,
@@ -74,13 +74,19 @@ export default function HomePage() {
             },
             {
               icon: ListOrdered,
-              title: "Ikuti silabus berurutan",
+              title: "Ikuti Core Flow",
               body: "Modul 00 → setup → master data → Purchase/Sales. Jangan loncat.",
               href: "/silabus",
             },
             {
               icon: Route,
-              title: "Lihat peta alur",
+              title: "Peta kurikulum",
+              body: "Dual Layer, Module Matrix, dan Learning Path sebelum Deep Dive.",
+              href: "/kurikulum",
+            },
+            {
+              icon: BookOpenCheck,
+              title: "Peta alur proses",
               body: "Kalau bingung “ini masuk ke mana”, buka peta proses dulu.",
               href: "/alur",
             },

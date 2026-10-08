@@ -32,9 +32,12 @@ App: http://127.0.0.1:43129
 ## Cara belajar
 
 1. `/cara-pakai`
-2. Modul 00
-3. Kerjakan tiap langkah di http://172.16.2.123:8072 (DB `odoo`)
-4. Pakai tabel **Isi field ini** + screenshot di tiap step
+2. **Core Flow** di `/silabus` (Modul 00–09 — dipertahankan)
+3. **Curriculum Architecture** di `/kurikulum` (evaluasi Dual Layer + Module Matrix)
+4. Kerjakan tiap langkah di http://172.16.2.123:8072 (DB `odoo`)
+5. Pakai tabel **Isi field ini** + screenshot di tiap step
+
+Dokumen arsitektur: [`CURRICULUM.md`](./CURRICULUM.md)
 
 ## Docker (opsional, package odoo19e)
 

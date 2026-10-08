@@ -24,7 +24,10 @@ export function SiteHeader() {
             Cara pakai
           </Link>
           <Link href="/silabus" className="nav-link">
-            Silabus
+            Core Flow
+          </Link>
+          <Link href="/kurikulum" className="nav-link">
+            Kurikulum
           </Link>
           <Link href="/alur" className="nav-link hidden sm:inline-flex">
             Peta alur
