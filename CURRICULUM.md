@@ -1,8 +1,8 @@
 # Odoo Functional Curriculum Architecture (Phase 0)
 
-> **Status:** Rancangan untuk evaluasi — belum rewrite besar.  
+> **Status:** Phase 0–3 implemented (shell Dual-Layer + Wave 1 Deep Dive + Core Users/Closing).  
 > **Target:** Odoo 19 Enterprise · Lab `http://172.16.2.123:8072` · DB `odoo`  
-> **Halaman web:** [/kurikulum](./src/app/kurikulum/page.tsx) → route `/kurikulum`
+> **Pages:** `/silabus` (Core Flow) · `/materi` (Deep Dive) · `/kurikulum` (architecture map)
 
 ## Keputusan desain
 

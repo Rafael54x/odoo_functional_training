@@ -375,6 +375,120 @@ export const stepScreenshots: Record<string, RealShot> = {
     "Home Apps — seluruh modul yang sudah dikuasai",
     ["Contacts → Purchase → Inventory → Sales → Accounting"],
   ),
+
+  // Users & Access (Core 02a)
+  "buka-users": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Settings — pintu masuk Users & Companies",
+    ["Settings → Users & Companies → Users"],
+  ),
+  "create-sales-user": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Users — buat user Sales",
+    ["Access Rights / Groups: Sales"],
+  ),
+  "create-purchase-user": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Users — buat user Purchase",
+    ["Access Rights / Groups: Purchase"],
+  ),
+  "set-passwords": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Users — set password / invite",
+    ["Password atau invitation email"],
+  ),
+  "manager-vs-user-note": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Users — beda User vs Manager group",
+    ["Manager punya config & approval lebih luas"],
+  ),
+  "logout-admin": shot(
+    "/screenshots/odoo19e/01-home-apps.png",
+    "Logout admin sebelum uji user lain",
+    ["User menu → Log out"],
+  ),
+  "login-ayu-quotation": shot(
+    "/screenshots/odoo19e/09-sales-quotation-form.png",
+    "Login sebagai Sales User — buat Quotation",
+    ["Hanya menu Sales yang relevan"],
+  ),
+  "login-budi-rfq": shot(
+    "/screenshots/odoo19e/05-purchase-rfq-form.png",
+    "Login sebagai Purchase User — buat RFQ",
+    ["Hanya menu Purchase yang relevan"],
+  ),
+  "prove-no-manage-users": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "User biasa tidak boleh Manage Users",
+    ["Settings Users tersembunyi / Access Error"],
+  ),
+  "wrap-matrix": shot(
+    "/screenshots/odoo19e/11-settings.png",
+    "Ringkas matrix akses User vs Manager",
+    ["Dokumentasikan group yang dipakai di lab"],
+  ),
+
+  // Closing & Reporting (Core 10)
+  "define-cutoff": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Accounting — tentukan cutoff periode latihan",
+    ["Tanggal tutup operasional & akuntansi"],
+  ),
+  "close-purchase-ops": shot(
+    "/screenshots/odoo19e/04-purchase-rfq-list.png",
+    "Purchase list — tutup PO terbuka",
+    ["Receipt & bill status sebelum closing"],
+  ),
+  "close-sales-ops": shot(
+    "/screenshots/odoo19e/08-sales-quotations.png",
+    "Sales list — tutup SO/delivery/invoice",
+    ["Tidak ada delivery Waiting tanpa alasan"],
+  ),
+  "close-bills-invoices": shot(
+    "/screenshots/odoo19e/15-customer-invoices.png",
+    "Invoices/Bills — pastikan Posted/Paid sesuai skenario",
+    ["AR/AP bersih untuk periode latihan"],
+  ),
+  "stock-snapshot": shot(
+    "/screenshots/odoo19e/07-products-list.png",
+    "Products / On Hand — snapshot stok akhir",
+    ["Qty masuk akal vs receipt−delivery"],
+  ),
+  "closing-signoff": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Accounting — sign-off closing checklist",
+    ["Dashboard & kontrol akhir"],
+  ),
+  "sales-analysis": shot(
+    "/screenshots/odoo19e/08-sales-quotations.png",
+    "Sales reporting / analysis",
+    ["Omzet per customer/produk"],
+  ),
+  "purchase-analysis": shot(
+    "/screenshots/odoo19e/04-purchase-rfq-list.png",
+    "Purchase reporting / analysis",
+    ["Belanja per vendor"],
+  ),
+  "inventory-report-restock": shot(
+    "/screenshots/odoo19e/06-inventory-overview.png",
+    "Inventory — putusan restock dari laporan stok",
+    ["On Hand rendah → rencana PO"],
+  ),
+  "aged-receivable-decisions": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Aged Receivable — keputusan penagihan",
+    ["Invoice jatuh tempo"],
+  ),
+  "aged-payable-decisions": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Aged Payable — keputusan bayar vendor",
+    ["Bill jatuh tempo"],
+  ),
+  "decision-memo": shot(
+    "/screenshots/odoo19e/10-accounting.png",
+    "Closing — ringkas keputusan dari laporan",
+    ["Apa yang diputuskan dari angka Odoo"],
+  ),
 };
 
 export function getStepScreenshot(stepId: string): RealShot | undefined {

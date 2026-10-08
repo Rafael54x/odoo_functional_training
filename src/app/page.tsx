@@ -18,23 +18,25 @@ export default function HomePage() {
               Belajar Odoo Functional dari nol, langkah demi langkah.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-teal-50/85 sm:text-lg">
-              Panduan praktik untuk pemula di instance{" "}
-              <span className="font-semibold text-amber-200">{odooLab.name}</span>{" "}
-              ({odooLab.edition}) — dari login & kenalan layar sampai transaksi
-              beli–stok–jual–tagih, dengan jalur klik yang jelas.
+              Path pemula: ikuti{" "}
+              <span className="font-semibold text-amber-200">Core Flow</span> dulu
+              (setup → transaksi → closing), lalu dalami tiap app di{" "}
+              <span className="font-semibold text-amber-200">Materi Modul</span>.
+              Lab {odooLab.edition} · {odooLab.url.replace("http://", "")} · DB{" "}
+              {odooLab.database}.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/cara-pakai"
+                href="/silabus"
                 className="inline-flex h-11 items-center gap-2 rounded-lg bg-amber-300 px-4 text-sm font-semibold text-teal-950 transition hover:bg-amber-200"
               >
-                Cara pakai dulu <ArrowRight className="size-4" />
+                Mulai Core Flow <ArrowRight className="size-4" />
               </Link>
               <Link
-                href="/modul/pengenalan/apa-itu-odoo-functional"
+                href="/materi"
                 className="inline-flex h-11 items-center rounded-lg border border-teal-100/40 px-4 text-sm font-semibold text-teal-50 transition hover:bg-white/10"
               >
-                Langsung Modul 00
+                Materi Modul
               </Link>
             </div>
           </div>

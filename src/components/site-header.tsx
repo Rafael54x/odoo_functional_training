@@ -14,23 +14,23 @@ export function SiteHeader() {
               Odoo Functional Lab
             </div>
             <div className="mt-1 text-[11px] uppercase tracking-[0.18em] text-teal-800/70">
-              Belajar Odoo 19 dari nol
+              Core Flow + Materi Modul
             </div>
           </div>
         </Link>
 
-        <nav className="flex items-center gap-1 text-sm sm:gap-2">
+        <nav className="flex flex-wrap items-center justify-end gap-1 text-sm sm:gap-2">
           <Link href="/cara-pakai" className="nav-link">
             Cara pakai
           </Link>
           <Link href="/silabus" className="nav-link">
             Core Flow
           </Link>
-          <Link href="/kurikulum" className="nav-link">
-            Kurikulum
+          <Link href="/materi" className="nav-link">
+            Materi Modul
           </Link>
-          <Link href="/alur" className="nav-link hidden sm:inline-flex">
-            Peta alur
+          <Link href="/kurikulum" className="nav-link hidden md:inline-flex">
+            Kurikulum
           </Link>
         </nav>
       </div>

@@ -5,12 +5,16 @@ import { odooLab, odooLoginHint } from "@/data/odoo-lab";
 export default function SilabusPage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
-      <p className="eyebrow">Urutan belajar</p>
+      <p className="eyebrow">Layer A · Path pemula</p>
       <h1 className="font-heading mt-2 max-w-3xl text-4xl text-teal-950 sm:text-5xl">
-        Silabus Odoo Functional
+        Core Business Flow
       </h1>
       <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-600 sm:text-lg">
-        {learningPathSummary.principle}
+        {learningPathSummary.principle} Setelah Core Flow lancar, lanjut{" "}
+        <Link href="/materi" className="font-semibold text-teal-800 underline">
+          Materi Modul (Deep Dive)
+        </Link>
+        .
       </p>
 
       <div className="mt-6 rounded-2xl border border-teal-900/10 bg-white/70 px-4 py-3 text-sm text-stone-700">

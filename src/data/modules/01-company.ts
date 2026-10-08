@@ -29,7 +29,7 @@ export const companyModule: SyllabusModule = {
       duration: "35 menit",
       summary:
         "Company = “identitas toko/perusahaan” di Odoo. Nama & alamat di sini ikut tercetak di PO, SO, dan Invoice.",
-      beginnerIntro: `Anggap ini seperti mengisi profil toko di marketplace. Belum perlu paham akuntansi — cukup isi nama, alamat, dan kontak yang benar. Lab: ${odooLab.url} · DB ${odooLab.database}.`,
+      beginnerIntro: `Anggap ini seperti mengisi profil toko di marketplace. Belum perlu paham akuntansi — cukup isi nama, alamat, dan kontak yang benar. Lab: ${odooLab.url} · DB ${odooLab.database}. Setelah Core Flow ini, dalami Settings di Materi Modul → Settings.`,
       objectives: [
         "Membuka data perusahaan default",
         "Mengisi nama & alamat lengkap dari seed",

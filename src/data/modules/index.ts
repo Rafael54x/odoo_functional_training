@@ -2,6 +2,7 @@ import type { SyllabusModule, Lesson } from "../types";
 import { odooLab } from "../odoo-lab";
 import { introModule } from "./00-intro";
 import { companyModule } from "./01-company";
+import { usersAccessModule } from "./01b-users-access";
 import { contactsModule } from "./02-contacts";
 import { accountingMasterModule } from "./03-accounting-master";
 import { inventoryMasterModule } from "./04-inventory-master";
@@ -10,10 +11,13 @@ import { inventoryOpsModule } from "./06-inventory-ops";
 import { salesModule } from "./07-sales";
 import { invoicingModule } from "./08-invoicing";
 import { e2eModule } from "./09-e2e";
+import { closingReportingModule } from "./10-closing-reporting";
 
+/** Layer A — Core Business Flow (path pemula) */
 export const modules: SyllabusModule[] = [
   introModule,
   companyModule,
+  usersAccessModule,
   contactsModule,
   accountingMasterModule,
   inventoryMasterModule,
@@ -22,6 +26,7 @@ export const modules: SyllabusModule[] = [
   salesModule,
   invoicingModule,
   e2eModule,
+  closingReportingModule,
 ];
 
 export function getModule(slug: string): SyllabusModule | undefined {
@@ -73,5 +78,6 @@ export const learningPathSummary = {
     "Invoicing / Accounting",
   ],
   principle:
-    "Urutan emas untuk pemula: kenalan layar Odoo → setup perusahaan → isi kontak & produk → baru beli/jual → baru pelajari tagihan & laporan. Loncat urutan biasanya bikin bingung.",
+    "Path pemula (Core Flow): kenalan layar → company → users/access → kontak & produk → beli → stok → jual → tagih → E2E → closing. Setelah lancar, lanjut Materi Modul (Deep Dive).",
+  defaultPath: "beginner-core" as const,
 };

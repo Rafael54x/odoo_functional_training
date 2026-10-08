@@ -29,15 +29,13 @@ npm run dev
 
 App: http://127.0.0.1:43129
 
-## Cara belajar
+## Cara belajar (path pemula)
 
 1. `/cara-pakai`
-2. **Core Flow** di `/silabus` (Modul 00–09 — dipertahankan)
-3. **Curriculum Architecture** di `/kurikulum` (evaluasi Dual Layer + Module Matrix)
-4. Kerjakan tiap langkah di http://172.16.2.123:8072 (DB `odoo`)
-5. Pakai tabel **Isi field ini** + screenshot di tiap step
-
-Dokumen arsitektur: [`CURRICULUM.md`](./CURRICULUM.md)
+2. **Core Flow** di `/silabus` — alur bisnis (termasuk Users & Access + Closing)
+3. **Materi Modul** di `/materi` — Deep Dive Wave 1 (Sales, Purchase, Inventory, Accounting, Contacts, Users, Settings)
+4. Kerjakan di http://172.16.2.123:8072 (DB `odoo`)
+5. Peta arsitektur: `/kurikulum` · [`CURRICULUM.md`](./CURRICULUM.md)
 
 ## Docker (opsional, package odoo19e)
 

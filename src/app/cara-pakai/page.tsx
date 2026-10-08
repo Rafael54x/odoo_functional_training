@@ -8,8 +8,12 @@ const steps = [
     body: `Di browser, buka ${odooLab.url}. Database: ${odooLab.database}. Login ${odooLab.user} / ${odooLab.password}. Ini instance Odoo 19 Enterprise di ${odooLab.hostLabel}.`,
   },
   {
-    title: "Mulai dari Modul 00",
-    body: "Jangan loncat ke Purchase/Sales dulu. Pelajari navigasi, pastikan modul terpasang, lalu isi master data.",
+    title: "Mulai dari Core Flow (Modul 00)",
+    body: "Path pemula: Core Flow dulu (navigasi → company → users → master → beli/jual → closing). Jangan loncat ke Materi Modul Deep Dive sebelum transaksi dasar lancar.",
+  },
+  {
+    title: "Lanjut Materi Modul setelah Core Flow",
+    body: "Deep Dive per app (Sales, Purchase, Inventory, Accounting, Contacts, Users, Settings) ada di menu Materi Modul — untuk mendalami config, field, skenario, dan troubleshooting.",
   },
   {
     title: "Baca satu langkah → isi field → cek hasil",
