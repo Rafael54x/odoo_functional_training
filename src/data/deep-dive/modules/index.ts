@@ -5,6 +5,7 @@ import { inventoryDeepDive } from "./inventory";
 import { accountingDeepDive } from "./accounting";
 import { contactsDeepDive } from "./contacts";
 import { usersDeepDive } from "./users";
+import { settingsDeepDive } from "./settings";
 
 /** Wave 1 Deep Dive modules dengan konten penuh */
 export const wave1DeepDives: DeepDiveModule[] = [
@@ -14,6 +15,7 @@ export const wave1DeepDives: DeepDiveModule[] = [
   inventoryDeepDive,
   accountingDeepDive,
   usersDeepDive,
+  settingsDeepDive,
 ];
 
 export {
@@ -23,6 +25,7 @@ export {
   accountingDeepDive,
   contactsDeepDive,
   usersDeepDive,
+  settingsDeepDive,
 };
 
 export type DeepDivePlaceholder = {
@@ -51,13 +54,6 @@ export const laterPlaceholders: DeepDivePlaceholder[] = [
     wave: 2,
     availability: "available",
     note: "Sebagian overlap Accounting wave 1; deep dive khusus invoice workflow & portal.",
-  },
-  {
-    slug: "settings",
-    name: "Settings / General Configuration",
-    wave: 2,
-    availability: "available",
-    note: "Company, languages, document layout, general settings lintas app.",
   },
   {
     slug: "pos",
