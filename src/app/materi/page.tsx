@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   wave1DeepDives,
   wave2DeepDives,
+  wave3DeepDives,
   laterPlaceholders,
 } from "@/data/deep-dive/modules";
 
@@ -63,7 +64,7 @@ export default function MateriPage() {
         dulu, lalu dalami modul di sini.
       </p>
 
-      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+      <div className="mt-6 grid gap-3 sm:grid-cols-3">
         <div className="rounded-2xl border border-teal-200 bg-teal-50/40 px-4 py-3 text-sm text-teal-950">
           <strong>Wave 1:</strong>{" "}
           {wave1DeepDives.map((m) => m.shortTitle).join(" · ")}
@@ -71,6 +72,10 @@ export default function MateriPage() {
         <div className="rounded-2xl border border-violet-200 bg-violet-50/40 px-4 py-3 text-sm text-violet-950">
           <strong>Wave 2:</strong>{" "}
           {wave2DeepDives.map((m) => m.shortTitle).join(" · ")}
+        </div>
+        <div className="rounded-2xl border border-amber-200 bg-amber-50/40 px-4 py-3 text-sm text-amber-950">
+          <strong>Wave 3:</strong>{" "}
+          {wave3DeepDives.map((m) => m.shortTitle).join(" · ")}
         </div>
       </div>
 
@@ -83,6 +88,13 @@ export default function MateriPage() {
         capture server agent.
       </p>
       <ModuleGrid modules={wave2DeepDives} />
+
+      <h2 className="font-heading mt-12 text-2xl text-teal-950">Wave 3</h2>
+      <p className="mt-2 text-sm text-stone-600">
+        Extended suite: POS, Helpdesk, Quality, Barcode, Recruitment — screenshot
+        Odoo <strong>19.0+e</strong>.
+      </p>
+      <ModuleGrid modules={wave3DeepDives} />
 
       <h2 className="font-heading mt-12 text-2xl text-teal-950">
         Wave berikutnya (katalog)

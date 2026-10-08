@@ -236,9 +236,12 @@ export const implementationPhases = [
   {
     phase: 5,
     title: "Deep Dive Wave 3 — Extended Suite",
-    goal: "POS, Subscriptions, Helpdesk, Quality, Barcode, Marketing, dll.",
-    deliverables: ["Konten + N/A yang jujur jika app tidak terpasang di lab"],
-    status: "planned",
+    goal: "POS, Helpdesk, Quality, Barcode, Recruitment (Subscriptions/Marketing → Wave 4).",
+    deliverables: [
+      "Mini-courses Wave 3 penuh",
+      "Screenshot Odoo 19.0+e dari runbot Enterprise",
+    ],
+    status: "done",
   },
   {
     phase: 6,

@@ -17,6 +17,11 @@ import { companiesDeepDive } from "./companies";
 import { localizationDeepDive } from "./localization";
 import { developerModeDeepDive } from "./developer-mode";
 import { invoicingDeepDive } from "./invoicing-deep";
+import { posDeepDive } from "./pos";
+import { helpdeskDeepDive } from "./helpdesk";
+import { qualityDeepDive } from "./quality";
+import { barcodeDeepDive } from "./barcode";
+import { recruitmentDeepDive } from "./recruitment";
 
 /** Wave 1 Deep Dive modules dengan konten penuh */
 export const wave1DeepDives: DeepDiveModule[] = [
@@ -44,6 +49,15 @@ export const wave2DeepDives: DeepDiveModule[] = [
   invoicingDeepDive,
 ];
 
+/** Wave 3 Deep Dive modules dengan konten penuh */
+export const wave3DeepDives: DeepDiveModule[] = [
+  posDeepDive,
+  helpdeskDeepDive,
+  qualityDeepDive,
+  barcodeDeepDive,
+  recruitmentDeepDive,
+];
+
 export {
   salesDeepDive,
   purchaseDeepDive,
@@ -63,6 +77,11 @@ export {
   localizationDeepDive,
   developerModeDeepDive,
   invoicingDeepDive,
+  posDeepDive,
+  helpdeskDeepDive,
+  qualityDeepDive,
+  barcodeDeepDive,
+  recruitmentDeepDive,
 };
 
 export type DeepDivePlaceholder = {
@@ -78,39 +97,18 @@ export type DeepDivePlaceholder = {
  */
 export const laterPlaceholders: DeepDivePlaceholder[] = [
   {
-    slug: "pos",
-    name: "Point of Sale",
-    wave: 3,
+    slug: "subscriptions",
+    name: "Subscriptions",
+    wave: 4,
     availability: "verify",
-    note: "Retail counter; butuh produk & payment method.",
+    note: "Recurring revenue — lanjut setelah Wave 3 retail/service.",
   },
   {
-    slug: "helpdesk",
-    name: "Helpdesk",
-    wave: 3,
+    slug: "marketing",
+    name: "Email Marketing",
+    wave: 4,
     availability: "verify",
-    note: "Support tickets — Wave 3.",
-  },
-  {
-    slug: "quality",
-    name: "Quality",
-    wave: 3,
-    availability: "verify",
-    note: "Quality checks on receipt/production.",
-  },
-  {
-    slug: "barcode",
-    name: "Barcode",
-    wave: 3,
-    availability: "verify",
-    note: "Mobile scanning ops.",
-  },
-  {
-    slug: "recruitment",
-    name: "Recruitment",
-    wave: 3,
-    availability: "verify",
-    note: "Hiring pipeline.",
+    note: "Mailing lists & campaigns.",
   },
   {
     slug: "studio",
@@ -125,6 +123,7 @@ export const laterPlaceholders: DeepDivePlaceholder[] = [
 export const deepDiveModules: DeepDiveModule[] = [
   ...wave1DeepDives,
   ...wave2DeepDives,
+  ...wave3DeepDives,
 ];
 
 export function getDeepDive(slug: string): DeepDiveModule | undefined {

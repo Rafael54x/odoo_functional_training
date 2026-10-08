@@ -33,7 +33,7 @@ App: http://127.0.0.1:43129
 
 1. `/cara-pakai`
 2. **Core Flow** di `/silabus` — alur bisnis (termasuk Users & Access + Closing)
-3. **Materi Modul** di `/materi` — Deep Dive Wave 1 + Wave 2 (CRM, Project, Timesheets, Employees, Manufacturing, Website, eCommerce, …)
+3. **Materi Modul** di `/materi` — Deep Dive Wave 1–3 (termasuk POS, Helpdesk, Quality, Barcode, Recruitment)
 4. Kerjakan di http://172.16.2.123:8072 (DB `odoo`)
 5. Peta arsitektur: `/kurikulum` · [`CURRICULUM.md`](./CURRICULUM.md)
 
