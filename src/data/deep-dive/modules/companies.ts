@@ -905,6 +905,6 @@ export const companiesDeepDive: DeepDiveModule = {
     { label: "Settings Deep Dive", href: "/materi/settings" },
     { label: "Users Deep Dive", href: "/materi/users" },
     { label: "Localization Deep Dive", href: "/materi/localization" },
-    { label: "Modul Perusahaan", href: "/modul/company-setup" },
+    { label: "Modul Perusahaan", href: "/modul/setup-perusahaan" },
   ],
 };

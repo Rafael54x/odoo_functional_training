@@ -22,9 +22,12 @@ import { helpdeskDeepDive } from "./helpdesk";
 import { qualityDeepDive } from "./quality";
 import { barcodeDeepDive } from "./barcode";
 import { recruitmentDeepDive } from "./recruitment";
+import { subscriptionsDeepDive } from "./subscriptions";
+import { marketingDeepDive } from "./marketing";
+import { studioDeepDive } from "./studio";
 
-/** Wave 1 Deep Dive modules dengan konten penuh */
-export const wave1DeepDives: DeepDiveModule[] = [
+/** Fondasi operasional (Contacts → Accounting + Users/Settings) */
+export const foundationDeepDives: DeepDiveModule[] = [
   contactsDeepDive,
   salesDeepDive,
   purchaseDeepDive,
@@ -34,8 +37,8 @@ export const wave1DeepDives: DeepDiveModule[] = [
   settingsDeepDive,
 ];
 
-/** Wave 2 Deep Dive modules dengan konten penuh */
-export const wave2DeepDives: DeepDiveModule[] = [
+/** Operasi adjacent (CRM, Project, HR, Web, MRP, dll.) */
+export const adjacentDeepDives: DeepDiveModule[] = [
   crmDeepDive,
   projectDeepDive,
   timesheetsDeepDive,
@@ -49,14 +52,30 @@ export const wave2DeepDives: DeepDiveModule[] = [
   invoicingDeepDive,
 ];
 
-/** Wave 3 Deep Dive modules dengan konten penuh */
-export const wave3DeepDives: DeepDiveModule[] = [
+/** Suite lanjutan (POS, Helpdesk, Quality, Barcode, Recruitment) */
+export const extendedDeepDives: DeepDiveModule[] = [
   posDeepDive,
   helpdeskDeepDive,
   qualityDeepDive,
   barcodeDeepDive,
   recruitmentDeepDive,
 ];
+
+/** Growth & kustomisasi (Subscriptions, Marketing, Studio) */
+export const growthDeepDives: DeepDiveModule[] = [
+  subscriptionsDeepDive,
+  marketingDeepDive,
+  studioDeepDive,
+];
+
+/** @deprecated gunakan foundationDeepDives — alias kompatibilitas */
+export const wave1DeepDives = foundationDeepDives;
+/** @deprecated gunakan adjacentDeepDives */
+export const wave2DeepDives = adjacentDeepDives;
+/** @deprecated gunakan extendedDeepDives */
+export const wave3DeepDives = extendedDeepDives;
+/** @deprecated gunakan growthDeepDives */
+export const wave4DeepDives = growthDeepDives;
 
 export {
   salesDeepDive,
@@ -82,48 +101,54 @@ export {
   qualityDeepDive,
   barcodeDeepDive,
   recruitmentDeepDive,
+  subscriptionsDeepDive,
+  marketingDeepDive,
+  studioDeepDive,
 };
 
-export type DeepDivePlaceholder = {
-  slug: string;
-  name: string;
-  wave: 2 | 3 | 4;
-  availability: DeepDiveModule["availability"];
-  note: string;
-};
-
-/**
- * Modul Deep Dive gelombang berikutnya — belum punya file konten penuh.
- */
-export const laterPlaceholders: DeepDivePlaceholder[] = [
-  {
-    slug: "subscriptions",
-    name: "Subscriptions",
-    wave: 4,
-    availability: "verify",
-    note: "Recurring revenue — lanjut setelah Wave 3 retail/service.",
-  },
-  {
-    slug: "marketing",
-    name: "Email Marketing",
-    wave: 4,
-    availability: "verify",
-    note: "Mailing lists & campaigns.",
-  },
-  {
-    slug: "studio",
-    name: "Studio",
-    wave: 4,
-    availability: "verify",
-    note: "Kustomisasi no-code — setelah fondasi functional kuat.",
-  },
+/** Semua Deep Dive tersedia (konten penuh) — urutan katalog datar */
+export const deepDiveModules: DeepDiveModule[] = [
+  ...foundationDeepDives,
+  ...adjacentDeepDives,
+  ...extendedDeepDives,
+  ...growthDeepDives,
 ];
 
-/** Semua Deep Dive yang sudah tersedia (konten penuh) */
-export const deepDiveModules: DeepDiveModule[] = [
-  ...wave1DeepDives,
-  ...wave2DeepDives,
-  ...wave3DeepDives,
+/** Grup katalog UI (tanpa label Wave) */
+export const deepDiveCatalogGroups: Array<{
+  id: string;
+  title: string;
+  description: string;
+  modules: DeepDiveModule[];
+}> = [
+  {
+    id: "foundation",
+    title: "Fondasi operasional",
+    description:
+      "Contacts, Sales, Purchase, Inventory, Accounting, Users, dan Settings — mulai di sini setelah Core Flow.",
+    modules: foundationDeepDives,
+  },
+  {
+    id: "adjacent",
+    title: "Operasi adjacent",
+    description:
+      "CRM, Project, Timesheets, Employees, Manufacturing, Website, eCommerce, Companies, Localization, Developer Mode, dan Invoicing harian.",
+    modules: adjacentDeepDives,
+  },
+  {
+    id: "extended",
+    title: "Suite lanjutan",
+    description:
+      "Point of Sale, Helpdesk, Quality, Barcode, dan Recruitment untuk ritel & layanan.",
+    modules: extendedDeepDives,
+  },
+  {
+    id: "growth",
+    title: "Growth & kustomisasi",
+    description:
+      "Subscriptions, Email Marketing, dan Studio — setelah fondasi functional kuat.",
+    modules: growthDeepDives,
+  },
 ];
 
 export function getDeepDive(slug: string): DeepDiveModule | undefined {
@@ -132,8 +157,6 @@ export function getDeepDive(slug: string): DeepDiveModule | undefined {
 
 export function getDeepDiveOrPlaceholder(
   slug: string,
-): DeepDiveModule | DeepDivePlaceholder | undefined {
-  return (
-    getDeepDive(slug) ?? laterPlaceholders.find((p) => p.slug === slug)
-  );
+): DeepDiveModule | undefined {
+  return getDeepDive(slug);
 }

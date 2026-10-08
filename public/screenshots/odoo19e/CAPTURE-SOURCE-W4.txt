@@ -1,0 +1,5 @@
+Odoo 19 Enterprise screenshots (Wave 4 / final)
+server_version: 19.0+e
+source: https://127871400-19-0.runbot114.odoo.com
+db: 127871400-19-0-all
+captured: 2026-10-08T04:24:16.963Z

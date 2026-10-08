@@ -901,8 +901,8 @@ export const usersDeepDive: DeepDiveModule = {
     },
   ],
   coreFlowLinks: [
-    { label: "Core: Users & Access", href: "/learn/users-access" },
-    { label: "Core: Setup Perusahaan", href: "/learn/setup-perusahaan" },
-    { label: "Deep Dive: Settings", href: "/deep-dive/settings" },
+    { label: "Core: Users & Access", href: "/modul/users-access" },
+    { label: "Core: Setup Perusahaan", href: "/modul/setup-perusahaan" },
+    { label: "Deep Dive: Settings", href: "/materi/settings" },
   ],
 };

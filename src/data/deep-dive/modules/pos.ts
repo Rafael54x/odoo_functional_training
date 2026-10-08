@@ -1294,7 +1294,7 @@ export const posDeepDive: DeepDiveModule = {
     { label: "Deep Dive Inventory", href: "/materi/inventory" },
     { label: "Deep Dive Accounting", href: "/materi/accounting" },
     { label: "Deep Dive Sales", href: "/materi/sales" },
-    { label: "Master Products", href: "/modul/master-products" },
+    { label: "Master Products", href: "/modul/master-inventory" },
     { label: "Core Flow Inventory", href: "/modul/flow-inventory" },
     { label: "Home Apps (install POS)", href: "/materi/pos" },
   ],

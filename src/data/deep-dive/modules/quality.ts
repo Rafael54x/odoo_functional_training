@@ -1581,6 +1581,9 @@ export const qualityDeepDive: DeepDiveModule = {
     { label: "Deep Dive Inventory", href: "/materi/inventory" },
     { label: "Deep Dive Manufacturing", href: "/materi/manufacturing" },
     { label: "Deep Dive Purchase", href: "/materi/purchase" },
-    { label: "Core Flow: Purchase → Receipt", href: "/flow/purchase-receipt" },
+    {
+      label: "Core Flow: Purchase → Receive & Bill",
+      href: "/modul/flow-purchase/receive-and-bill",
+    },
   ],
 };

@@ -173,7 +173,7 @@ export default function KurikulumPage() {
             </h3>
             <p className="mt-2 text-sm text-stone-600">
               Mini-course per aplikasi Odoo (config → master → transaksi → integrasi →
-              report → troubleshoot). Diimplementasikan bertahap per wave.
+              report → troubleshoot). Pilih modul di Materi Modul sesuai kebutuhan.
             </p>
           </div>
         </div>
@@ -282,19 +282,17 @@ export default function KurikulumPage() {
           ))}
         </div>
 
-        <div id="wave-1" className="mt-4 rounded-xl border border-teal-200 bg-teal-50/50 px-4 py-3 text-sm text-teal-950">
-          <strong>Wave 1 (prioritas implementasi konten):</strong>{" "}
+        <div className="mt-4 rounded-xl border border-teal-200 bg-teal-50/50 px-4 py-3 text-sm text-teal-950">
+          <strong>Fondasi disarankan dulu:</strong>{" "}
           {moduleMatrix
             .filter((m) => m.wave === 1)
             .map((m) => m.name)
             .join(" · ")}
-        </div>
-        <div id="wave-2" className="mt-2 rounded-xl border border-violet-200 bg-violet-50/50 px-4 py-3 text-sm text-violet-950">
-          <strong>Wave 2:</strong>{" "}
-          {moduleMatrix
-            .filter((m) => m.wave === 2)
-            .map((m) => m.name)
-            .join(" · ")}
+          . Setelah itu pilih modul di{" "}
+          <Link href="/materi" className="font-semibold underline">
+            Materi Modul
+          </Link>
+          .
         </div>
 
         {(Object.keys(categoryMeta) as Array<keyof typeof categoryMeta>).map((cat) => {
@@ -311,7 +309,6 @@ export default function KurikulumPage() {
                       <th className="px-3 py-2">Module</th>
                       <th className="px-3 py-2">Availability</th>
                       <th className="px-3 py-2">Core?</th>
-                      <th className="px-3 py-2">Wave</th>
                       <th className="px-3 py-2">Notes</th>
                     </tr>
                   </thead>
@@ -329,7 +326,6 @@ export default function KurikulumPage() {
                           {availabilityLabels[row.availability].label}
                         </td>
                         <td className="px-3 py-2">{row.inCoreFlow ? "Yes" : "—"}</td>
-                        <td className="px-3 py-2">{row.wave}</td>
                         <td className="px-3 py-2 text-stone-600">{row.notes}</td>
                       </tr>
                     ))}
@@ -396,7 +392,7 @@ export default function KurikulumPage() {
             >
               <strong className="text-stone-900">{label}</strong>
               <p className="mt-1 text-xs">
-                Hub lintas-modul — diisi saat Phase 1–2 (shell + Wave 1).
+                Hub lintas-modul — lihat juga tautan di tiap Materi Modul.
               </p>
             </div>
           ))}
@@ -509,7 +505,7 @@ export default function KurikulumPage() {
         </p>
         <ol className="mt-3 space-y-2 text-sm text-stone-700">
           <li>1. Apakah urutan Core Flow (keep/enrich/add) sudah sesuai?</li>
-          <li>2. Apakah prioritas Wave 1 (Sales, Purchase, Inventory, Accounting, Contacts, Users, Settings) OK?</li>
+          <li>2. Apakah urutan fondasi (Sales, Purchase, Inventory, Accounting, Contacts, Users, Settings) OK?</li>
           <li>3. Modul mana yang wajib N/A di lab Anda (Payroll, POS, dll.)?</li>
           <li>4. Path default untuk homepage: Path A (Flow first) atau Path C (Consultant)?</li>
         </ol>

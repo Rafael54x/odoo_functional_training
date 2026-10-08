@@ -901,9 +901,9 @@ export const settingsDeepDive: DeepDiveModule = {
     },
   ],
   coreFlowLinks: [
-    { label: "Core: Setup Perusahaan", href: "/learn/setup-perusahaan" },
-    { label: "Core: Users & Access", href: "/learn/users-access" },
-    { label: "Deep Dive: Users", href: "/deep-dive/users" },
-    { label: "Deep Dive: Contacts", href: "/deep-dive/contacts" },
+    { label: "Core: Setup Perusahaan", href: "/modul/setup-perusahaan" },
+    { label: "Core: Users & Access", href: "/modul/users-access" },
+    { label: "Deep Dive: Users", href: "/materi/users" },
+    { label: "Deep Dive: Contacts", href: "/materi/contacts" },
   ],
 };

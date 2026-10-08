@@ -1117,9 +1117,9 @@ export const contactsDeepDive: DeepDiveModule = {
     },
   ],
   coreFlowLinks: [
-    { label: "Core: Master Contacts", href: "/learn/master-contacts" },
-    { label: "Core: Setup Perusahaan", href: "/learn/setup-perusahaan" },
-    { label: "Core: Purchase", href: "/learn/flow-purchase" },
-    { label: "Core: Sales", href: "/learn/flow-sales" },
+    { label: "Core: Master Contacts", href: "/modul/master-contacts" },
+    { label: "Core: Setup Perusahaan", href: "/modul/setup-perusahaan" },
+    { label: "Core: Purchase", href: "/modul/flow-purchase" },
+    { label: "Core: Sales", href: "/modul/flow-sales" },
   ],
 };

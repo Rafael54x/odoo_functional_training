@@ -873,6 +873,9 @@ export const localizationDeepDive: DeepDiveModule = {
     { label: "Accounting Deep Dive", href: "/materi/accounting" },
     { label: "Companies Deep Dive", href: "/materi/companies" },
     { label: "Settings Deep Dive", href: "/materi/settings" },
-    { label: "Modul Perusahaan — Localization", href: "/modul/company-setup/localization-currency" },
+    {
+      label: "Modul Perusahaan — Localization",
+      href: "/modul/setup-perusahaan/localization-currency",
+    },
   ],
 };

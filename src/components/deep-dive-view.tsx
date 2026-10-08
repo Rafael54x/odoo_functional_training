@@ -78,7 +78,10 @@ export function DeepDiveView({ mod }: { mod: DeepDiveModule }) {
       </Link>
 
       <p className="eyebrow mt-4">
-        Deep Dive · Wave {mod.wave} · {mod.availability === "available" ? "Available" : mod.availability}
+        Deep Dive ·{" "}
+        {mod.availability === "available"
+          ? "Odoo 19 Enterprise"
+          : mod.availability}
       </p>
       <h1 className="font-heading mt-2 text-4xl text-teal-950 sm:text-5xl">
         {mod.name}
