@@ -83,7 +83,7 @@ function TocNav({
         className={
           compact
             ? "mb-2 text-[10px] font-bold uppercase tracking-[0.16em] text-teal-800/70"
-            : "mb-3 text-xs font-bold uppercase tracking-[0.16em] text-teal-800/70"
+            : "mb-3 px-1 text-[10px] font-bold uppercase tracking-[0.18em] text-teal-800/65"
         }
       >
         Loncat ke bagian
@@ -96,7 +96,7 @@ function TocNav({
               className={
                 compact
                   ? "inline-block rounded-full border border-stone-200 bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-stone-700 hover:bg-teal-50"
-                  : "block rounded-lg px-2.5 py-1.5 text-[12px] font-medium text-stone-700 hover:bg-teal-50 hover:text-teal-950"
+                  : "block rounded-md px-2.5 py-1.5 text-[12.5px] leading-snug text-stone-600 transition hover:bg-teal-50 hover:text-teal-950"
               }
             >
               {label}
@@ -108,11 +108,44 @@ function TocNav({
   );
 }
 
+function SidebarAside() {
+  return (
+    <aside className="sticky top-20 hidden max-h-[calc(100vh-5.5rem)] w-full overflow-y-auto rounded-2xl border border-teal-900/10 bg-white/95 p-3.5 shadow-[0_1px_0_rgba(15,60,50,0.04)] lg:block">
+      <TocNav />
+      <div className="mt-4 border-t border-stone-100 pt-3">
+        <p className="px-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-stone-400">
+          Cepat
+        </p>
+        <Link
+          href="/materi"
+          className="mt-1 block rounded-md px-2.5 py-1.5 text-[12.5px] text-teal-800 transition hover:bg-teal-50"
+        >
+          ← Semua modul
+        </Link>
+        <Link
+          href="/kurikulum"
+          className="block rounded-md px-2.5 py-1.5 text-[12.5px] text-teal-800 transition hover:bg-teal-50"
+        >
+          Peta kurikulum
+        </Link>
+        <Link
+          href="/silabus"
+          className="block rounded-md px-2.5 py-1.5 text-[12.5px] text-teal-800 transition hover:bg-teal-50"
+        >
+          Core Flow
+        </Link>
+      </div>
+    </aside>
+  );
+}
+
 export function DeepDiveView({ mod }: { mod: DeepDiveModule }) {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-14">
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_15.5rem] lg:items-start lg:gap-10">
-        <div className="min-w-0 max-w-[52rem]">
+      <div className="lg:grid lg:grid-cols-[15rem_minmax(0,1fr)] lg:items-start lg:gap-10 xl:grid-cols-[16rem_minmax(0,1fr)] xl:gap-12">
+        <SidebarAside />
+
+        <div className="min-w-0 max-w-[52rem] lg:justify-self-start">
           <Link href="/materi" className="text-sm text-teal-800 hover:underline">
             ← Semua Materi Modul
           </Link>
@@ -664,34 +697,6 @@ export function DeepDiveView({ mod }: { mod: DeepDiveModule }) {
             .
           </div>
         </div>
-
-        {/* Desktop sticky right sidebar */}
-        <aside className="sticky top-20 hidden max-h-[calc(100vh-6rem)] overflow-y-auto rounded-2xl border border-stone-200 bg-white/90 p-3 shadow-sm lg:block">
-          <TocNav />
-          <div className="mt-4 border-t border-stone-100 pt-3">
-            <p className="px-2.5 text-[10px] font-bold uppercase tracking-[0.16em] text-stone-400">
-              Cepat
-            </p>
-            <Link
-              href="/materi"
-              className="mt-1 block rounded-lg px-2.5 py-1.5 text-[12px] font-medium text-teal-800 hover:bg-teal-50"
-            >
-              ← Semua modul
-            </Link>
-            <Link
-              href="/kurikulum"
-              className="block rounded-lg px-2.5 py-1.5 text-[12px] font-medium text-teal-800 hover:bg-teal-50"
-            >
-              Peta kurikulum
-            </Link>
-            <Link
-              href="/silabus"
-              className="block rounded-lg px-2.5 py-1.5 text-[12px] font-medium text-teal-800 hover:bg-teal-50"
-            >
-              Core Flow
-            </Link>
-          </div>
-        </aside>
       </div>
     </div>
   );
