@@ -728,7 +728,7 @@ export const usersDeepDive: DeepDiveModule = {
       diagnosis: [
         "Admin Action Change Password",
         "Cek Active",
-        "Pastikan DB name ${odooLab.database}",
+        `Pastikan DB name ${odooLab.database}`,
       ],
       solution: [
         "Set password ulang",

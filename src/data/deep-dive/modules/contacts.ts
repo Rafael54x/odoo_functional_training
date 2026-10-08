@@ -989,7 +989,7 @@ export const contactsDeepDive: DeepDiveModule = {
       name: "Aged Receivable",
       path: "Accounting → Reporting → Partner Reports → Aged Receivable",
       kpi: "Piutang per customer & bucket umur",
-      decision: "Siapa perlu ditagih dulu? (${c1.name} vs ${c2.name})",
+      decision: `Siapa perlu ditagih dulu? (${c1.name} vs ${c2.name})`,
     },
     {
       name: "Aged Payable",
