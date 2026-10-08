@@ -96,7 +96,19 @@
     background-attachment: fixed;
   }
   html {
-    @apply font-sans scroll-smooth;
+    @apply font-sans;
+    /* Avoid scroll-smooth: fights sticky header + hash jumps (needs 2 clicks). */
+    overflow-y: scroll;
+    scroll-padding-top: 6rem;
+  }
+
+  /* Deep Dive section targets — clear the sticky site header */
+  section[id],
+  [id^="cfg-"],
+  [id^="md-"],
+  [id^="form-"],
+  [id^="proc-"] {
+    scroll-margin-top: 6rem;
   }
 }
 
@@ -466,6 +478,16 @@
   border: 1px solid rgba(28, 43, 42, 0.18);
   background: #132826;
   box-shadow: 0 16px 40px rgba(15, 76, 69, 0.12);
+}
+
+.shot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: top;
+  background: #fff;
 }
 
 .tip-box {

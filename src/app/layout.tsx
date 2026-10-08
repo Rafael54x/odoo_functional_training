@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="id"
-      className={`${sans.variable} ${heading.variable} ${mono.variable} h-full antialiased`}
+      className={`${sans.variable} ${heading.variable} ${mono.variable} min-h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <SiteHeader />

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import type { DeepDiveModule, ShotRef } from "@/data/deep-dive/types";
+import { DeepDiveSidebar, DeepDiveToc } from "@/components/deep-dive-toc";
 
 const TOC = [
   ["overview", "1. Overview"],
@@ -41,7 +42,15 @@ function ShotBlock({ shot }: { shot?: ShotRef }) {
         Screenshot Odoo 19 Enterprise (asli)
       </div>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={shot.src} alt={shot.caption} className="w-full bg-white" loading="lazy" />
+      <img
+        src={shot.src}
+        alt={shot.caption}
+        className="w-full bg-white"
+        loading="lazy"
+        decoding="async"
+        width={1440}
+        height={900}
+      />
       <figcaption className="space-y-1 px-3 py-3 text-xs text-teal-50/90">
         <p>{shot.caption}</p>
         {shot.whatYouSee && <p>Seeing: {shot.whatYouSee}</p>}
@@ -63,79 +72,10 @@ function Section({
   children: ReactNode;
 }) {
   return (
-    <section id={id} className="mt-12 scroll-mt-28">
+    <section id={id} className="mt-12 scroll-mt-32">
       <h2 className="font-heading text-2xl text-teal-950 sm:text-3xl">{title}</h2>
       <div className="mt-4 space-y-4">{children}</div>
     </section>
-  );
-}
-
-function TocNav({
-  className,
-  compact,
-}: {
-  className?: string;
-  compact?: boolean;
-}) {
-  return (
-    <nav className={className} aria-label="Daftar isi modul">
-      <p
-        className={
-          compact
-            ? "mb-2 text-[10px] font-bold uppercase tracking-[0.16em] text-teal-800/70"
-            : "mb-3 px-1 text-[10px] font-bold uppercase tracking-[0.18em] text-teal-800/65"
-        }
-      >
-        Loncat ke bagian
-      </p>
-      <ul className={compact ? "flex flex-wrap gap-1.5" : "space-y-0.5"}>
-        {TOC.map(([id, label]) => (
-          <li key={id}>
-            <a
-              href={`#${id}`}
-              className={
-                compact
-                  ? "inline-block rounded-full border border-stone-200 bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-stone-700 hover:bg-teal-50"
-                  : "block rounded-md px-2.5 py-1.5 text-[12.5px] leading-snug text-stone-600 transition hover:bg-teal-50 hover:text-teal-950"
-              }
-            >
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-}
-
-function SidebarAside() {
-  return (
-    <aside className="sticky top-20 hidden max-h-[calc(100vh-5.5rem)] w-full overflow-y-auto rounded-2xl border border-teal-900/10 bg-white/95 p-3.5 shadow-[0_1px_0_rgba(15,60,50,0.04)] lg:block">
-      <TocNav />
-      <div className="mt-4 border-t border-stone-100 pt-3">
-        <p className="px-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-stone-400">
-          Cepat
-        </p>
-        <Link
-          href="/materi"
-          className="mt-1 block rounded-md px-2.5 py-1.5 text-[12.5px] text-teal-800 transition hover:bg-teal-50"
-        >
-          ← Semua modul
-        </Link>
-        <Link
-          href="/kurikulum"
-          className="block rounded-md px-2.5 py-1.5 text-[12.5px] text-teal-800 transition hover:bg-teal-50"
-        >
-          Peta kurikulum
-        </Link>
-        <Link
-          href="/silabus"
-          className="block rounded-md px-2.5 py-1.5 text-[12.5px] text-teal-800 transition hover:bg-teal-50"
-        >
-          Core Flow
-        </Link>
-      </div>
-    </aside>
   );
 }
 
@@ -143,7 +83,7 @@ export function DeepDiveView({ mod }: { mod: DeepDiveModule }) {
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-14">
       <div className="lg:grid lg:grid-cols-[15rem_minmax(0,1fr)] lg:items-start lg:gap-10 xl:grid-cols-[16rem_minmax(0,1fr)] xl:gap-12">
-        <SidebarAside />
+        <DeepDiveSidebar items={TOC} />
 
         <div className="min-w-0 max-w-[52rem] lg:justify-self-start">
           <Link href="/materi" className="text-sm text-teal-800 hover:underline">
@@ -190,7 +130,7 @@ export function DeepDiveView({ mod }: { mod: DeepDiveModule }) {
 
           {/* Mobile / tablet TOC */}
           <div className="mt-8 rounded-2xl border border-stone-200 bg-white/80 p-4 lg:hidden">
-            <TocNav compact />
+            <DeepDiveToc items={TOC} compact />
           </div>
 
           <Section id="overview" title="1. Module Overview">
@@ -261,7 +201,7 @@ export function DeepDiveView({ mod }: { mod: DeepDiveModule }) {
               <article
                 key={c.id}
                 id={`cfg-${c.id}`}
-                className="scroll-mt-28 rounded-2xl border border-stone-200 bg-white/85 p-4"
+                className="scroll-mt-32 rounded-2xl border border-stone-200 bg-white/85 p-4"
               >
                 <h3 className="font-heading text-xl text-teal-950">{c.name}</h3>
                 <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-stone-500">
@@ -303,7 +243,7 @@ export function DeepDiveView({ mod }: { mod: DeepDiveModule }) {
               <article
                 key={md.id}
                 id={`md-${md.id}`}
-                className="scroll-mt-28 rounded-2xl border border-stone-200 bg-white/85 p-4"
+                className="scroll-mt-32 rounded-2xl border border-stone-200 bg-white/85 p-4"
               >
                 <h3 className="font-heading text-xl text-teal-950">{md.name}</h3>
                 <p className="mt-1 text-sm text-stone-600">{md.purpose}</p>
@@ -374,7 +314,7 @@ export function DeepDiveView({ mod }: { mod: DeepDiveModule }) {
               <article
                 key={form.id}
                 id={`form-${form.id}`}
-                className="scroll-mt-28 rounded-2xl border border-stone-200 bg-white/85 p-4"
+                className="scroll-mt-32 rounded-2xl border border-stone-200 bg-white/85 p-4"
               >
                 <h3 className="font-heading text-xl text-teal-950">{form.name}</h3>
                 <p className="text-xs text-stone-500">{form.menuPath}</p>
@@ -414,7 +354,7 @@ export function DeepDiveView({ mod }: { mod: DeepDiveModule }) {
               <article
                 key={p.id}
                 id={`proc-${p.id}`}
-                className="scroll-mt-28 rounded-2xl border border-stone-200 bg-white/85 p-4"
+                className="scroll-mt-32 rounded-2xl border border-stone-200 bg-white/85 p-4"
               >
                 <h3 className="font-heading text-xl text-teal-950">{p.title}</h3>
                 <p className="mt-1 text-sm text-stone-600">
